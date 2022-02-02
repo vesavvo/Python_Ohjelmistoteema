@@ -46,7 +46,7 @@ Näin luot itsellesi oman GitHub-repositorion:
 2. Kirjauduttuasi sisään paina Repositories-otsikon vieressä olevaa New-painiketta.
 3. Tee itsellesi oma yksityinen repositorio alla olevan kuvan mukaisesti.
 
-![Uuden repositorion luonti](img/uusi_repo.png)
+![Uuden repositorion luonti](img/uusi_repo2.png)
 
 
 
