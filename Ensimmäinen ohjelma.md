@@ -43,7 +43,7 @@ julkinen repositorio.
 Näin luot itsellesi oman GitHub-repositorion:
 
 1. Rekisteröidy GitHubin käyttäjäksi osoitteessa https://github.com/.
-2. Kirjauduttuasi sisään paina Repositories-kohdassa olevaa New-painiketta.
+2. Kirjauduttuasi sisään paina Repositories-otsikon vieressä olevaa New-painiketta.
 3. Tee itsellesi oma yksityinen repositorio alla olevan kuvan mukaisesti.
 
 ![Uuden repositorion luonti](img/uusi_repo.png)
