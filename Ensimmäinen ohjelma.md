@@ -11,7 +11,7 @@ Python on maailman yleisimpiä ohjelmointikieliä. Kun opiskelet Pythonia, voit:
 - luoda näyttävää grafiikkaa visualisointikirjastojen avulla
 - soveltaa tekoälyä kattavien koneoppimiskirjastojen ansiosta
 
-# Näin pääset alkuun
+## Näin pääset alkuun
 
-# Ensimmäinen ohjelma
+## Ensimmäinen ohjelma
 
