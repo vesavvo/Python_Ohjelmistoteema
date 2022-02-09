@@ -1,15 +1,43 @@
 from pelaaja import Pelaaja
 from kenttä import Kenttä
+from säätila import Säätila
+import json
 
+def etsi_lähikentät(sijainti, max_xdist, max_ydist):
+    lista = []
+    # DUMMY - korvataan tietokantahaulla
+    lista.append(Kenttä("TKU"))
+    lista.append(Kenttä("TMP"))
+    lista.append(Kenttä("MIK"))
+    return lista
 
-class Peli:
-    def __init__(self):
-        pass
+def tee_datapaketti(nick, raha, sijainti, kentät_tarjolla):
+    kohteet = []
+    for k in kentät_tarjolla:
+        kohteet.append((k.__dict__))
+    data = {
+        "nick" : nick,
+        "raha" : raha,
+        "sijainti" : sijainti.__dict__,
+        "säätila": säätila.__dict__,
+        "tarjolla" : kohteet,
+    }
 
-# Alustus
+    json_data = json.dumps(data)
+    return json_data
+
+# Alusta peli
 nick = "Vesa"
 alkusijainti = "HEL"
+raha = 1500
+max_xdist = 1
+max_ydist = 1
 
 pelaaja = Pelaaja(nick)
 sijainti = Kenttä(alkusijainti)
-sijainti.dump()
+säätila = Säätila(sijainti)
+
+kentät_tarjolla = etsi_lähikentät(sijainti, max_xdist, max_ydist)
+
+json_data = tee_datapaketti(nick, raha, sijainti, kentät_tarjolla)
+print(json_data)
