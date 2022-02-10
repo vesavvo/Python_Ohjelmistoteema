@@ -15,7 +15,7 @@ conn = mysql.connector.connect(
 
 # http://127.0.0.1:5000/fly?game=123&dest=HEL
 @app.route('/fly')
-def etene():
+def fly():
     args = request.args
     id = args.get("game")
     dest = args.get("dest")
@@ -26,7 +26,7 @@ def etene():
 
 # http://127.0.0.1:5000/new?dest=RVN
 @app.route('/new')
-def uusi():
+def new():
     args = request.args
     dest = args.get("dest")
     reply = main.new_game(conn, dest)
