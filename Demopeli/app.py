@@ -1,11 +1,12 @@
 from flask import Flask, request
 import mysql.connector
 import main
+import config
 
 app = Flask(__name__)
 
 # Tietokantayhteys
-conn = mysql.connector.connect(
+config.conn = mysql.connector.connect(
          host='127.0.0.1',
          port= 3306,
          database='lento',
@@ -20,7 +21,7 @@ def fly():
     id = args.get("game")
     dest = args.get("dest")
 
-    reply = main.fly(conn, id, dest)
+    reply = main.fly(id, dest)
 
     return reply
 
@@ -30,7 +31,7 @@ def newgame():
     args = request.args
     nick = args.get("nick")
     loc = args.get("loc")
-    reply = main.new_game(conn, nick, loc)
+    reply = main.new_game(nick, loc)
 
     return reply
 
@@ -40,6 +41,7 @@ def newgame():
 def newplayer():
     # DUMMY
     return "TBD"
+
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)
