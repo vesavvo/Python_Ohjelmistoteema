@@ -13,8 +13,8 @@ conn = mysql.connector.connect(
          password='piLo_t5AD'
          )
 
-# http://127.0.0.1:5000/fly?game=123&dest=HEL
-@app.route('/fly')
+# http://127.0.0.1:5000/flyto?game=123&dest=HEL
+@app.route('/flyto')
 def fly():
     args = request.args
     id = args.get("game")
@@ -24,12 +24,13 @@ def fly():
 
     return reply
 
-# http://127.0.0.1:5000/new?dest=RVN
-@app.route('/new')
-def new():
+# http://127.0.0.1:5000/newgame?nick=Vesa&loc=RVN
+@app.route('/newgame')
+def newgame():
     args = request.args
-    dest = args.get("dest")
-    reply = main.new_game(conn, dest)
+    nick = args.get("nick")
+    loc = args.get("loc")
+    reply = main.new_game(conn, nick, loc)
 
     return reply
 

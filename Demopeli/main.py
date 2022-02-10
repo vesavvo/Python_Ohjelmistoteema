@@ -32,7 +32,7 @@ def make_json(peli, sijainti, säätila, kohteet):
 def fly(conn, id, kohde):
 
     # find game from DB
-    sql = "SELECT id, money, location FROM Peli WHERE id='" + id + "'"
+    sql = "SELECT id, money, location FROM Game WHERE id='" + id + "'"
     print (sql)
     cur = conn.cursor()
     cur.execute(sql)
@@ -54,14 +54,14 @@ def fly(conn, id, kohde):
         json_data = json.dumps(data)
     return json_data
 
-def new_game(conn, starting_point):
+def new_game(conn, nick, loc):
 
     # Create new game id
     letters = string.ascii_lowercase + string.ascii_uppercase + string.digits
     game_id = ''.join(random.choice(letters) for i in range(20))
 
     # Insert new game into DB
-    sql = "INSERT INTO Peli VALUES ('" + game_id + "', " + str(initial_money) + ", '" + starting_point + "')"
+    sql = "INSERT INTO Game VALUES ('" + game_id + "', " + str(initial_money) + ", '" + loc + "', '" + nick + "')"
     print (sql)
     cur = conn.cursor()
     cur.execute(sql)
