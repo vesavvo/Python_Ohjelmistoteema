@@ -7,7 +7,7 @@ max_xdist = 1
 max_ydist = 1
 initial_money = 1500
 
-def etsi_lähikentät(sijainti, max_xdist, max_ydist):
+def find_close_airports(sijainti, max_xdist, max_ydist):
     lista = []
     # DUMMY - korvataan tietokantahaulla
     lista.append(Kenttä("TKU"))
@@ -15,7 +15,7 @@ def etsi_lähikentät(sijainti, max_xdist, max_ydist):
     lista.append(Kenttä("MIK"))
     return lista
 
-def tee_datapaketti(peli, sijainti, säätila, kohteet):
+def make_json(peli, sijainti, säätila, kohteet):
     kohdelista = []
     for k in kohteet:
         kohdelista.append((k.__dict__))
@@ -29,7 +29,7 @@ def tee_datapaketti(peli, sijainti, säätila, kohteet):
     json_data = json.dumps(data)
     return json_data
 
-def siirry(conn, id, kohde):
+def fly(conn, id, kohde):
     # DUMMY
 
     # find game from DB
@@ -47,15 +47,15 @@ def siirry(conn, id, kohde):
         sijainti = Kenttä(kohde)
         säätila = Säätila(sijainti)
 
-        kohteet = etsi_lähikentät(sijainti, max_xdist, max_ydist)
+        kohteet = find_close_airports(sijainti, max_xdist, max_ydist)
 
-        json_data = tee_datapaketti(peli, sijainti, säätila, kohteet)
+        json_data = make_json(peli, sijainti, säätila, kohteet)
     else:
         data = {"Success:" : "false"}
         json_data = json.dumps(data)
     return json_data
 
-def uusipeli(conn, starting_point):
+def new_game(conn, starting_point):
 
     # Create new game id
     letters = string.ascii_lowercase + string.ascii_uppercase + string.digits

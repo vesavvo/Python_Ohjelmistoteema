@@ -13,25 +13,25 @@ conn = mysql.connector.connect(
          password='piLo_t5AD'
          )
 
-# http://127.0.0.1:5000/siirto?id=123&kohde=HEL
-@app.route('/siirto')
+# http://127.0.0.1:5000/fly?game=123&dest=HEL
+@app.route('/fly')
 def etene():
     args = request.args
-    id = args.get("id")
-    kohde = args.get("kohde")
+    id = args.get("game")
+    dest = args.get("dest")
 
-    tulos = main.siirry(conn, id, kohde)
+    reply = main.fly(conn, id, dest)
 
-    return tulos
+    return reply
 
-# http://127.0.0.1:5000/uusi?nick=Vesa&kohde=RVN
-@app.route('/uusi')
+# http://127.0.0.1:5000/new?dest=RVN
+@app.route('/new')
 def uusi():
     args = request.args
-    kohde = args.get("kohde")
-    tulos = main.uusipeli(conn, kohde)
+    dest = args.get("dest")
+    reply = main.new_game(conn, dest)
 
-    return tulos
+    return reply
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)
