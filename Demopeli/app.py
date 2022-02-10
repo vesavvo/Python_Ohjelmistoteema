@@ -20,7 +20,7 @@ def etene():
     id = args.get("id")
     kohde = args.get("kohde")
 
-    tulos = main.siirry(id, kohde)
+    tulos = main.siirry(conn, id, kohde)
 
     return tulos
 
@@ -28,9 +28,8 @@ def etene():
 @app.route('/uusi')
 def uusi():
     args = request.args
-    nick = args.get("nick")
     kohde = args.get("kohde")
-    tulos = main.uusipeli(conn, nick, kohde)
+    tulos = main.uusipeli(conn, kohde)
 
     return tulos
 
