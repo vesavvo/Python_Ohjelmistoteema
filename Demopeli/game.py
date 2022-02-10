@@ -4,7 +4,7 @@ import config
 
 class Game:
 
-    def __init__(self, id, nick=None, loc=None):
+    def __init__(self, id, player=None, loc=None):
 
         initial_money = 1500
 
@@ -14,11 +14,11 @@ class Game:
             letters = string.ascii_lowercase + string.ascii_uppercase + string.digits
             self.id = ''.join(random.choice(letters) for i in range(20))
             self.money = initial_money
-            self.loc = loc
-            self.nick = nick
+            self.location = Airport(loc)
+            self.player = player
 
             # Insert new game into DB
-            sql = "INSERT INTO Game VALUES ('" + self.id + "', " + str(initial_money) + ", '" + loc + "', '" + nick + "')"
+            sql = "INSERT INTO Game VALUES ('" + self.id + "', " + str(initial_money) + ", '" + self.location.ident + "', '" + player + "')"
             print(sql)
             cur = config.conn.cursor()
             cur.execute(sql)
@@ -35,14 +35,15 @@ class Game:
                 # game found
                 self.id = res[0][0]
                 self.money = res[0][1]
-                self.loc = res[0][2]
-                self.nick = res[0][3]
+                self.location = Airport(res[0][2])
+                self.player = res[0][3]
 
 
-    def updateLocation(self, sijainti):
+    def set_location(self, sijainti):
+        self.location = sijainti
         sql = "UPDATE Game SET location='" + sijainti.ident + "' WHERE id='" + self.id + "'"
         print(sql)
         cur = config.conn.cursor()
         cur.execute(sql)
         config.conn.commit()
-        self.loc = sijainti.ident
+        #self.loc = sijainti.ident

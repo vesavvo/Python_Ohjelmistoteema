@@ -7,7 +7,6 @@ class Airport:
         self.ident = ident
 
         # find airport from DB
-
         sql = "SELECT ident, name, latitude_deg, longitude_deg FROM Airport WHERE ident='" + ident + "'"
         print(sql)
         cur = config.conn.cursor()
@@ -22,11 +21,6 @@ class Airport:
 
     def find_nearby_airports(self):
         lista = []
-        # DUMMY - korvataan tietokantahaulla
-        #lista.append(Airport("EFEJ"))
-        #lista.append(Airport("EFSE"))
-        #lista.append(Airport("EFKG"))
-
         sql = "SELECT ident FROM Airport WHERE latitude_deg BETWEEN "
         sql += str(self.latitude-config.max_lat_dist) + " AND " + str(self.latitude+config.max_lat_dist)
         sql += " AND longitude_deg BETWEEN "
@@ -37,8 +31,7 @@ class Airport:
         res = cur.fetchall()
         for r in res:
             lista.append(Airport(r[0]))
-
-        return lista
+        self.nearby_airports = lista
 
     def getWeather(self):
         self.weather=Weather(self)

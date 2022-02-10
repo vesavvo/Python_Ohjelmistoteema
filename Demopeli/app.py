@@ -25,13 +25,13 @@ def fly():
 
     return reply
 
-# http://127.0.0.1:5000/newgame?nick=Vesa&loc=RVN
+# http://127.0.0.1:5000/newgame?player=Vesa&loc=RVN
 @app.route('/newgame')
 def newgame():
     args = request.args
-    nick = args.get("nick")
+    player = args.get("player")
     loc = args.get("loc")
-    reply = main.new_game(nick, loc)
+    reply = main.new_game(player, loc)
 
     return reply
 
