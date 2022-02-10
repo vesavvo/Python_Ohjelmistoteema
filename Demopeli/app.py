@@ -34,5 +34,12 @@ def newgame():
 
     return reply
 
+
+# http://127.0.0.1:5000/newplayer?nick=Vesa
+@app.route('/newplayer')
+def newplayer():
+    # DUMMY
+    return "TBD"
+
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)
