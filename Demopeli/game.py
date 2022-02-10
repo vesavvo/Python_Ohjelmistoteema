@@ -45,3 +45,4 @@ class Game:
         cur = config.conn.cursor()
         cur.execute(sql)
         config.conn.commit()
+        self.loc = sijainti.ident
