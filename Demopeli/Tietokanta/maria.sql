@@ -52,3 +52,12 @@ INSERT INTO Goal VALUES
 (7, "CLOUDS", "Cloudy weather", "WEATHER", NULL, NULL, "Clouds"),
 (8, "WINDY", "Wind blows more than 10 m/s", "WIND", 10.0, 9999, NULL)
 ;
+
+
+CREATE TABLE GoalReached (
+	gameid VARCHAR(40),
+	goalid INTEGER,
+	PRIMARY KEY (gameid, goalid),
+	FOREIGN KEY (gameid) REFERENCES Game(id),
+	FOREIGN KEY (goalid) REFERENCES Goal(id)
+);
