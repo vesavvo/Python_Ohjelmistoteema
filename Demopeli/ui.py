@@ -7,7 +7,7 @@ def output_status(json):
     print ("Pilot      : " + json["player"])
     print ("Money      : " + str(json["money"]))
     print ("Location   : " + json["location"]["ident"] + " - " + json["location"]["name"])
-    print ("Link       : ")
+    print ("Link       : https://www.openstreetmap.org/#map=8/" + str(json["location"]["latitude"]) + "/" + str(json["location"]["longitude"]))
     print ("------------------------------------------------")
     print ("Weather    : " + json["location"]["weather"]["type"])
     print ("Temperature: " + str(json["location"]["weather"]["temperature"]) + "'C")
@@ -44,11 +44,13 @@ while True:
     output_status(response)
 
     default_destination = response["location"]["nearby_airports"][0]["ident"]
-    destination = input("Enter next destination (default=" + default_destination + "): ")
+    destination = input("Enter next destination or 'q' to quit (default=" + default_destination + "): ")
     if destination=="":
         destination = default_destination
+    elif destination=="q":
+        quit()
     print ("Generating flight plan to " + destination)
 
     # http://127.0.0.1:5000/flyto?game=p5eiPgQPT9jbIt1TlqzH&dest=EFHK
-    request = "http://127.0.0.1:5000/newgame?loc=" + initial_airport + "&player=" + name
+    request = "http://127.0.0.1:5000/flyto?game=" + response["id"] + "&dest=" + destination
 
