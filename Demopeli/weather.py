@@ -15,13 +15,15 @@ class Weather:
         for a in res:
             if a[3]=="TEMP":
                 # temperature rule
-                if (self.temperature>=a[4] and self.temperature<=a[5]):
-                    print ("Rule " + a[1] + " satisfied.")
+                if self.temperature>=a[4] and self.temperature<=a[5]:
                     self.meets_goals.append(a[1])
             elif a[3]=="WEATHER":
                 # weather type rule
-                if (self.type==a[6]):
-                    print("Rule " + a[1] + " satisfied.")
+                if self.type==a[6]:
+                    self.meets_goals.append(a[1])
+            elif a[3]=="WIND":
+                # wind rule
+                if self.wind_speed>=a[4] and self.wind_speed<=a[5]:
                     self.meets_goals.append(a[1])
         return
 
