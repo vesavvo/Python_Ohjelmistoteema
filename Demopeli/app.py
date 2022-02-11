@@ -19,8 +19,9 @@ config.conn = mysql.connector.connect(
 def fly(id,dest):
     game = Game(id)
     game.set_location(Airport(dest))
-    game.location.getWeather()
+    game.location.fetchWeather(game)
     game.location.find_nearby_airports()
+    game.fetch_goal_info()
     json_data = json.dumps(game, default=lambda o: o.__dict__, indent=4)
     return json_data
 

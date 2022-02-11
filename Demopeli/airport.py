@@ -33,6 +33,8 @@ class Airport:
             lista.append(Airport(r[0]))
         self.nearby_airports = lista
 
-    def getWeather(self):
-        self.weather=Weather(self)
+    def fetchWeather(self, game):
+        self.weather=Weather(self, game)
+
+
 

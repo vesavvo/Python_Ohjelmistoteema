@@ -5,7 +5,7 @@ def output_status(json):
     print ("================================================")
     print ("Trip ID    : " + json["id"])
     print ("Pilot      : " + json["player"])
-    print ("Money      : " + str(json["money"]))
+    print ("Footprint  : " + str(json["footprint"]))
     print ("Location   : " + json["location"]["ident"] + " - " + json["location"]["name"])
     print ("Link       : https://www.openstreetmap.org/#map=8/" + str(json["location"]["latitude"]) + "/" + str(json["location"]["longitude"]))
     print ("------------------------------------------------")
@@ -16,7 +16,13 @@ def output_status(json):
 
     goals_met = json["location"]["weather"]["meets_goals"]
     for a in goals_met:
-        print ("---> This weather meets a goal: " + a)
+        print ("---> This weather meets a goal: " + str(a))
+
+    print("------------------------------------------------")
+    print("Weather goals:")
+    goals = json["goals"]
+    for a in goals:
+        print (str(a["goalid"]) + " " + a["name"] + " " + a["description"] + " " + str(a["reached"]))
 
 
     print("------------------------------------------------")
@@ -24,8 +30,6 @@ def output_status(json):
     nearby = json["location"]["nearby_airports"]
     for a in nearby:
         print (a["ident"] + " - " + a["name"])
-
-
 
     print ("================================================")
     return
@@ -46,6 +50,7 @@ while True:
     print (request)
     response = requests.get(request).json()
     print(response)
+
     output_status(response)
 
     default_destination = response["location"]["nearby_airports"][0]["ident"]
