@@ -14,6 +14,11 @@ def output_status(json):
     print ("Humidity   : " + str(json["location"]["weather"]["humidity"]))
     print ("Wind speed : " + str(json["location"]["weather"]["wind_speed"]))
 
+    goals_met = json["location"]["weather"]["meets_goals"]
+    for a in goals_met:
+        print ("---> This weather meets a goal: " + a)
+
+
     print("------------------------------------------------")
     print ("Possible destinations:")
     nearby = json["location"]["nearby_airports"]

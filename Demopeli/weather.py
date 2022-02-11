@@ -17,9 +17,12 @@ class Weather:
                 # temperature rule
                 if (self.temperature>=a[4] and self.temperature<=a[5]):
                     print ("Rule " + a[1] + " satisfied.")
+                    self.meets_goals.append(a[1])
             elif a[3]=="WEATHER":
                 # weather type rule
-                pass
+                if (self.type==a[6]):
+                    print("Rule " + a[1] + " satisfied.")
+                    self.meets_goals.append(a[1])
         return
 
 
@@ -34,4 +37,5 @@ class Weather:
         self.humidity = vastaus["main"]["humidity"]
         self.wind_speed = vastaus["wind"]["speed"]
 
+        self.meets_goals = []
         self.check_weather_goals()
