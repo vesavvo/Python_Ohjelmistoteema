@@ -1,3 +1,13 @@
+DROP TABLE IF EXISTS Game
+
+CREATE TABLE Game (
+  id varchar(40),
+  money int(8),
+  location varchar(10),
+  player varchar(40),
+  PRIMARY KEY (id)
+)
+
 DROP TABLE IF EXISTS Airport;
 
 CREATE TABLE Airport(
