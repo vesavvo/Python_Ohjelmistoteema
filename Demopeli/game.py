@@ -6,19 +6,16 @@ class Game:
 
     def __init__(self, id, player=None, loc=None):
 
-        initial_money = 1500
-
         if id==0:
             # new game
             # Create new game id
             letters = string.ascii_lowercase + string.ascii_uppercase + string.digits
             self.id = ''.join(random.choice(letters) for i in range(20))
-            self.money = initial_money
+            self.money = config.initial_money
             self.location = Airport(loc)
             self.player = player
-
             # Insert new game into DB
-            sql = "INSERT INTO Game VALUES ('" + self.id + "', " + str(initial_money) + ", '" + self.location.ident + "', '" + player + "')"
+            sql = "INSERT INTO Game VALUES ('" + self.id + "', " + str(config.initial_money) + ", '" + self.location.ident + "', '" + player + "')"
             print(sql)
             cur = config.conn.cursor()
             cur.execute(sql)
