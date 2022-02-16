@@ -26,7 +26,7 @@ def fly(id,dest):
     return json_data
 
 
-# http://127.0.0.1:5000/flyto?game=123&dest=HEL
+# http://127.0.0.1:5000/flyto?game=123&dest=EFHK
 @app.route('/flyto')
 def flyto():
     args = request.args
@@ -36,17 +36,16 @@ def flyto():
     return json_data
 
 
-# http://127.0.0.1:5000/newgame?player=Vesa&loc=RVN
+# http://127.0.0.1:5000/newgame?player=Vesa&loc=EFHK
 @app.route('/newgame')
 def newgame():
     args = request.args
     player = args.get("player")
     loc = args.get("loc")
-    #reply = main.new_game(player, loc)
     game = Game(0, player, loc)
     json_data = fly(game.id, loc)
     return json_data
-    #return reply
+
 
 
 

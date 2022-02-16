@@ -50,10 +50,6 @@ class Game:
     def fetch_goal_info(self):
         self.goals = []
 
-        #sql = "SELECT goal.id, goal.name, goal.description, game.id "
-        #sql += "FROM Goal LEFT JOIN GoalReached ON Goal.id = GoalReached.goalid LEFT JOIN Game "
-        #sql += "ON GoalReached.gameid = Game.id WHERE Game.id = '" + self.id + "' OR Game.id IS NULL"
-
         sql = "SELECT * FROM (SELECT Goal.id, Goal.name, Goal.description, GoalReached.gameid FROM "
         sql += "Goal INNER JOIN GoalReached ON Goal.id = GoalReached.goalid "
         sql += "WHERE GoalReached.gameid = '" + self.id + "' "
