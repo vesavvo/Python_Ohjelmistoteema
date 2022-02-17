@@ -14,4 +14,8 @@ class Goal:
             self.target_maxvalue = 0.0
         else:
             self.target_maxvalue = float(target_maxvalue)
-        self.target_text = target_text
+        if (target_text is None):
+            self.target_text = ""
+        else:
+            self.target_text = target_text
+

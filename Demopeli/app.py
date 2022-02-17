@@ -21,8 +21,8 @@ def fly(id, dest, player=None):
     if id==0:
         game = Game(0, dest, player)
     else:
-        game = Game(id)
-    game.set_location(Airport(dest))
+        game = Game(id, dest)
+    #game.set_location(Airport(dest))
     game.location.fetchWeather(game)
     game.location.find_nearby_airports()
 #    game.fetch_goal_info()
@@ -47,8 +47,7 @@ def newgame():
     args = request.args
     player = args.get("player")
     dest = args.get("loc")
-    #game = Game(0, player, loc)
-    json_data = fly(0, dest, player=player)
+    json_data = fly(0, dest, player)
     return json_data
 
 if __name__ == '__main__':

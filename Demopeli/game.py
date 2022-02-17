@@ -5,14 +5,9 @@ import config
 
 class Game:
 
-    def __init__(self, id, loc=None, player=None):
+    def __init__(self, id, loc, player=None):
 
         if id==0:
-            print("Id, loc, player:")
-            print (id)
-            print(loc)
-            print(player)
-
             # new game
             # Create new game id
             letters = string.ascii_lowercase + string.ascii_uppercase + string.digits
@@ -38,11 +33,16 @@ class Game:
                 # game found
                 self.id = res[0][0]
                 self.footprint = res[0][1]
-                self.location = Airport(res[0][2])
+                # old location in DB currently not used
+                self.location = Airport(loc)
                 self.player = res[0][3]
+            else:
+                print("************** PELIÄ EI LÖYDY! ***************")
 
         # read game's goals
         self.fetch_goal_info()
+
+
 
 
 
