@@ -5,9 +5,14 @@ import config
 
 class Game:
 
-    def __init__(self, id, player=None, loc=None):
+    def __init__(self, id, loc=None, player=None):
 
         if id==0:
+            print("Id, loc, player:")
+            print (id)
+            print(loc)
+            print(player)
+
             # new game
             # Create new game id
             letters = string.ascii_lowercase + string.ascii_uppercase + string.digits
@@ -16,7 +21,7 @@ class Game:
             self.location = Airport(loc)
             self.player = player
             # Insert new game into DB
-            sql = "INSERT INTO Game VALUES ('" + self.id + "', " + str(config.initial_footprint) + ", '" + self.location.ident + "', '" + player + "')"
+            sql = "INSERT INTO Game VALUES ('" + self.id + "', " + str(config.initial_footprint) + ", '" + loc + "', '" + player + "')"
             print(sql)
             cur = config.conn.cursor()
             cur.execute(sql)

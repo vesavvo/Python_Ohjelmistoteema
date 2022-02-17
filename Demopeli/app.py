@@ -17,8 +17,11 @@ config.conn = mysql.connector.connect(
          autocommit=True
          )
 
-def fly(id,dest):
-    game = Game(id)
+def fly(id, dest, player=None):
+    if id==0:
+        game = Game(0, dest, player)
+    else:
+        game = Game(id)
     game.set_location(Airport(dest))
     game.location.fetchWeather(game)
     game.location.find_nearby_airports()
@@ -43,9 +46,9 @@ def flyto():
 def newgame():
     args = request.args
     player = args.get("player")
-    loc = args.get("loc")
-    game = Game(0, player, loc)
-    json_data = fly(game.id, loc)
+    dest = args.get("loc")
+    #game = Game(0, player, loc)
+    json_data = fly(0, dest, player=player)
     return json_data
 
 if __name__ == '__main__':
