@@ -22,7 +22,7 @@ def fly(id,dest):
     game.set_location(Airport(dest))
     game.location.fetchWeather(game)
     game.location.find_nearby_airports()
-    game.fetch_goal_info()
+#    game.fetch_goal_info()
     json_data = json.dumps(game, default=lambda o: o.__dict__, indent=4)
     return json_data
 
@@ -34,6 +34,7 @@ def flyto():
     id = args.get("game")
     dest = args.get("dest")
     json_data = fly(id, dest)
+    print("*** Called flyto endpoint ***")
     return json_data
 
 
@@ -46,9 +47,6 @@ def newgame():
     game = Game(0, player, loc)
     json_data = fly(game.id, loc)
     return json_data
-
-
-
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)

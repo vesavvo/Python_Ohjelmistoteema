@@ -7,48 +7,29 @@ class Weather:
         return int (kelvin - 273.15)
 
     def check_weather_goals(self, game):
-        sql = "SELECT id, name, description, target, target_minvalue, target_maxvalue, target_text FROM Goal"
-        print(sql)
-        cur = config.conn.cursor()
-        cur.execute(sql)
-        res = cur.fetchall()
-        for a in res:
-            if a[3]=="TEMP":
+
+        for goal in game.goals:
+            if goal.target=="TEMP":
                 # temperature rule
-                if self.temperature>=a[4] and self.temperature<=a[5]:
-                    self.meets_goals.append(a[0])
-            elif a[3]=="WEATHER":
+                if self.temperature>=goal.target_minvalue and self.temperature<=goal.target_maxvalue:
+                    self.meets_goals.append(goal.goalid)
+            elif goal.target=="WEATHER":
                 # weather type rule
-                if self.type==a[6]:
-                    self.meets_goals.append(a[0])
-            elif a[3]=="WIND":
+                if self.type==goal.target_text:
+                    self.meets_goals.append(goal.goalid)
+            elif goal.target=="WIND":
                 # wind rule
-                if self.wind_speed>=a[4] and self.wind_speed<=a[5]:
-                    self.meets_goals.append(a[0])
+                if self.wind_speed>=goal.target_minvalue and self.wind_speed<=goal.target_maxvalue:
+                    self.meets_goals.append(goal.goalid)
 
-
-        # here inserts to GoalReached table
-        sql = "SELECT goalid FROM GoalReached WHERE gameid='" + game.id + "'"
-        print(sql)
-        cur = config.conn.cursor()
-        cur.execute(sql)
-        res = cur.fetchall()
-        old_goals = []
-        for a in res:
-            old_goals.append(a[0])
-
-        for a in self.meets_goals:
-            if a in old_goals:
-                # old goal
-                pass
-            else:
+        for goal in game.goals:
+            if goal.reached==False and goal.goalid in self.meets_goals:
                 # new goal
-                sql = "INSERT INTO GoalReached VALUES ('" + game.id + "', '" + str(a)  + "')"
+                sql = "INSERT INTO GoalReached VALUES ('" + game.id + "', '" + str(goal.goalid)  + "')"
                 print(sql)
                 cur = config.conn.cursor()
                 cur.execute(sql)
-                #config.conn.commit()
-
+                goal.reached = True
         return
 
 

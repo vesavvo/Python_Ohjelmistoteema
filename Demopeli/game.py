@@ -1,5 +1,6 @@
 import string, random
 from airport import Airport
+from goal import Goal
 import config
 
 class Game:
@@ -35,6 +36,10 @@ class Game:
                 self.location = Airport(res[0][2])
                 self.player = res[0][3]
 
+        # read game's goals
+        self.fetch_goal_info()
+
+
 
 
     def set_location(self, sijainti):
@@ -50,10 +55,13 @@ class Game:
     def fetch_goal_info(self):
         self.goals = []
 
-        sql = "SELECT * FROM (SELECT Goal.id, Goal.name, Goal.description, GoalReached.gameid FROM "
-        sql += "Goal INNER JOIN GoalReached ON Goal.id = GoalReached.goalid "
+        sql = "SELECT * FROM (SELECT Goal.id, Goal.name, Goal.description, GoalReached.gameid, "
+        sql += "Goal.target, Goal.target_minvalue, Goal.target_maxvalue, Goal.target_text "
+        sql += "FROM Goal INNER JOIN GoalReached ON Goal.id = GoalReached.goalid "
         sql += "WHERE GoalReached.gameid = '" + self.id + "' "
-        sql += "UNION SELECT Goal.id, Goal.name, Goal.description, NULL FROM Goal WHERE Goal.id NOT IN ("
+        sql += "UNION SELECT Goal.id, Goal.name, Goal.description, NULL, "
+        sql += "Goal.target, Goal.target_minvalue, Goal.target_maxvalue, Goal.target_text "
+        sql += "FROM Goal WHERE Goal.id NOT IN ("
         sql += "SELECT Goal.id FROM Goal INNER JOIN GoalReached ON Goal.id = GoalReached.goalid "
         sql += "WHERE GoalReached.gameid = '" + self.id + "')) AS t ORDER BY t.id;"
 
@@ -66,11 +74,6 @@ class Game:
                 is_reached = True
             else:
                 is_reached = False
-            goal = {
-                "goalid" : a[0],
-                "name" : a[1],
-                "description": a[2],
-                "reached": is_reached
-            }
+            goal = Goal(a[0], a[1], a[2], is_reached, a[4], a[5], a[6], a[7])
             self.goals.append(goal)
         return
