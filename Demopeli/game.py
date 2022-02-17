@@ -100,7 +100,7 @@ class Game:
         cur.execute(sql)
         res = cur.fetchall()
         for a in res:
-            if a[3]==self.status["id"]:
+            if a[4]==self.status["id"]:
                 is_reached = True
             else:
                 is_reached = False

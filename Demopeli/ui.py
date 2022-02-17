@@ -30,7 +30,7 @@ def output_status(json):
 
     for a in json["location"]:
         if not a["active"]:
-            print (a["ident"] + " - " + a["name"])
+            print (a["ident"] + " - " + a["name"] + " " + str(a["distance"]) + " " + str(a["co2_consumption"]))
 
     print ("================================================")
     return
