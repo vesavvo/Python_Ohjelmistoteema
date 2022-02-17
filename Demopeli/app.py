@@ -22,10 +22,10 @@ def fly(id, dest, player=None):
         game = Game(0, dest, player)
     else:
         game = Game(id, dest)
-    #game.set_location(Airport(dest))
-    game.location.fetchWeather(game)
-    game.location.find_nearby_airports()
-#    game.fetch_goal_info()
+    game.location[0].fetchWeather(game)
+    nearby = game.location[0].find_nearby_airports()
+    for a in nearby:
+        game.location.append(a)
     json_data = json.dumps(game, default=lambda o: o.__dict__, indent=4)
     return json_data
 

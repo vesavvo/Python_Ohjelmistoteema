@@ -1,4 +1,8 @@
-DROP TABLE IF EXISTS Game
+DROP TABLE IF EXISTS GoalReached;
+DROP TABLE IF EXISTS Game;
+DROP TABLE IF EXISTS Airport;
+DROP TABLE IF EXISTS Goal;
+
 
 CREATE TABLE Game (
   id varchar(40),
@@ -6,9 +10,8 @@ CREATE TABLE Game (
   location varchar(10),
   player varchar(40),
   PRIMARY KEY (id)
-)
+);
 
-DROP TABLE IF EXISTS Airport;
 
 CREATE TABLE Airport(
 id VARCHAR(40),
@@ -32,19 +35,16 @@ keywords VARCHAR(1000),
 PRIMARY KEY (ident)
 ) CHARACTER SET 'utf8'; 
 
-
 LOAD DATA LOCAL INFILE "C:\\Users\\olliv\\Documents\\airports\\airports.csv"
 INTO TABLE Airport
 CHARACTER SET 'utf8'
 FIELDS TERMINATED BY "," ENCLOSED BY '"';
 
-
-DROP TABLE IF EXISTS Goal;
-
 CREATE TABLE Goal (
 	id INTEGER,
 	name VARCHAR(40),
 	description VARCHAR(200),
+	icon VARCHAR(8),
 	target VARCHAR(40),
 	target_minvalue DECIMAL(8,2),
 	target_maxvalue DECIMAL(8,2),
@@ -53,14 +53,14 @@ CREATE TABLE Goal (
 );
 
 INSERT INTO Goal VALUES 
-(1, "HOT", "Temperature over +25C", "TEMP", 25, 9999, NULL),
-(2, "COLD", "Temperature under -25C", "TEMP", -9999, -25, NULL),
-(3, "0DEG", "Temperature exactly 0C", "TEMP", -0.5, 0.5, NULL),
-(4, "10DEG", "Temperature exactly +10C", "TEMP", 9.5, 10.5, NULL),
-(5, "20DEG", "Temperature exactly +20C", "TEMP", 19.5, 20.5, NULL),
-(6, "SUNNY", "Sunny weather", "WEATHER", NULL, NULL, "Sunny"),
-(7, "CLOUDS", "Cloudy weather", "WEATHER", NULL, NULL, "Clouds"),
-(8, "WINDY", "Wind blows more than 10 m/s", "WIND", 10.0, 9999, NULL)
+(1, "HOT", "Temperature over +25C", "04d", "TEMP", 25, 9999, NULL),
+(2, "COLD", "Temperature under -25C", "04d", "TEMP", -9999, -25, NULL),
+(3, "0DEG", "Temperature exactly 0C", "04d", "TEMP", -0.5, 0.5, NULL),
+(4, "10DEG", "Temperature exactly +10C", "04d", "TEMP", 9.5, 10.5, NULL),
+(5, "20DEG", "Temperature exactly +20C", "04d", "TEMP", 19.5, 20.5, NULL),
+(6, "SUNNY", "Sunny weather", "04d", "WEATHER", NULL, NULL, "Sunny"),
+(7, "CLOUDS", "Cloudy weather", "04d", "WEATHER", NULL, NULL, "Clouds"),
+(8, "WINDY", "Wind blows more than 10 m/s", "04d", "WIND", 10.0, 9999, NULL)
 ;
 
 
@@ -71,3 +71,4 @@ CREATE TABLE GoalReached (
 	FOREIGN KEY (gameid) REFERENCES Game(id),
 	FOREIGN KEY (goalid) REFERENCES Goal(id)
 );
+

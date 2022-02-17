@@ -6,15 +6,15 @@ def output_status(json):
     print ("Trip ID    : " + json["id"])
     print ("Pilot      : " + json["player"])
     print ("Footprint  : " + str(json["footprint"]))
-    print ("Location   : " + json["location"]["ident"] + " - " + json["location"]["name"])
-    print ("Link       : https://www.openstreetmap.org/#map=8/" + str(json["location"]["latitude"]) + "/" + str(json["location"]["longitude"]))
+    print ("Location   : " + json["location"][0]["ident"] + " - " + json["location"][0]["name"])
+    print ("Link       : https://www.openstreetmap.org/#map=8/" + str(json["location"][0]["latitude"]) + "/" + str(json["location"][0]["longitude"]))
     print ("------------------------------------------------")
-    print ("Weather    : " + json["location"]["weather"]["type"])
-    print ("Temperature: " + str(json["location"]["weather"]["temperature"]) + "'C")
-    print ("Humidity   : " + str(json["location"]["weather"]["humidity"]))
-    print ("Wind speed : " + str(json["location"]["weather"]["wind_speed"]))
+    print ("Weather    : " + json["location"][0]["weather"]["main"])
+    print ("Temperature: " + str(json["location"][0]["weather"]["temp"]) + "'C")
+    print ("Humidity   : " + str(json["location"][0]["weather"]["humidity"]))
+    print ("Wind speed : " + str(json["location"][0]["weather"]["wind"]["speed"]))
 
-    goals_met = json["location"]["weather"]["meets_goals"]
+    goals_met = json["location"][0]["weather"]["meets_goals"]
     for a in goals_met:
         print ("---> This weather meets a goal: " + str(a))
 
@@ -26,10 +26,11 @@ def output_status(json):
 
 
     print("------------------------------------------------")
-    print ("Possible destinations:")
-    nearby = json["location"]["nearby_airports"]
-    for a in nearby:
-        print (a["ident"] + " - " + a["name"])
+    print ("Nearby:")
+
+    for a in json["location"]:
+        if not a["active"]:
+            print (a["ident"] + " - " + a["name"])
 
     print ("================================================")
     return
@@ -53,7 +54,7 @@ while True:
 
     output_status(response)
 
-    default_destination = response["location"]["nearby_airports"][0]["ident"]
+    default_destination = response["location"][1]["ident"]
     destination = input("Enter next destination or 'q' to quit (default=" + default_destination + "): ")
     if destination=="":
         destination = default_destination

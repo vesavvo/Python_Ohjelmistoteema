@@ -3,8 +3,9 @@ import config
 from weather import Weather
 
 class Airport:
-    def __init__(self, ident):
+    def __init__(self, ident, active=False):
         self.ident = ident
+        self.active = active
 
         # find airport from DB
         sql = "SELECT ident, name, latitude_deg, longitude_deg FROM Airport WHERE ident='" + ident + "'"
@@ -30,8 +31,9 @@ class Airport:
         cur.execute(sql)
         res = cur.fetchall()
         for r in res:
-            lista.append(Airport(r[0]))
-        self.nearby_airports = lista
+            if r[0]!=self.ident:
+                lista.append(Airport(r[0]))
+        return lista
 
     def fetchWeather(self, game):
         self.weather=Weather(self, game)
