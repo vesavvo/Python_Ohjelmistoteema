@@ -6,9 +6,10 @@ DROP TABLE IF EXISTS Goal;
 
 CREATE TABLE Game (
   id varchar(40),
-  money int(8),
+  co2_consumed int(8),
+  co2_budget int(8),
   location varchar(10),
-  player varchar(40),
+  screen_name varchar(40),
   PRIMARY KEY (id)
 );
 
@@ -53,16 +54,15 @@ CREATE TABLE Goal (
 );
 
 INSERT INTO Goal VALUES 
-(1, "HOT", "Temperature over +25C", "04d", "TEMP", 25, 9999, NULL),
-(2, "COLD", "Temperature under -25C", "04d", "TEMP", -9999, -25, NULL),
+(1, "HOT", "Temperature over +25C", "01d", "TEMP", 25, 9999, NULL),
+(2, "COLD", "Temperature under -20C", "13d", "TEMP", -9999, -20, NULL),
 (3, "0DEG", "Temperature exactly 0C", "04d", "TEMP", -0.5, 0.5, NULL),
 (4, "10DEG", "Temperature exactly +10C", "04d", "TEMP", 9.5, 10.5, NULL),
 (5, "20DEG", "Temperature exactly +20C", "04d", "TEMP", 19.5, 20.5, NULL),
-(6, "SUNNY", "Sunny weather", "04d", "WEATHER", NULL, NULL, "Sunny"),
-(7, "CLOUDS", "Cloudy weather", "04d", "WEATHER", NULL, NULL, "Clouds"),
+(6, "CLEAR", "Clear skies", "01d", "WEATHER", NULL, NULL, "Clear"),
+(7, "CLOUDS", "Cloudy", "04d", "WEATHER", NULL, NULL, "Clouds"),
 (8, "WINDY", "Wind blows more than 10 m/s", "04d", "WIND", 10.0, 9999, NULL)
 ;
-
 
 CREATE TABLE GoalReached (
 	gameid VARCHAR(40),

@@ -3,9 +3,9 @@ import config
 
 def output_status(json):
     print ("================================================")
-    print ("Trip ID    : " + json["id"])
-    print ("Pilot      : " + json["player"])
-    print ("Footprint  : " + str(json["footprint"]))
+    print ("Trip ID    : " + json["status"]["id"])
+    print ("Pilot      : " + json["status"]["name"])
+    print ("Footprint  : " + str(json["status"]["co2"]))
     print ("Location   : " + json["location"][0]["ident"] + " - " + json["location"][0]["name"])
     print ("Link       : https://www.openstreetmap.org/#map=8/" + str(json["location"][0]["latitude"]) + "/" + str(json["location"][0]["longitude"]))
     print ("------------------------------------------------")
@@ -63,5 +63,5 @@ while True:
     print ("Generating flight plan to " + destination)
 
     # http://127.0.0.1:5000/flyto?game=p5eiPgQPT9jbIt1TlqzH&dest=EFHK
-    request = "http://127.0.0.1:5000/flyto?game=" + response["id"] + "&dest=" + destination
+    request = "http://127.0.0.1:5000/flyto?game=" + response["status"]["id"] + "&dest=" + destination
 
