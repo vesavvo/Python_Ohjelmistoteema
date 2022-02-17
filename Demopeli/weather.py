@@ -47,7 +47,7 @@ class Weather:
                 print(sql)
                 cur = config.conn.cursor()
                 cur.execute(sql)
-                config.conn.commit()
+                #config.conn.commit()
 
         return
 

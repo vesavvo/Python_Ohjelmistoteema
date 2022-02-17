@@ -13,7 +13,8 @@ config.conn = mysql.connector.connect(
          port= 3306,
          database='lento',
          user='lentopassi',
-         password='piLo_t5AD'
+         password='piLo_t5AD',
+         autocommit=True
          )
 
 def fly(id,dest):

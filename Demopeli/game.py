@@ -19,7 +19,7 @@ class Game:
             print(sql)
             cur = config.conn.cursor()
             cur.execute(sql)
-            config.conn.commit()
+            #config.conn.commit()
 
         else:
             # find game from DB
@@ -43,7 +43,7 @@ class Game:
         print(sql)
         cur = config.conn.cursor()
         cur.execute(sql)
-        config.conn.commit()
+        #config.conn.commit()
         #self.loc = sijainti.ident
 
 
