@@ -161,10 +161,27 @@ Esimerkkiohjelma tuottaa seuraavan tulosteen:
 2.0
 ```
 
-## Laskutoimitukset
+## Laskutoimitukset ja tyypinmuunnosfunktiot
 
+Muuttujilla ja vakioilla voidaan tehdä laskutoimituksia. Laskutoimitusten laskujärjestys voidaan
+tarvittaessa osoittaa sulkeilla.
 
-## Tyypinmuunnosfunktiot
+Alla oleva ohjelma kysyy lämpötilan Fahrenheit-asteina ja muuntaa sen Celsius-asteiksi. Muunnos tehdään
+siten, että Fahrenheit-asteista vähennetään 32, ja erotus kerrotaan vakiolla 5/9.
+
+```python
+fahrenheit_str = input("Anna lämpötila Fahrenheit-asteina: ")
+fahrenheit = float(fahrenheit_str)
+celsius = (fahrenheit-32)*5/9
+print("Lämpötila Celsius-asteina: " + str(celsius))
+```
+
+Huomaa, että edellä input-funktion palauttama arvo tulkitaan aina merkkijonoksi, vaikka käyttäjän
+antama syöte koostuisi pelkistä numeromerkeistä. Merkkijono voidaan muuntaa liukuluvuksi float-funktiolla tai
+kokonaisluvuksi int-funktiolla.
+
+Vastaavasti luku voidaan muuntaa merkkijonoksi str-funktiolla. Esimerkin tulostuslauseessa muunnos on tehtävä, jotta Celsius-asteet
+sisältävä liukuluku voidaan liittää merkkijonoon. Liitoksen molempien osapuolten on oltava merkkijonoja.
 
 
 ## Tulosteen muotoilu
