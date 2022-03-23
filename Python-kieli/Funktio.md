@@ -252,6 +252,75 @@ Funktion kutsussa arvo sijoitetaan yleensä välittömästi muuttujaan tai hyöd
 
 ## Lista parametrina
 
+Funktiolle voidaan antaa parametrina lista. Seuraavassa esimerkissä inventaario-funktio saa parametrinaan listan
+ja luettelee listan alkiot:
+
+```python
+def inventaario(tavarat):
+    print("Sinulla on seuraavat tavarat:")
+    for t in tavarat:
+        print ("- " + t)
+    return
+
+reppu = ["Vesipullo", "Kartta", "Kompassi"]
+inventaario(reppu)
+reppu.append("Linkkuveitsi")
+inventaario(reppu)
+```
+
+
+Funktiota kutsutaan kahteen kertaan. Kummallakin kerralla tulostetaan repussa olevat tavarat:
+```monospace
+Sinulla on seuraavat tavarat:
+- Vesipullo
+- Kartta
+- Kompassi
+Sinulla on seuraavat tavarat:
+- Vesipullo
+- Kartta
+- Kompassi
+- Linkkuveitsi
+```
+
+Muutetaan nyt ohjelmaa hieman. Muokataan alihojelmaa siten, että se tyhjentää listan sen tulostettuaan:
+
+```python
+def inventaario(tavarat):
+    print("Sinulla on seuraavat tavarat:")
+    for t in tavarat:
+        print ("- " + t)
+    # Tavarat katoavat inventaariossa!
+    tavarat.clear()
+    return
+
+reppu = ["Vesipullo", "Kartta", "Kompassi"]
+inventaario(reppu)
+reppu.append("Linkkuveitsi")
+inventaario(reppu)
+```
+
+Tulosteesta nähdään, että inventaario-funktion kutsu tyhjentää repun:
+```monospace
+Sinulla on seuraavat tavarat:
+- Vesipullo
+- Kartta
+- Kompassi
+Sinulla on seuraavat tavarat:
+- Linkkuveitsi
+```
+
+Mitä tapahtui? Kun parametrina annetaan lista, sen välitys toimii toisin kuin alkeistyyppisten muuttujien.
+
+Alkeistyypin arvo kopioidaan kutsussa olevasta argumentista parametrimuuttujan arvoksi. Listan tapauksessa
+listan sisältöä ei kopioida, vaan listasta välitetään funktiolle vain muistiosoite, eli tieto siitä,
+mistä lista keskusmuistista löytyy.
+
+Tällöin globaalin reppu-muuttujan muistiosoite kopioituu tavarat-muuttujan arvoksi.
+Nyt sekä reppu- että tavarat-muuttujat viittaavat samaan tietokoneen keskusmuistissa olevaan listaan.
+Funktio muuttaa tavarat-muuttujan kautta saatavan listan sisältöä clear-listametodilla, joka tyhjentää listan.
+Koska kyseessä on yksi ja sama lista, muutos näkyy myös globaalin reppu-muuttujan arvon muutoksena.
+Parametrina saatuun listaan tehdyt muutokset heijastuvat siis myös kutsussa annettuun listaan.
+
 ## Muita funktioiden piirteitä
 
 Pythonin funktioilla on lisäksi seuraavat ominaisuudet:
@@ -259,6 +328,8 @@ Pythonin funktioilla on lisäksi seuraavat ominaisuudet:
 Argumentteja voidaan antaa kutsukerrastasta toiseen vaihteleva määrä. Funktio voi käsitellä saadut arvot listana.
 2. Parametrien välittäminen avainsanojen avulla.
 Ohjelmoija voi antaa parametrien arvot (nimi = arvo)-pareina. Parametreille voi antaa funktion määrityksessä myös oletusarvot.
+
+*TODO: Yllä olevia avataan esimerkin kautta.*
 
 Lisäksi Python-tukee anonyymejä funktioita eli lambda-funktioita. Tällöin määritetään vain kaava tai sääntö, jolla paluuarvo tuotetaan ilman,
 että kirjoitetaan varsinaista funktiota. Lambda-funktioita käsitellään myöhemmin.
