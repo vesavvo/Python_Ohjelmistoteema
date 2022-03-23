@@ -176,6 +176,12 @@ celsius = (fahrenheit-32)*5/9
 print("Lämpötila Celsius-asteina: " + str(celsius))
 ```
 
+Ohjelma toimii seuraavasti:
+```monospace
+Anna lämpötila Fahrenheit-asteina: 102
+Lämpötila Celsius-asteina: 38.888888888888886
+```
+
 Huomaa, että edellä input-funktion palauttama arvo tulkitaan aina merkkijonoksi, vaikka käyttäjän
 antama syöte koostuisi pelkistä numeromerkeistä. Merkkijono voidaan muuntaa liukuluvuksi float-funktiolla tai
 kokonaisluvuksi int-funktiolla.
@@ -185,4 +191,60 @@ sisältävä liukuluku voidaan liittää merkkijonoon. Liitoksen molempien osapu
 
 
 ## Tulosteen muotoilu
+
+Toisinaan halutaan säädellä sitä, kuinka tulostus muotoillaan: monenko desimaalin tarkkuudella liukuluvut esitetään,
+tai monenko merkin suuruinen tila vaikkapa merkkijonolle varataan.
+
+Tämä voidaan toteuttaa käyttämällä ns. muotoilumerkkijonoliteraalia, jossa tulostettava 
+merkkijono sisältää muotoilukoodeja.
+
+Tarkastellaan asiaa esimerkin kautta. Vaihdamme edellisen esimerkin tulostuslauseen sellaiseksi, että Celsius-lämpötila
+näytetään aina kahden desimaalin tarkkuudellla:
+
+```python
+print(f"Lämpötila Celsius-asteina: {celsius:6.2f}")
+```
+Huomaa, että print-funktiokutsun argumentti alkaa nyt `f`-kirjaimella, joka kertoo, että tulostettava merkkijono
+sisältää muotoiltavia lausekkeita.
+Ilman f-kirjainta merkkijonoliteraali tulostettaisiin sellaisena kuin se ohjelmakoodissa näkyy, aaltosulkeineen päivineen.
+
+Muotoiltava lauseke muotoilukoodeineen kirjoitetaan aaltosulkeiden sisään. Esimerkissä muotoiltava lauseke on muuttujan `celsius`
+arvo, joka on liukuluku.
+
+Muotoilukoodi on tässä tapauksessa `6.2f`.
+Kirjain `f` kertoo, että lauseke tulostetaan liukuluvuna.
+Liukuluvun merkkiä `f` edeltävä merkintä `6.2` täsmentää, että tulos esitetään kuusi merkkiä leveässä kentässä,
+ja liukuluvun esitystarkkuus on kaksi desimaalia.
+
+Seuraavassa on esimerkkejä muotoilukoodeista:
+
+- .5f : liukuluku viiden desimaalin tarkkuudella
+- 10.2f : liukuluku kahden desimaalin tarkkuudella kymmenen merkkiä leveään kenttään
+- <20s : merkkijono 20 merkkiä leveään kenttään vasemman reunan mukaan tasattuna
+- 8d : kokonaisluku kahdeksan merkkiä leveään kenttään
+
+Merkkijonoa kuvaava `s` on valinnainen, ja sen voi jättää pois.
+
+Saman muotoiltavan merkkijonoliteraalin sisällä voi olla useita muotoiltavia lausekkeita koodeineen. Seuraava
+ohjelma tulostaa kahden luonnonvakion, piin ja Neperin luvun, arvot siten, että kummankin vakion nimi
+tulostetaan 12 merkkiä leveään kenttään, ja vastaava arvo tulostetaan viidellä desimaalilla kymmenen merkkiä leveään kenttään:
+
+```python
+print(f"{'Pii':12s}:{math.pi:10.5f}")
+print(f"{'Neperin luku':12s}:{math.e:10.5f}")
+```
+
+Edellä luonnonvakiot pii ja Neperin luku tulostettiin Pythonin matematiikkakirjaston avulla. Niihin viitattiin
+ilmauksilla `math.pi` ja `math.e`.
+
+Lopuksi mainittakoon, että Python tarjoaa useita tapoja tulostuksen muotoiluun. Tässä kuvatut muotoilumerkkijonoliteraalit
+ovat uudehko tapa, joka on ollut tarjolla Python-versiosta 3.6. alkaen. Yhden hyvän tavan opettelu riittää,
+mutta vaihtoehtoisiin tapoihin voit törmätä netin opetusmateriaaleja ja muiden tekemiä
+ohjelmakoodeja tarkasteltaessa. Nämä vaihtoehtoiset tavat ovat:
+1.`str.format()`-metodin käyttö
+2. muotoilumerkkijonon ja lausekeluettelon käyttö print-funktiossa (ns. prosenttinotaatio)
+3. mallimerkkijonon (*template string*) käyttö
+
+Edellä lueteltuja vaihtoehtoisia tapoja ei käsitellä tässä. Aiheesta löytyy lisätietoa Python 3 -kielen dokumentaatiosta:
+[https://docs.python.org/3/tutorial/inputoutput.html]
 

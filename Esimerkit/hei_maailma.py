@@ -1,6 +1,4 @@
-
-
-
+import math
 
 eka = -9
 toka = 12_456_123_180
@@ -15,9 +13,12 @@ print (neljäs.real)
 print (neljäs.imag)
 
 
+print(f"{'Pii':12s}:{math.pi:10.5f}")
+print(f"{'Neperin luku':12s}:{math.e:10.5f}")
+
 fahrenheit_str = input("Anna lämpötila Fahrenheit-asteina: ")
 fahrenheit = float(fahrenheit_str)
-celsius = (fahrenheit-32)*5/9
-print("Lämpötila Celsius-asteina: " + str(celsius))
+celsius = int((fahrenheit-32)*5/9)
+print(f"Lämpötila Celsius-asteina: {celsius:6d}")
 
 
