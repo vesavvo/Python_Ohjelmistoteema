@@ -190,9 +190,76 @@ muuttujia tarkoituksenmukaisesti sekä osaat välittää parametreja funktioille
 
 ## Useita parametreja
 
+Funktiolle voidaan välittää useita argumentteja. Tällöin argumentit erotetaan toisistaan pilkulla.
+Funktion kutsussa olevat argumenttien arvot sijoitetaan parametrimuuttujiin siinä järjestyksessä kuin ne esiintyvät.
 
+Tarkastellaan esimerkkiohjelmaa:
+
+```python
+def tervehdi(tervehdys, kerrat):
+    for i in range(kerrat):
+        print (tervehdys + " " + str(i+1) + ". kerran")
+    return
+```
+
+Ohjelma tuottaa seuraavan tulosteen:
+
+```monospace
+Moi 1. kerran
+Moi 2. kerran
+Moi 3. kerran
+Hyvää päivää 1. kerran
+Hyvää päivää 2. kerran
+```
+
+Huomaamme, että tervehtimisfunktio on muuttunut aiempaa yleiskäyttöisemmäksi: sitä voidaan käyttää monenmoiseen
+tervehtimiseen. Tällä tavoin funktiota parametrisoimalla (eli korvaamalla kiinteitä oletuksia parametreina
+annettavilla lähtötiedoilla) funktioista saadaan vahvoja, monikäyttöisiä työkaluja suurtenkin ohjelmien tarpeisiin.
+
+## Paluuarvo
+
+Joskus funktio tuottaa arvon, joka on palautettava kutsuvalle ohjelmanosalle. Tämä arvon palauttaminen onnistuu
+paluuarvomekanismin avulla.
+
+Funktion tuottama arvo palautetaan return-lauseella. Tähänastisissa esimerkeissä return-lause ei ole sisältänyt
+paluuarvoa. Tarkastellaan nyt paluuarvon lisäämistä.
+
+Seuraava ohjelma laskee kahden luvun neliösumman, joka saadaan kertomalla kumpikin luvuista itsellään ja
+palauttamalla näin saatujen tulojen summa. Nyt on tärkeää, että tuo neliösumma - eli funktion laskema tulos - 
+saadaan välitettyä pääohjelmalle.
+
+```python
+def neliösumma(eka, toka):
+    ns = eka**2 + toka**2
+    return ns
+
+luku1 = float(input("Anna ensimmäinen luku: "))
+luku2 = float(input("Anna toinen luku: "))
+tulos = neliösumma(luku1, luku2)
+print(f"Lukujen {luku1:.3f} ja {luku2:.3f} neliösumma on {tulos:.3f}.")
+```
+
+Tuloste on seuraavanlainen:
+
+```monospace
+Anna ensimmäinen luku: 2
+Anna toinen luku: 3.2
+Lukujen 2.000 ja 3.200 neliösumma on 14.240.
+```
+
+Paluuarvo on luonnollisesti otettava talteen, jotta sitä voidaan käyttää.
+Funktion kutsussa arvo sijoitetaan yleensä välittömästi muuttujaan tai hyödynnetään muulla tavoin.
 
 ## Lista parametrina
 
 ## Muita funktioiden piirteitä
+
+Pythonin funktioilla on lisäksi seuraavat ominaisuudet:
+1. Vaihtuvan mittaiset argumenttijonot.
+Argumentteja voidaan antaa kutsukerrastasta toiseen vaihteleva määrä. Funktio voi käsitellä saadut arvot listana.
+2. Parametrien välittäminen avainsanojen avulla.
+Ohjelmoija voi antaa parametrien arvot (nimi = arvo)-pareina. Parametreille voi antaa funktion määrityksessä myös oletusarvot.
+
+Lisäksi Python-tukee anonyymejä funktioita eli lambda-funktioita. Tällöin määritetään vain kaava tai sääntö, jolla paluuarvo tuotetaan ilman,
+että kirjoitetaan varsinaista funktiota. Lambda-funktioita käsitellään myöhemmin.
 
