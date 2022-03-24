@@ -22,7 +22,7 @@ Seuraava pseudokoodi kuvaa alkuehdollisen toistorakenteen idean: niin kauan kuin
 kaivetaan kolikoita yksi kerrallaan lisää:
 
 ```monospace
-Niin kauan kuin (maksettu < 5)
+niin kauan kuin maksettu_rahamäärä < 5
 	anna kolikko
 ```
 

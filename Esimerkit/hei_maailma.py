@@ -1,10 +1,6 @@
-# Virheellinen ohjelma, ikuinen silmukka
+suutari = input("Anna suutarin nimi: ")
+räätäli = input("Anna räätälin nimi: ")
 
-luku = 1
-while luku<5:
-    print (luku)
-
-# Tänne ei koskaan päästä:
-print("Valmista tuli.")
-
+if suutari==räätäli:
+    print("Hyvänen aika! Suutari ja räätäli ovat kaimoja!")
 

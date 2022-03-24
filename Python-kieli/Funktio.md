@@ -40,13 +40,7 @@ Jos parametreja ei anneta, kirjoitetaan kuitenkin tyhjät kaarisulkeet kuten yll
 Kaarisulkeiden jälkeen lisätään kaksoispiste. Kaksoispisteen jälkeen kirjoitetaan funktion runkoon kuuluvat lauseet,
 jotka suoritetaan silloin, kun funktiota kutsutaan.
 
-Funktion runkoon kuuluvat lauseet on kirjoitettava yhden askeleen verran sisennettyinä. Python-kielessä yhden askeleen
-sisennys saadaan ilmaistaan tuottamalla rivin alkuun neljä välilyöntiä. Käytännössä neljää välilyöntiä ei kannata
-tehdä välilyöntinäppäintä napsuttelemalla vaan painamalla yhden kerran sarkainnäppäintä eli Tab-näppäintä.
-Koodin sisentäminen on tärkeä työväline Python-kielessä: sillä ilmaistaan ohjelman sisäinen hierarkia. Tässä tapauksessa
-yhden askeleen sisennys ilmaisee, mitkä lauseet kuuluvat funktion runkoon. Python-kielessä koodin oikea sisentäminen
-on pakollista, ja sivutuotteena se tekee koodista myös havainnollisemman ja helpommin luettavan. Tässä Python poikkeaa
-monista tunnetuista ohjelmointikielistä, joissa koodin sisentäminen on kielen syntaksin näkökulmasta vapaaehtoista.
+Funktion runkoon kuuluvat lauseet on kirjoitettava yhden askeleen verran sisennettyinä.
 
 Funktio päättyy return-lauseeseen.
 Return-lauseella voidaan palauttaa paluuarvo, jos sellainen on. Tässä sellaista ei ole, joten palataan
