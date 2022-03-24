@@ -107,10 +107,11 @@ räätäli = input("Anna räätälin nimi: ")
 
 if suutari==räätäli:
     print("Hyvänen aika! Suutari ja räätäli ovat kaimoja!")
+```
 
 Huomaa, että yhtäsuuruusvertailussa on kaksi yhtäsuuruusmerkkiä (`==`). Yhdellä yhtäsuuruusmerkillä ilmaistaisiin
 sijoituslause.
-```
+
 
 Ohjelma ilmoittaa, jos suutarilla ja räätälillä on sama nimi:
 ``` monospace
@@ -121,8 +122,8 @@ Hyvänen aika! Suutari ja räätäli ovat kaimoja!
 
 ## Loogiset operaattorit
 
-## Kaksi toisensa poissulkevaa ohjelmanosaa
+## Kaksi toisensa poissulkevaa vaihtoehtoa
 
-## Monen vaihtoehdon valintarakenne
+## Monta vaihtoehtoa
 
 
