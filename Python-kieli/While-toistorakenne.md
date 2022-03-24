@@ -117,9 +117,14 @@ Anna komento: lopeta
 Toiminnot lopetettu.
 ```
 
+Esimerkissä hyödynnetään Python-kielen mukana tulevaa random-kirjastoa.
+Kirjasto otetaan käyttöön kirjoittamalla ohjelman alkuun sitä vastaava import-lause.
+Valmiiden kirjastojen käyttöä ei tarvitse opetella ulkoa, vaan käyttötavan
+voi aina tarkistaa dokumentaatiosta: [https://docs.python.org/]
+
 ## Esimerkki 3: vaihteleva määrä toistoja
 
-Tarkastellaan sitten simulaatioesimerkkiä, jossa toistokertojen lukumäärä riippuu satunnaislukugeneraattorista.
+Tarkastellaan seuraavaksi simulaatioesimerkkiä, jossa toistokertojen lukumäärä riippuu satunnaislukugeneraattorista.
 Ohjelma heittelee kahta noppaa niin kauan, kunnes saadaan kaksi kuutosta.
 
 Tarvittavien heittojen lukumäärä vaihtelee suorituskerrasta toiseen:
@@ -212,6 +217,114 @@ empiirisen simulaation, jossa arvio teoreettisesta tuloksesta saadaan jäljittel
 
 ## Break
 
+Python-kielessä on break-lause, jonka avulla on mahdollista poistua toistorakenteesta välittömästi.
+Tällöin toistoehdon arvoa ei enää lasketa.
+
+Seuraavassa esimerkissä MAYDAY-komennolla poistutaan toistorakenteen sisältä kokonaan ja saman tien:
+
+```python
+komento = input ("Anna komento: ")
+while komento!="lopeta":
+    if komento=="MAYDAY":
+        break
+    print ("Suoritan toiminnon: " + komento)
+    komento = input("Anna komento: ")
+print ("Toiminnot lopetettu.")
+```
+
+Kun käyttäjä on antanut MAYDAY-komennon, sallii while-toistorakenteen alkuehto uuden toistokierroksen aloittamisen.
+While-lohkon sisällä olevan if-lauseen suorituksen seurauksena toistorakenteesta poistutaan välittömästi:
+
+```monospace
+Anna komento: laula
+Suoritan toiminnon: laula
+Anna komento: tanssi
+Suoritan toiminnon: tanssi
+Anna komento: MAYDAY
+Toiminnot lopetettu.
+```
+
+Break-lauseen käytön suhteen kannattaa olla varovainen. Sen avulla voidaan kirjoittaa vaikeasti hahmotettavaa
+ohjelmakoodia, ns. spagettikoodia.
+Toistoehto kannattaa lähtökohtaisesti  rakentaa siten, että break-lausetta ei tarvita.
+
+Helppolukuisen ja logiikaltaan selkeän ohjelman kirjoittaminen on osa ohjelmoijan ammattitaitoa. Niinpä break-lauseen
+käyttö kannattaa rajata tilanteisiin, joissa käyttö edistää näitä tavoitteita.
+
 ## While/else
 
+Python-kielessä while-rakenteeseen voidaan liittää else-haara, johon suoritus siirtyy, kun toistoehto on epätosi.
+Else-haara suoritetaan siis toistorakenteen onnistuneen suorituksen päätteeksi. Sitä ei suoriteta, jos
+toistorakenteesta poistutaan break-lauseella.
+
+Tarkastellaan seuraavaa ohjelmaesimerkkiä:
+
+```python
+komento = input ("Anna komento: ")
+while komento!="lopeta":
+    if komento=="MAYDAY":
+        break
+    print ("Suoritan toiminnon: " + komento)
+    komento = input("Anna komento: ")
+else:
+    print ("Näkemiin.")
+print ("Toiminnot lopetettu.")
+```
+
+Ohjelma tulostaa Näkemiin-tekstin yhden kerran silloin, kun toistorakenteesta poistutaan normaalisti
+alkuehdon tullessa epätodeksi:
+
+```monospace
+Anna komento: tanssi
+Suoritan toiminnon: tanssi
+Anna komento: lopeta
+Näkemiin.
+Toiminnot lopetettu.
+```
+
+Kun ohjelmasta poistutaan break-lauseella, tekstiä ei tulosteta:
+
+```monospace
+Anna komento: tanssi
+Suoritan toiminnon: tanssi
+Anna komento: MAYDAY
+Toiminnot lopetettu.
+```
+
+Kyseessä on varsin harvoin käytetty kielen piirre.
+
 ## Ikuinen silmukka
+
+Lopuksi tarkastellaan ikuista silmukkaa, ohjelmointivirhettä, jonka jokainen ohjelmoija silloin tällöin tekee.
+Ohjelma joutuu ikuiseen silmukkaan silloin, kun toistorakenteen alkuehto ei muutu koskaan epätodeksi.
+Tällainen tilanne syntyy esimerkiksi silloin, jos kierrosmuuttujan arvoa unohdetaan kasvattaa
+toistorakenteen sisällä.
+
+Seuraava virheellinen ohjelmakoodi tuottaa ikuisen silmukan:
+
+```python
+# Virheellinen ohjelma, ikuinen silmukka
+
+luku = 1
+while luku<5:
+    print (luku)
+
+# Tänne ei koskaan päästä:
+print("Valmista tuli.")
+```
+
+Suoritus ei pääty koskaan:
+```monospace
+1
+1
+1
+...
+```
+
+Ikuiseen silmukkaan joutunut ohjelma on pysäytettävä väkisin. PyCharm-kehittimessä se tehdään napsauttamalla
+konsoli-ikkunan laidassa olevaa pysäytyspainiketta:
+
+![Uuden repositorion luonti](img/stop-nappi1.png)
+
+Jos pysäytyspainike ei pysäytä suoritusta, tarkista, että päätetoimintojen emulointi on käytössä konsoli-ikkunassa:
+valitse Run/Edit Configurations, ja aseta päälle Emulate Terminal in Output Console -valintaruutu.
