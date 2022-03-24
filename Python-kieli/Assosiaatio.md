@@ -175,7 +175,33 @@ parametrina annetaan viittaus Koira-olioon. Assosiaatiosuhde voi olla voimassa v
 kun toisen luokan ilmentymä kerrotaan metodin parametrina. Kun metodin kutsu päättyy, katoaisi metodin suorituksen
 aikainen assosiaatiosuhdekin, ellei tietoa suhteesta ole tallennettu ominaisuudeksi, kuten esimerkissämme on tehty.
 
-Tarkastellaan nyt esimerkkiä tilanteesta, jossa assosiaatiosuhe on puhtaasti tilapäinen: auton ja romuttamon välistä
-suhdetta.
+Tarkastellaan nyt esimerkkiä tilanteesta, jossa assosiaatiosuhde on puhtaasti tilapäinen: auton ja maalaamon välistä
+suhdetta. Esimerkissä luodaan sininen auto ja annetaan se maalaamolle maalattavaksi punaiseksi:
 
+```python
+class Auto:
+    def __init__(self, rekisteritunnus, väri):
+        self.rekisteritunnus = rekisteritunnus
+        self.väri = väri
 
+class Maalaamo:
+    def maalaa(self, auto, väri):
+        auto.väri = väri
+
+maalaamo = Maalaamo()
+auto = Auto("ABC-123", "sininen")
+print("Auto on " + auto.väri)
+maalaamo.maalaa(auto, "punainen")
+print("Auto on nyt " + auto.väri)
+```
+
+Ohjelma tulostaa auton värin ennen ja jälkeen maalauksen:
+
+```monospace
+Auto on sininen
+Auto on nyt punainen
+```
+
+Tässä esimerkissä maalaamo tuntee maalattavan auton vain maalaa-metodin suorituksen ajan, sillä viittaus Auto-olioon
+on saatu metodikutsun parametrina. Kun metodin suoritus päättyy, parametrimuuttujan arvoon ei enää pääse käsiksi.
+Myöskään auto ei tiedä maalaamosta mitään. Maalaamon ja auton assosiaatiosuhde on tässä esimerkissä tilapäinen.
