@@ -11,14 +11,14 @@
 6. Listarakenne ja läpikäyvä toistorakenne (for)
 7. Funktio
 8. Monikko, joukko ja sanakirja
-9. Iteraattori
+
+Lisäksi ehkä: iteraattori
 
 
 ## Osa 3: Pythonin hallinta
-10. Luokka, olio, konstruktori
-11. Assosiaatio
-12. Periytyminen
-13. JSON-käsittely
-14. Relaatiotietokannan käyttö
-15. Lambda-funktio
-16. Poikkeuskäsittely
+9.  Luokka, olio, konstruktori
+10. Assosiaatio
+11. Periytyminen
+12. Relaatiotietokannan käyttö
+
+Lisäksi ehkä: JSON-käsittely, lambda-funktio, poikkeuskäsittely
