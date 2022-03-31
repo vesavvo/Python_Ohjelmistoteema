@@ -145,7 +145,8 @@ Kun sanakirja alustetaan arvot luettelemalla, annetaan kukin avain-arvopari seur
 avain-arvoparit erotellaan toisistaan pilkulla.
 
 Kun olemassa olevaan sanakirjaan lisätään arvo, käytetään notaatiota `sanakirja[avain] = arvo`, missä `sanakirja` on
-sanakirjaan viittaavan muuttujan nimi.
+sanakirjaan viittaavan muuttujan nimi. Vastaavasti sanakirjassa olevan alkion arvo saadaan haettua
+kirjoittamalla `sanakirja[avain]`.
 
 Kun sanakirja läpikäydään `for/in`-rakennetta käyttäen, saa kierrosmuuttuja arvokseen vuoron perään kunkin sanakirjassa
 esiintyvän avaimen.
