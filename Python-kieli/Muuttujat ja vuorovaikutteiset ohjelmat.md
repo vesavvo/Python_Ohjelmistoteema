@@ -223,9 +223,16 @@ Seuraavassa on esimerkkejä muotoilukoodeista:
 - <20s : merkkijono 20 merkkiä leveään kenttään vasemman reunan mukaan tasattuna
 - 8d : kokonaisluku kahdeksan merkkiä leveään kenttään
 
-Merkkijonoa kuvaava `s` on valinnainen, ja sen voi jättää pois.
+Muotoilkoodien kirjoittaminen on valinnaista. Muotoilumerkkijonoliteraalien käyttö helpottaa
+silti numeeristen ja merkkijonomuotoisten tulosteiden yhdistelemistä, kun `str`-funktioita ja muita
+muunnosfunktioita ei tarvitse välttämättä käyttää. Edellä voisimme yksinkertaisesti tulostaa Celsius-asteet
+ilman muotoilukoodia:
 
-Saman muotoiltavan merkkijonoliteraalin sisällä voi olla useita muotoiltavia lausekkeita koodeineen. Seuraava
+```python
+print(f"Lämpötila Celsius-asteina: {celsius}")
+```
+
+Saman muotoiltavan merkkijonoliteraalin sisällä voi olla useita muotoiltavia lausekkeita mahdollisine koodeineen. Seuraava
 ohjelma tulostaa kahden luonnonvakion, piin ja Neperin luvun, arvot siten, että kummankin vakion nimi
 tulostetaan 12 merkkiä leveään kenttään, ja vastaava arvo tulostetaan viidellä desimaalilla kymmenen merkkiä leveään kenttään:
 
