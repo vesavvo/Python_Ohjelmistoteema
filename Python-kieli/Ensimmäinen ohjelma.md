@@ -14,20 +14,64 @@ Python on maailman yleisimpiä ohjelmointikieliä. Kun opiskelet Pythonia, voit:
 Ensimmäisenä opiskeluvuonna saat vankat Python-ohjelmoinnin perustaidot. Syvennät osaamistasi myöhemmissä opinnoissa,
 ja opit käyttämään Python-kieltä työkaluna ohjelmointi- ja ohjelmistotuotantoprojekteissa.
 
+Tässä ensimmäisessä moduulissa asennat Python-kehitystyökalut ja opit kirjoittamaan ja ajamaan ensimmäisen Python-ohjelmasi.
+
 ## Kehittimen asennus
 
 Aloitetaan kehittimen eli IDE:n asentamisesta. IDE on lyhenne englannin kielen sanoista
-Integrated Development Environment. Se tarkoittaa ammattikäyttöön
+*Integrated Development Environment*. Se tarkoittaa ammattikäyttöön
 soveltuvaa ohjelmistoa, jonka avulla voit kirjoittaa, ajaa ja testata ohjelmia.
 
 Tällä opintojaksolla käytetään JetBrains PyCharm -kehitintä, jonka voit ladata seuraavasti:
 1. Siirry osoitteeseen https://www.jetbrains.com/
-2. Valitse Developer tools / PyCharm ja paina Download.
+2. Valitse **Developer tools / PyCharm** ja paina **Download**.
 3. Valitse ladattavaksi Professional-versio.
 4. Saat käyttöön oikeuttavan lisenssin, kun asennuksen yhteydessä rekisteröit ohjelmiston käyttäen Metropolian sähköpostiosoitetta. Asennusohjelma opastaa sinua tässä.
 
 Asennuksen jälkeen voit käynnistää PyCharm-ohjelman napsauttamalla sen kuvaketta.
 
-## Ohjelman kirjoitus
+## projektin ja Python-tiedoston luonti
 
-## Ohjelman tallennus ja ajo
+Ennen kuin voit kirjoittaa ohjelmia, on perustettava projekti. Projektia voi ajatella eräänlaisena
+salkkuna, johon kerätään samaan aihepiiriin liittyviä ohjelmia. Esimerkiksi ensimmäisiä ohjelmointikokeiluja
+varten voit perustaa uuden projektin nimeltä ´kokeilut´. Nimi kirjoitetaan projektin tiedostopolun perään:
+
+![Uuden projektin luonti](img/uusiprojekti.png)
+
+Uusi projekti perustetaan oletusarvoisesti virtuaaliympäristöön (venv). Tämä helpottaa ohjelmien käyttämien
+pakkausten ja niiden versioiden hallintaa.
+
+Kun painat **Create**, kehitin kysyy, avataanko projekti olemassaolevassa vai uudessa ikkunassa. Voit valita kumman vain vaihtoehdon.
+
+Näytön vasempaan reunaan ilmestyy projektipuu, joka näyttää projektiin kuuluvat tiedostot:
+
+![Uuden projektin luonti](img/projektipuu.png)
+
+Jokainen ohjelma kirjoitetaan tiedostoon projektin kansiohierarkian sisälle. Voit tehdä ensimmäistä
+ohjelmaa varten uuden tiedoston napsauttamalla projektin nimeä projektipuussa hiiren kakkospainikkeella.
+Valitse sitten **New / Python file** ja kirjoita avautuvaan valintaikkunaan tiedoston nimi, esimerkiksi
+`hello`.
+Projektipuuhun ilmestyy kuvassa näkyvä tiedosto nimeltä `hello.py`. Python-ohjelma kirjoitetaan tiedostoihin, joiden päättenä on ´.py´. 
+
+
+## Ohjelman kirjoitus, tallennus ja ajo
+
+Ohjelma, eli Python-lähdekoodi, kirjoitetaan editorikenttään: 
+
+![Ensimmäinen ohjelma](img/ekaohjelma.png)
+
+Voit suorittaa eli ajaa ohjelman napsauttamalla hiiren kakkospainiketta editorikentässä ja valitsemalla **Run 'hello'**.
+
+Tuloste ilmestyy alareunan konsoli-ikkunaan:
+
+```python
+Hei, maailma!
+```
+
+Jos ohjelmassa on virheitä, ei hätää! Saat virheilmoituksen, joka auttaa virheen paikantamisessa. Sen jälkeen voit
+korjata ohjelmaa niin monta kertaa kuin on tarpeen ja suorittaa sen aina uudelleen.
+
+Virheiden teko kuuluu ohjelmointiin. On arvioitu, että 80 prosenttia ammattimaisen ohjelmoijan työajasta kuuluu
+virheiden jäljitykseen ja niiden korjaamiseen. Myös oppiminen tapahtuu virheitä tekemällä. Kun selvität virheen
+syyn ja korjaat sen, olet oppinut hieman paremmaksi ohjelmoijaksi.
+
