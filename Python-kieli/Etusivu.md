@@ -16,9 +16,10 @@ Lisäksi ehkä: iteraattori
 
 
 ## Osa 3: Pythonin hallinta
-9.  Luokka, olio, konstruktori
+9. Luokka, olio, konstruktori
 10. Assosiaatio
 11. Periytyminen
 12. Relaatiotietokannan käyttö
+13. Taustapalvelun rakentaminen
 
-Lisäksi ehkä: JSON-käsittely, lambda-funktio, poikkeuskäsittely
+Lisäksi ehkä: lambda-funktio, poikkeuskäsittely
