@@ -167,7 +167,7 @@ Pääohjelmaan ne eivät säteile.
 
 ## Moniperintä
 
-Toisinaan on tilanteita, joissa sama luokka halutaan määrittä kahden tai jopa useamman luokan aliluokaksi.
+Toisinaan on tilanteita, joissa sama luokka halutaan määrittää kahden tai jopa useamman luokan aliluokaksi.
 Tätä piirrettä kutsutaan moniperinnäksi. Python-kielessä moniperintä on sallittua toisin kuin joissain
 muissa olio-ohjelmointikielissä.
 
