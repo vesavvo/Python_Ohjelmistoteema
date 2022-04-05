@@ -149,7 +149,7 @@ aliluokassa määritettyyn tuntipalkkaan.
 Ongelma ratkeaa ylikirjoittamalla `tulostaTiedot`-metodi. Ylikirjoittaminen tarkoittaa sitä, että aliluokkaan
 luodaan toinen toteutus yliluokassa olevasta metodista. Aliluokassa oleva, ylikirjoitettu metodi menee edelle
 yliluokassa määritellystä metodista. Kun siis kirjoitamme `t.tulostaTiedot()` oliolle, joka on
-`Työntekijä`-luokan ilmentymä, kutsutaan automaattisesti `Työntekijä`-luokassa olevaa versiota metodista.
+`Tuntipalkkainen`-luokan ilmentymä, kutsutaan automaattisesti `Tuntipalkkainen`-luokassa olevaa versiota metodista.
 Jos sama metodikutsu kirjoitetaan `Työntekijä`-luokan ilmentymäksi luodulle oliolle, kutsutaan yliluokassa
 olevaa versiota.
 
