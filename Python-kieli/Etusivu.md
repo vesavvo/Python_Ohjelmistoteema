@@ -12,14 +12,10 @@
 6. Funktio
 7. Monikko, joukko ja sanakirja
 
-Lisäksi ehkä: iteraattori
-
-
 ## Osa 3: Pythonin hallinta
-9. Luokka, olio, alustaja
-10. Assosiaatio
-11. Periytyminen
-12. Relaatiotietokannan käyttö
-13. Taustapalvelun rakentaminen
-
-Lisäksi ehkä: lambda-funktio, poikkeuskäsittely
+8. Luokka, olio, alustaja
+9. Assosiaatio
+10. Periytyminen
+11. Relaatiotietokannan käyttö
+12. Ulkoisen rajapinnan käyttö
+13. Taustapalvelun ja rajapinnan rakentaminen

@@ -4,20 +4,20 @@ Tässä moduulissa opit käyttämään ulkoisia ohjelmointirajapintoja.
 
 Internetin julkiset palveluntarjoajat kuten sääpalvelut ja avoimet tietokantapalvelut antavat mahdollisuuden
 käyttää niitä ohjelmallisesti. Tuo ohjelmallinen käyttö tapahtuu niin kutsutun ohjelmointirajapinnan kautta.
-Palveluntarjoaja päättää, millaisen ohjelmointirajapinnan se tarjoaa ja miten sitä käytetään. Rarajapinnan
+Palveluntarjoaja päättää, millaisen ohjelmointirajapinnan se tarjoaa ja miten sitä käytetään. Rajapinnan
 käyttö edellyttääkin aina rajapinnan dokumentaatioon perehtymistä.
 
 ## Pyynnön lähettäminen
 
-Tarkastellaan esimerkkinä TVMaze-palvelun tarjoaman rajapinnan käyttö. Rajapinnan dokumentaatio
+Tarkastellaan esimerkkinä TVMaze-palvelun tarjoaman rajapinnan käyttöä. Rajapinnan dokumentaatio
 on saatavilla sivulla https://www.tvmaze.com/api.
 
 Kirjoitetaan Python-ohjelma, joka hakee kaikki ohjelmat, joissa esiintyy käyttäjän kirjoittama merkkijono.
 Dokumentaation perusteella tällainen rajapintapyyntö annetaan muodossa `URL: /search/shows?q=:query`, ja esimerkki
 pyynnöstä on https://api.tvmaze.com/search/shows?q=girls.
 
-Pyyntö lähetetään requests-pakkauksen get-metodin avulla, ja vastaukseen kohdistettava json-metodi tuottaa
-vastauksen sisällöstä JSON-muotoisen olion:
+Pyyntö lähetetään `requests`-pakkauksen `get`-metodin avulla, ja vastaukseen kohdistettava `json`-metodi tuottaa
+vastauksen sisällöstä Python-sanakirjarakenteen:
 
 ```python
 import requests
@@ -38,6 +38,128 @@ Anna hakusana: python
 ```
 
 Pyynnön lähetys onnistuu ja vastaus saadaan.
-Vastauksesta rakennettua JSON-oliota on käsiteltävä, jotta siitä saadaan tulostettua halutut tiedot.
+Vastauksesta rakennettua JSON-rakennetta on käsiteltävä, jotta siitä saadaan tulostettua halutut tiedot.
 
 ## Vastauksen käsittely
+
+Edellä JSON-vastaus tuotettiin muuttujaan nimeltä `vastaus`. Sen rakenteen hahmottamiseksi voidaan käyttää
+funktiota `json.dumps`, joka muotoilee vastauksen paremmaksi. Kirjoitetaan tulostuslauseen tilalle:
+```python
+print(json.dumps(vastaus, indent=2))
+```
+
+Tätä varten ohjelman alkuun on lisättävä `import`-lause:
+```python
+import json
+```
+
+Nyt tuloksena oleva rakenne on helpompi hahmottaa. Se alkaa seuraavasti:
+
+```json
+[
+  {
+    "score": 0.6097852,
+    "show": {
+      "id": 25376,
+      "url": "https://www.tvmaze.com/shows/25376/python-hunters",
+      "name": "Python Hunters",
+      "type": "Reality",
+      "language": "English",
+      "genres": [
+        "Nature"
+      ],
+```
+
+Nähdään, että tuloksena olevassa listassa on alkioina ohjelmia, joista jokainen esitetään
+sanakirjarakenteena. Kukin sellainen sisältää avaimen `show`, jonka arvona on jälleen sanakirjarakenne.
+Sisemmästä sanakirjarakenteesta löytyy avain `name`, ja sen arvona on ohjelman nimen sisältävä merkkijono.
+Esimerkiksi tuloslistan `vastaus` ensimmäisen elokuvan nimeen voitaisiin näin ollen viitata ilmauksella
+`vastaus[0][show][name]`.
+
+Nyt voimme korvata ohjelmassa olevan tulostuslauseen `for`-toistorakenteella, joka tulostaa jokaisen löytyneen
+ohjelman nimen:
+
+```python
+for a in vastaus:
+    print(a["show"]["name"])
+```
+
+Tuloste alkaa seuraavasti:
+
+```monospace
+Python Hunters
+Monty Python: Almost the Truth
+Mytho
+Monty Python's Flying Circus
+```
+
+## Virheenkäsittely
+
+Edellä laadittu ulkoista rajapintaa käyttävä ohjelma toimii silloin, kun ulkoinen palvelu (tässä tapauksessa TV Maze)
+on toiminnassa ja onnistuu suorittamaan vastaanottamansa pyynnön. Koska kyseessä on ulkoinen palvelu, emme voi
+kuitenkaan vaikuttaa palvelun toimivuuteen. Lisätään ohjelmaan tarpeelliset virhetarkistukset, jotta voimme ohjelmoida
+virhetilanteiden käsittelyn haluamallamme tavalla.
+
+Virhetilanteiden käsittely perustuu tässä kahteen seikkaan:
+1. Vastauksen mukana tulevaan HTTP-statuskoodiin, sekä
+2. Python-ohjelmassa syntyvien poikkeusten käsittelyyn.
+
+Kun ulkoinen palvelu on toiminnassa, se palauttaa vastauksen mukana HTTP-statuskoodin, joka on 200 silloin,
+kun pyyntöön vastataan onnistuneesti. Epäonnistuneeseen pyyntöön vastataan virheen luonnetta mahdollisimman
+hyvin kuvaavalla statuskoodilla.
+Statuskoodien virallinen luettelo on World Wide Web Consortiumin (W3C) web-sivulla
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html.
+Vastauksen mukana tuleva statuskoodi voidaan lukea ohjelmallisesti `requests.get`-metodin palauttaman
+vastauksen ominaisuudesta `status_code`. Tässä rajoitutaan testaamaan onko saatu statuskoodi 200, vai onko
+se jotakin muuta.
+
+Toisinaan voi syntyä tilanne, jossa ulkoiseen palveluun ei saada lainkaan yhteyttä, ja palvelu ei pääse
+edes palauttamaan virheestä kertovaa statuskoodia. Tämä ilmenee siten, että Python-ohjelma
+kaatuu ajonaikaiseen virhetilanteeseen. Tällöin syntyy niin kutsuttu ajonaikainen poikkeus. Python-kielessä
+poikkeusten käsittely on mahdollista ohjelmoida itse, jolloin se, mitä poikkeuksen syntyessä tapahtuu,
+on ohjelmoijan päätettävissä. Poikkeuksen käsittely toteutetaan `try/except`-rakenteella.
+
+Lisätään ohjelmaan HTTP-statuskoodin 200 varmistus sekä poikkeuskäsittelyrutiini kaikille
+`request`-kirjaston tuottamille poikkeuksille.
+
+Jokainen Python-poikkeus on olio.
+Erityisesti `requests`-kirjaston tuottamat poikkeukset ovat `RequestException`-luokasta periytyvien luokkien
+ilmentymiä. Virhetarkistuksilla täydennetty ohjelma näyttää tältä:
+
+```python
+import json
+import requests
+
+hakusana = input("Anna hakusana: ")
+
+# Pyynnön malli: https://api.tvmaze.com/search/shows?q=girls
+pyyntö = "https://api.tvmaze.com/search/shows?q=" + hakusana
+
+try:
+    vastaus = requests.get(pyyntö)
+    if vastaus.status_code==200:
+        json_vastaus = vastaus.json()
+        print(json.dumps(json_vastaus, indent=2))
+        for a in json_vastaus:
+            print(a["show"]["name"])
+except requests.exceptions.RequestException as e:
+    print ("Hakua ei voitu suorittaa.")
+```
+
+Kokeillaan mitä tapahtuu, kun haku epäonnistuu. Muutetaan pyyntö tahallaan virheelliseksi tekemällä
+lyöntivirhe verkko-osoitteeseen. Maatunnuksena on nyt virheellisesti `cob` eikä `com`:
+
+```python
+pyyntö = "https://api.tvmaze.cob/search/shows?q=" + hakusana
+```
+
+Nyt ohjelma ei "kaadu" virhetilanteeseen, vaan se toimii siten kuin olemme ohjelmoineet:
+```monospace
+Anna hakusana: python
+Hakua ei voitu suorittaa.
+```
+
+Lopuksi tietenkin korjaamme verkko-osoitteen oikeaksi. Poikkeuskäsittelyn ansiosta olemme nyt
+varautuneet esimerkiksi tilanteisiin, joissa TV Maze on poissa käytöstä huoltokatkon vuoksi.
+Hyvään ohjelmointitapaan kuuluu lisätä ohjelmaan tämän kaltaiset virhetarkistukset.
+

@@ -1,4 +1,4 @@
-# Taustapalvelun rakentaminen
+# Taustapalvelun ja rajapinnan rakentaminen
 
 Tässä moduulissa opit toteuttamaan Python-kielisen taustapalvelun (*backend*). Tällöin voit rakentaa
 web-palvelun siten, että web-sovelluksen HTML-/CSS-/JavaScript-käyttöliittymä kommunikoi
