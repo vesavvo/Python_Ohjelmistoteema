@@ -9,14 +9,38 @@ käyttö edellyttääkin aina rajapinnan dokumentaatioon perehtymistä.
 
 ## Pyynnön lähettäminen
 
-Tarkastellaan esimerkkinä TVMaze-palvelun tarjoaman rajapinnan käyttöä. Rajapinnan dokumentaatio
+Rajapintapyynnöt noudattavat HTTP-yhteyskäytäntöä. Yhteyskäytäntö määrittelee neljä yleisesti käytettyä operaatiota tähän 
+tarkoitukseen:
+- GET lukee sisältökohteen
+- PUT korvaa olemassa olevan sisältökohteen
+- POST luo uuden sisältökohteen
+- PATCH muokkaa olemassa olevaa sisältökohdetta
+- DELETE poistaa olemassa olevan sisältökohteen
+
+GET-operaatio on sama operaatio, jota käytetään tavallisiin verkkosivujen hakupyyntöihin. Jos rajapinta suunnitellaan
+niin kutsuttujen REST-suunnitteluperiaatteiden mukaisesti, on käytössä kaikki viisi operaatiota.
+REST-rajapintamääritys noudattaa muitakin suunnitteluperiaatteita, joita ei tässä yhteydessä käsitellä. 
+
+Toimiva rajapinnan
+määritys voi perustua myös pelkkään GET-operaatioon, jolloin kyseessä ei ole varsinainen
+REST-rajapinta. Tällä kurssilla tarkastellaan GET-operaatioihin perustuvan rajapinnan käyttöä ja toteutusta.
+
+Tarkastellaan esimerkkinä TVmaze-palvelun tarjoaman rajapinnan käyttöä. Rajapinnan dokumentaatio
 on saatavilla sivulla https://www.tvmaze.com/api.
 
-Kirjoitetaan Python-ohjelma, joka hakee kaikki ohjelmat, joissa esiintyy käyttäjän kirjoittama merkkijono.
-Dokumentaation perusteella tällainen rajapintapyyntö annetaan muodossa `URL: /search/shows?q=:query`, ja esimerkki
+Kyseessä on julkinen ja kaikille avoin rajapinta, joka ei edellytä käyttäjätunnusten luontia.
+Tällaisiin rajapintoihin on yleensä mahdollista tehdä vain lukuoperaatioita. Lukuoperaatiot tehdään GET-rajapintapyyntöjen
+avulla.
+
+Tavoitteenamme on kirjoittaa Python-ohjelma, joka hakee kaikki ohjelmat, joissa esiintyy käyttäjän kirjoittama merkkijono.
+TVmaze-rajapinnan dokumentaation perusteella tällainen rajapintapyyntö annetaan muodossa `URL: /search/shows?q=:query`, ja esimerkki
 pyynnöstä on https://api.tvmaze.com/search/shows?q=girls.
 
-Pyyntö lähetetään `requests`-pakkauksen `get`-metodin avulla, ja vastaukseen kohdistettava `json`-metodi tuottaa
+Pyynnön toimivuutta kannattaa aluksi kokeilla kirjoittamatta se Internet-selaimen (esim. Chrome) osoiteriville.
+Selaimen kautta voidaan yleensä lähettää vain  GET-pyyntöjä.
+
+Python-kielisestä ohjelmasta vastaava pyyntö lähetetään `requests`-pakkauksen `get`-metodin avulla.
+Vastaukseen kohdistettava `json`-metodi tuottaa
 vastauksen sisällöstä Python-sanakirjarakenteen:
 
 ```python
