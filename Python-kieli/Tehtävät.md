@@ -166,8 +166,21 @@ päättyy. Käyttäjä saa valita uuden toiminnon miten monta kertaa tahansa ain
 (ICAO-koodi on lentoaseman yksilöivä tunniste. Esimerkiksi Helsinki-Vantaan lentoaseman ICAO-koodi on EFHK. Löydät
 koodeja helposti selaimen avulla.)
 
+## 8. Relaatiotietokannan käyttö
 
-## 8. Luokka, olio, alustaja
+1. Kirjoita ohjelma, joka kysyy käyttäjältä lentoaseman ICAO-koodin. Ohjelma hakee ja tulostaa koodia vastaavan lentokentän nimen
+ja sen sijaintikunnan kurssilla käytettävästä lentokenttätietokannasta.
+2. Kirjoita ohjelma, joka kysyy käyttäjältä maakoodin (esimerkiksi `FI`) ja tulostaa kyseisessä maassa olevien
+lentokenttien lukumäärät tyypeittäin. Esimerkiksi Suomen osalta tuloksena on saatava tieto siitä,
+että pieniä lentokenttiä on 65 kappaletta, helikopterikenttiä on 15 kappaletta jne. 
+3. Kirjoita ohjelma, joka kysyy käyttäjältä kahden lentokentän ICAO-koodit. Ohjelma ilmoittaa lentokenttien välisen etäisyyden
+kilometreinä. Laskenta perustuu tietokannasta haettuihin koordinaatteihin. Laske etäisyys `geopy`-kirjaston avulla: https://geopy.readthedocs.io/en/stable/. Asenna kirjasto valitsemalla
+**View / Tool Windows / Python Packages**. Kirjoita hakukenttään `geopy` ja vie asennus loppuun.
+
+
+
+
+## 9. Luokka, olio, alustaja
 
 1. Kirjoita `Auto`-luokka, jonka ominaisuuksina ovat rekisteritunnus, huippunopeus, tämänhetkinen nopeus
 ja kuljettu matka. Kirjoita
@@ -197,7 +210,7 @@ Sitten kilpailu alkaa. Kilpailun aikana tehdään tunnin välein seuraavat toime
 selkeäksi taulukoksi muotoiltuna.
 
 
-## 9. Assosiaatio
+## 10. Assosiaatio
 
 1. Tehtävä on jatkoa aiemmalle autokilpailutehtävälle. Kirjoita `Kilpailu`-luokka, jolla on ominaisuuksina
 kilpailun nimi, pituus kilometreinä ja osallistuvien autojen lista. Luokassa on alustaja, joka saa parametreinaan
@@ -215,7 +228,7 @@ avulla, onko kilpailu ohi. Ajantasainen tilanne tulostetaan `tulosta tilanne`-me
 kun kilpailu on päättynyt.
 
 
-## 10. Periytyminen
+## 11. Periytyminen
 
 1. Kirjoita aiemmin laatimallesi Auto-luokalle aliluokat Sähköauto ja Polttomoottoriauto. Sähköautolla on ominaisuutena
 akkukapasiteetti kilowattitunteina. Polttomoottoriauton ominaisuutena on bensatankin koko litroina. Kirjoita aliluokille
@@ -224,16 +237,6 @@ yliluokan alustajaa kahden ensin mainitun asettamiseksi sekä asettaa oman kapas
 yhden sähköauton (ABC-15, 180 km/h, 52.5 kWh) ja yhden polttomoottoriauton (ACD-123, 165 km/h, 32.3 l). Aseta kummallekin
 autolle haluamasi nopeus, käske autoja ajamaan kolmen tunnin verran ja tulosta autojen matkamittarilukemat.
 
-## 11. Relaatiotietokannan käyttö
-
-1. Kirjoita ohjelma, joka kysyy käyttäjältä lentoaseman ICAO-koodin. Ohjelma hakee ja tulostaa koodia vastaavan lentokentän nimen
-ja sen sijaintikunnan kurssilla käytettävästä lentokenttätietokannasta.
-2. Kirjoita ohjelma, joka kysyy käyttäjältä maakoodin (esimerkiksi `FI`) ja tulostaa kyseisessä maassa olevien
-lentokenttien lukumäärät tyypeittäin. Esimerkiksi Suomen osalta tuloksena on saatava tieto siitä,
-että pieniä lentokenttiä on 65 kappaletta, helikopterikenttiä on 15 kappaletta jne. 
-3. Kirjoita ohjelma, joka kysyy käyttäjältä kahden lentokentän ICAO-koodit. Ohjelma ilmoittaa lentokenttien välisen etäisyyden
-kilometreinä. Laskenta perustuu tietokannasta haettuihin koordinaatteihin. Laske etäisyys `geopy`-kirjaston avulla: https://geopy.readthedocs.io/en/stable/. Asenna kirjasto valitsemalla
-**View / Tool Windows / Python Packages**. Kirjoita hakukenttään `geopy` ja vie asennus loppuun.
 
 ## 12. Ulkoisen rajapinnan käyttö
 

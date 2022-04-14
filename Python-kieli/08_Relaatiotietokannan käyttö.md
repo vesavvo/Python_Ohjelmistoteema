@@ -90,24 +90,11 @@ saadaan onnistuneesti yhteys.
 ## Hakukysely ja tulosjoukon käsittely
 
 Kirjoitetaan nyt tietokantaa käyttävä ohjelma, joka kysyy käyttäjältä sukunimen,
-hakee sitä vastaavien työntekijöiden tiedot tietokannasta ja luo niiden pohjalta Työntekijä-olioista
-koostuvan listan. Lopuksi kutakin listassa olevaa työntekijää pyydetään esittelemään itsensä listassa
-olevan metodin avulla:
+hakee sitä vastaavien työntekijöiden tiedot tietokannasta ja esittelee kunkin työntekijän:
 
 ```python
 import mysql.connector
 
-class Työntekijä:
-    def __init__(self, numero, sukunimi, etunimi, palkka):
-        self.numero = numero
-        self.sukunimi = sukunimi
-        self.etunimi = etunimi
-        self.palkka = palkka
-
-    def esittäydy(self):
-        print(f"Päivää! Olen {self.etunimi} {self.sukunimi}. Palkkani on {self.palkka} euroa kuussa.")
-
-# Tietokantametodit
 def haeTyöntekijätSukunimellä(sukunimi):
     sql = "SELECT Numero, Sukunimi, Etunimi, Palkka FROM Työntekijä"
     sql += " WHERE Sukunimi='" + sukunimi + "'"
@@ -115,11 +102,10 @@ def haeTyöntekijätSukunimellä(sukunimi):
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
-    työntekijät = []
     if kursori.rowcount >0 :
         for rivi in tulos:
-            työntekijät.append(Työntekijä(rivi[0], rivi[1], rivi[2], rivi[3]))
-    return työntekijät
+            print(f"Päivää! Olen {rivi[2]} {rivi[1]}. Palkkani on {rivi[3]} euroa kuussa.")
+    return
 
 # Pääohjelma
 yhteys = mysql.connector.connect(
@@ -132,9 +118,7 @@ yhteys = mysql.connector.connect(
          )
 
 sukunimi = input("Anna sukunimi: ")
-työntekijät = haeTyöntekijätSukunimellä(sukunimi)
-for t in työntekijät:
-    t.esittäydy()
+haeTyöntekijätSukunimellä(sukunimi)
 
 ```
 

@@ -1,12 +1,28 @@
 
-numerot = {"Viivi":"050-1234567", "Ahmed":"040-1112223", "Pekka":"050-7654321"}
+import mysql.connector
 
-numerot["Olga"] = "050-1011012"
-numerot["Mary"] = "0401-2132139"
+def haeTyöntekijätSukunimellä(sukunimi):
+    sql = "SELECT Numero, Sukunimi, Etunimi, Palkka FROM Työntekijä"
+    sql += " WHERE Sukunimi='" + sukunimi + "'"
+    print(sql)
+    kursori = yhteys.cursor()
+    kursori.execute(sql)
+    tulos = kursori.fetchall()
+    if kursori.rowcount >0 :
+        for rivi in tulos:
+            print(f"Päivää! Olen {rivi[2]} {rivi[1]}. Palkkani on {rivi[3]} euroa kuussa.")
+    return
 
-print (numerot)
+# Pääohjelma
+yhteys = mysql.connector.connect(
+         host='127.0.0.1',
+         port= 3306,
+         database='ihmiset',
+         user='root',
+         password='pelle',
+         autocommit=True
+         )
 
-nimi = input("Anna nimi: ")
-if nimi in numerot:
-    print (f"Henkilön {nimi} puhelinnumero on {numerot[nimi]}.")
+sukunimi = input("Anna sukunimi: ")
+haeTyöntekijätSukunimellä(sukunimi)
 
