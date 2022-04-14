@@ -6,7 +6,7 @@ tehtävien lukumäärällä.
 ## 1. Ensimmäinen ohjelma ja versionhallinnan käyttöönotto
 
 1. Asenna PyCharm-kehitin. Kirjoita ohjelma, joka tervehtii sinua omalla nimelläsi.
-Jos nimesi on Viivi Virta, ohjelma tulostaa: `Hei, Viivi Virta!`
+Jos nimesi olisi Viivi Virta, ohjelma tulostaisi: `Hei, Viivi Virta!`
 2. Luo itsellesi GitHub-käyttäjätili ja tee repositorio Python-harjoitustehtäviä varten. Määritä  PyCharm käyttämään
 repositoriota harjoitustehtäväprojektin tietojen tallentamiseen. Varmista, että voit hakea, sitouttaa ja työntää
 tekemiäsi muutoksia (*pull*, *commit*, *push*).
@@ -14,8 +14,8 @@ tekemiäsi muutoksia (*pull*, *commit*, *push*).
 ## 2. Muuttujat ja vuorovaikutteiset ohjelmat
 
 1. Kirjoita ohjelma, joka kysyy nimesi ja sen jälkeen tervehtii sinua omalla nimelläsi. Esimerkkejä:
-   - Jos syötät nimeksesi Viivi, ohjelma tervehtii sinua sanoin 'Terve, Viivi!'
-   - Jos syötät nimeksesi Ahmed, ohjelma tervehtii sinua sanoin 'Terve, Ahmed!'
+   - Jos syötät nimeksesi Viivi, ohjelma tervehtii sinua sanoin `Terve, Viivi!`
+   - Jos syötät nimeksesi Ahmed, ohjelma tervehtii sinua sanoin `Terve, Ahmed!`
 
 2. Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan.
 
@@ -59,7 +59,7 @@ Kuha on alamittainen, jos sen pituus on alle 37 cm.
    - B on ikkunaton hytti autokannen yläpuolella.
    - C on ikkunaton hytti autokannen alapuolella.
 
-   Jos käyttäjä syöttää kelvottoman hyttiluokan, ohjelma tulostaa 'Virheellinen hyttiluokka'.
+   Jos käyttäjä syöttää kelvottoman hyttiluokan, ohjelma tulostaa `Virheellinen hyttiluokka`.
 
 3. Kirjoita ohjelma, joka kysyy käyttäjän biologisen sukupuolen ja hemoglobiiniarvon (g/l). Ohjelma ilmoittaa, onko hemoglobiiniarvo alhainen, normaali vai korkea.
    - Naisen normaali hemoglobiiniarvo on välillä 117-175 g/l.
