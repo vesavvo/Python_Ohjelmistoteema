@@ -1,10 +1,17 @@
-# Lentopelin  toimeksianto
+# Esiprojektin toimeksianto
 
-Tavoitteenanne on rakentaa toiminnallinen prototyyppi lentopelistä.
+Tavoitteenanne on rakentaa **toiminnallinen prototyyppi lentopelistä**.
 
-Lentopeli on peli, jonka
+![Sähkölentokone](img/Pipistrel_WATTsUP_airplane.jpg)
+
+<sub><sup>Pipistrel WATTsUP -sähkölentokoneen kuva: Ymmo, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</sup></sub>
+
+
+Lentopelin prototyyppi on peli, jonka
 avulla käyttäjä voi matkustaa joko koko maailmassa tai sallimallanne alueella. Peli hyödyntää
-todellisten lentokenttien sijanteja ja oikeaa kartta- tai satelliittidataa.
+todellisten lentokenttien sijanteja.
+
+
 
 Projekti etenee neljässä vaiheessa:
 
@@ -17,16 +24,13 @@ Ensimmäiset kaksi vaihetta tehdään Ohjelmisto 1 -opintojakson aikana. Tällö
 
 Jälkimmäiset kaksi vaihetta tehdään Ohjelmisto 2 -opintojakson kuluessa. Projektityössä esiprojektin tuloksena syntynyttä toiminnallista prototyyppiä laajennetaan ja muokataan siten, että pelillä on selaimessa toimiva karttapalvelua hyödyntävä käyttöliittymä. Lisäksi peli ohjelmoidaan käyttämään ulkoista tietolähdettä, esimerkiksi sääpalvelua.
 
-
-## Vaihe 1: Pelin määrittely esiprojektia varten
-
 Esiprojektin määrittelyvaiheen tarkoituksena on saavuttaa yhteinen näkemys siitä, minkälaista ohjelmistoa esiprojektissa lähdetään rakentamaan. Vaiheen tuloksena syntyy kirjallisessa muodossa oleva määrittelydokumentti, joka kuvaa ohjelmiston toiminnallisuuden eli sen,
 mitä tulevalla ohjelmistolla voidaan tehdä. Vaatimusmäärittelyssä otetaan lisäksi kantaa ohjelmiston sellaisiin
 vaatimuksiin, joita ei voida pelkistää toiminnoiksi. Näitä kutsutaan laadullisiksi vaatimuksiksi, ja ne voivat liittyä esimerkiksi
 suorituskykyyn, vasteaikoihin tai käytettävyyteen.
 
 
-### Tuotos: Määrittelydokumentti
+## Määrittelydokumentti
 
 Määrittelydokumentin tärkein hyve on konkreettisuus. Ohjelman toiminta kuvataan sellaisella tarkkudella, että tulkinnalle
 jää mahdollisimman vähän sijaa. Asioita ei lähtökohtaisesti jätetä toteutusvaiheessa päätettäviksi.
@@ -53,7 +57,7 @@ joka toimenpiteestä seuraa (kohteeseen siirtyminen). Käyttäjätarinoita laadi
 Luku 4 (Laadulliset vaatimukset) tarkentaa, millaisia muita kuin toiminnallisia vaatimuksia lentopelillä on. Näitä voivat olla esimerkiksi suorituskykyvaatimukset ("Lentokentän tietojen haku tietokannasta saa kestää korkeintaan kaksi sekuntia") tai
 käytettävyysvaatimukset ("Käyttäjän on saatava välitön palaute jokaisesta tekemästään toimenpiteestä").
 
-### Pelin reunaehdot
+## Pelin reunaehdot
 
 Määrittelyn pohjaksi asetetaan joukko reunaehtoja. Reunaehtojen tarkoitus on varmistaa, että saavutatte peliprojektin aikana ne oppimistavoitteet, joita opintojaksoille on määritetty.
 
@@ -65,7 +69,7 @@ Voitte siis määritellä ja toteuttaa minkälaisen pelin tahansa, kunhan se tot
 4. Peli huomioi kestävän kehityksen näkökulman.
 5. Peli on hyvien tapojen mukainen ja sovelttu myös nuorille käyttäjille (K12).
 
-### Arviointi
+## Määrittelydokumentin arviointi
 
 Määrittelydokumentin arviointi perustuu dokumentin kattavuuteen ja laatuun. Erityisesti arvioidaan seuraavia seikkoja:
 - Saako vision perusteella yleiskuvan pelistä ja sen ideasta?
@@ -74,9 +78,3 @@ Määrittelydokumentin arviointi perustuu dokumentin kattavuuteen ja laatuun. Er
 - Onko tarpeelliset laadulliset vaatimukset kuvattu konkreettisesti?
 - Huomioiko vaatimusmäärittely pelille asetetut reunaehdot?
 - Onko määrittelydokumentti kielensä ja ulkoasunsa puolesta laadukas tekninen asiakirja?
-
-## Vaihe 2: Prototyypin toteutus ja testaus
-
-## Vaihe 3: Määrittelyn tarkennus projektityötä varten
-
-## Vaihe 4: Projektityön toteutus ja testaus
