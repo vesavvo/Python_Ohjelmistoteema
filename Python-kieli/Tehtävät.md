@@ -230,7 +230,7 @@ kun kilpailu on päättynyt.
 
 ## 11. Periytyminen
 
-1. Kirjoita aiemmin laatimallesi Auto-luokalle aliluokat Sähköauto ja Polttomoottoriauto. Sähköautolla on ominaisuutena
+1. Kirjoita aiemmin laatimallesi `Auto`-luokalle aliluokat `Sähköauto` ja `Polttomoottoriauto`. Sähköautolla on ominaisuutena
 akkukapasiteetti kilowattitunteina. Polttomoottoriauton ominaisuutena on bensatankin koko litroina. Kirjoita aliluokille
 alustajat. Esimerkiksi sähköauton alustaja saa parametreinaan rekisteritunnuksen, huippunopeuden ja akkukapasiteetin. Se kutsuu
 yliluokan alustajaa kahden ensin mainitun asettamiseksi sekä asettaa oman kapasiteettinsa. Kirjoita pääohjelma, jossa luot
