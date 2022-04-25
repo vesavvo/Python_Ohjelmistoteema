@@ -172,8 +172,9 @@ Tätä piirrettä kutsutaan moniperinnäksi. Python-kielessä moniperintä on sa
 muissa olio-ohjelmointikielissä.
 
 Seuraava esimerkki kuvaa moniperintää. Määritetään kaksi luokkaa: `Kulkuneuvo` ja `Urheiluväline`. Kolmas luokka `Polkupyörä` voidaan
-asettee molempien mainittujen luokkien aliluokaksi.
+asettaa molempien mainittujen luokkien aliluokaksi.
 
+```python
 class Kulkuneuvo:
     def __init__(self, nopeus):
         self.nopeus = nopeus
@@ -193,9 +194,16 @@ pp = Polkupyörä(45, 18.7, 3)
 print (pp.vaihteet)
 print (pp.nopeus)
 print (pp.paino)
+```
 
 Luomme Polkupyörä-olion, josta tulostamme vaihteiden lukumäärän, nopeuden ja painon. Vaihteiden lukumäärä on määritetty 
-`Polkupyörä`-luokassa. Nopeus periytyy `Kulkuneuvo`-luokasta, ja paino periytyy `Urheiluväline`-luokasta.
+`Polkupyörä`-luokassa. Nopeus periytyy `Kulkuneuvo`-luokasta, ja paino periytyy `Urheiluväline`-luokasta. Ohjelma tuottaa seuraavan tulosteen:
+```monospace
+3
+45
+18.7
+```
+
 
 Tässä tapauksessa emme voi `Polkupyörä`-luokan alustajasta viitata molempien yliluokkien alustajin
 `super``-funktiolla tähän tapaan:
