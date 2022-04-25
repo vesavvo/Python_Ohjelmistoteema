@@ -1,8 +1,8 @@
-# Luokka ja olio
-Tässä moduulissa opit olio-ohjelmoinnin perusteet. Opit kirjoittamaan luokkia, jotka määrittävät yhteiset ominaisuudet
+# Olio-ohjelmoinnin lähtökohdat 
+Tässä moduulissa opit olio-ohjelmoinnin lähtökohdat. Opit kirjoittamaan luokkia, jotka määrittävät yhteiset ominaisuudet
 ja operaatiot luokan ilmentymille eli olioille. Opit olioiden luonnin, alustamisen ja käytön periaatteet.
 
-## Luokka
+## Luokka, olio ja ominaisuus
 
 Olio-ohjelmoinnissa luokalla tarkoitetaan yleiskäsitettä, joka määrittää yleiset ja yhteiset piirteet, joita
 sen jäsenillä on.
