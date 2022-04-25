@@ -1,28 +1,13 @@
+class Koira:
 
-import mysql.connector
+    tehty = 0
 
-def haeTyöntekijätSukunimellä(sukunimi):
-    sql = "SELECT Numero, Sukunimi, Etunimi, Palkka FROM Työntekijä"
-    sql += " WHERE Sukunimi='" + sukunimi + "'"
-    print(sql)
-    kursori = yhteys.cursor()
-    kursori.execute(sql)
-    tulos = kursori.fetchall()
-    if kursori.rowcount >0 :
-        for rivi in tulos:
-            print(f"Päivää! Olen {rivi[2]} {rivi[1]}. Palkkani on {rivi[3]} euroa kuussa.")
-    return
+    def __init__(self, nimi, syntymävuosi, haukahdus="Vuh-vuh"):
+        self.nimi = nimi
+        self.syntymävuosi = syntymävuosi
+        self.haukahdus = haukahdus
+        Koira.tehty = Koira.tehty + 1
 
-# Pääohjelma
-yhteys = mysql.connector.connect(
-         host='127.0.0.1',
-         port= 3306,
-         database='ihmiset',
-         user='root',
-         password='pelle',
-         autocommit=True
-         )
-
-sukunimi = input("Anna sukunimi: ")
-haeTyöntekijätSukunimellä(sukunimi)
-
+koira1 = Koira("Muro", 2018)
+koira2 = Koira("Rekku", 2022, "Viu viu viu")
+print (f"Koiria on nyt {Koira.tehty}.")

@@ -138,3 +138,35 @@ ja mahdollisine parametreineen. Esimerkiksi kutsu `koira1.hauku(2)` kutsuu koira
 välitetään haukahdusten määrä (2). Metodin sisällä voidaan viitata olion omiin ominaisuuksiin siten,
 että kirjoitetaan `self`, jota seuraa piste ja ominaisuuden nimi. Esimerkiksi ilmaisu `self.haukahdus` viittaa kulloisenkin
 olion `haukahdus`-ominaisuuden arvoon.
+
+## Luokkamuuttuja eli staattinen muuttuja
+
+Aiemmassa esimerkissä koiran ominaisuuksina olivat nimi, syntymävuosi ja haukahdus. Olion ominaisuudet ovat tietenkin oliokohtaisia, eli yhdellä koiralla voi olla eri nimi kuin toisella koiralla.
+
+Toisinaan on tarve tallentaa jokin koko luokkaa koskeva tieto, joka ei liity mihinkään yksittäiseen luokan olioon.
+Esimerkiksi `Koira`-luokan tapauksessa tällainen ominaisuus voisi olla tieto siitä, montako koiraa (eli `Koira`-luokan ilmentymää) kaiken kaikkiaan on luotu. Tällainen tieto voidaan tallentaa luokkamuuttujaan eli staattiseen muuttujaan.
+
+Seuraavassa esimerkissä on laadittu `tehty`-niminen luokkamuuttuja lukumäärän tallentamiseksi. Huomaa muuttujan sijoittaminen alustajan ulkopuolelle. Luokkamuuttujan määrityslauseeseen ei lisätä `self.`-etuliitettä. (Esimerkistä on jätetty pois aiempi haukkumistoiminnon toteutus.)
+
+```python
+class Koira:
+
+    tehty = 0
+
+    def __init__(self, nimi, syntymävuosi, haukahdus="Vuh-vuh"):
+        self.nimi = nimi
+        self.syntymävuosi = syntymävuosi
+        self.haukahdus = haukahdus
+        Koira.tehty = Koira.tehty + 1
+
+koira1 = Koira("Muro", 2018)
+koira2 = Koira("Rekku", 2022, "Viu viu viu")
+print (f"Koiria on nyt {Koira.tehty}.")
+```
+
+Luokkamuuttujan arvoon viitataan kirjoittamalla sekä luokan että luokkamuuttujan nimi, esimerkissä siis `Koira.tehty`.
+
+Ohjelma tuottaa seuraavan tulosteen:
+```monospace
+Koiria on nyt 2.
+```
