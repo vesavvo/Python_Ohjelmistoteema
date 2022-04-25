@@ -206,7 +206,8 @@ Luomme Polkupyörä-olion, josta tulostamme vaihteiden lukumäärän, nopeuden j
 
 
 Tässä tapauksessa emme voi `Polkupyörä`-luokan alustajasta viitata molempien yliluokkien alustajin
-`super``-funktiolla tähän tapaan:
+`super`-funktiolla tähän tapaan:
+
 ```python
 # Toimimattomat alustajien kutsut
 super.__init(nopeus)
