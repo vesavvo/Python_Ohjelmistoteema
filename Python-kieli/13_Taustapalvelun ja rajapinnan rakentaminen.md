@@ -115,7 +115,7 @@ JavaScript-kielen avulla:
 ![JSON-vastaus selainikkunassa](img/flask_json.png)
 
 Esimerkissä JSON-esitys luodaan Pythonin oliorakenteesta `json.dumps`-metodin avulla. Melko kryptisen näköinen
-metodikutsu muuntaa oliorakenteen rekursiivisesti JSON-rakenteeksi. Lause hyödyntää anonyymiä lambda-funktiota,
+metodikutsu muuntaa oliorakenteen JSON-rakenteeksi. Lause hyödyntää anonyymiä lambda-funktiota,
 jota ei tässä käsitellä.
 
 Edellä kuvatun yksinkertaisen taustapalvelun idean pohjalta on mahdollista
