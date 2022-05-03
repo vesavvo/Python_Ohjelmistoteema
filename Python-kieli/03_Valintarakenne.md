@@ -24,7 +24,7 @@ rahaaa on vähintään viisi euroa. Ehto voi olla tosi tai epätosi: jos rahaa o
 
 Ehdollisesti suoritettava ohjelmanosa (eli latten osto) suoritetaan täsmälleen silloin, kun ehto on tosi.
 
-Python-kielessä ehdollisesti suoritettava ohjelmanosa toteutetaan if-lauseen avulla. Lauseen rakenne on seuraava:
+Python-kielessä ehdollisesti suoritettava ohjelmanosa toteutetaan `if`-lauseen avulla. Lauseen rakenne on seuraava:
 
 ```monospace
 if (ehto):
@@ -273,7 +273,7 @@ tiedetään jo, että ikä on alle 65 vuotta, joten tähän ehtoon ei tarvitse l
 liittyvä ehdollinen lohko, ja suoritus päättyy.
 3. Jos kumpikaan testatuista ehdoista ei ollut tosi, on ikä alle 18 vuotta. Kolmannessa haarassa testataan, onko ikä vähintään seitsemän vuotta
    (eli käytännössä 7-17 vuotta). Jos näin on, suoritetaan kolmas ehdollinen lohko ja suoritus päättyy.
-4. Jos ikä ei ollut edes 7 vuotta, suoritetaan else-haarassa oleva ehdollinen lohko.
+4. Jos ikä ei ollut edes 7 vuotta, suoritetaan `else`-haarassa oleva ehdollinen lohko.
 
 Ohjelma siis kirjoitettiin siten, että ensimmäisen haaran kireää ehtoa löysätään vaihe vaiheelta, jolloin iän ylärajoja ei tarvitse
 haarojen ehtoihin kirjoittaa. Ne voitaisiin toki kirjoittaa, mutta se olisi tarpeetonta ja lisäisi uuden mahdollisuuden
