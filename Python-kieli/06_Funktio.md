@@ -323,8 +323,6 @@ Argumentteja voidaan antaa kutsukerrastasta toiseen vaihteleva määrä. Funktio
 2. Parametrien välittäminen avainsanojen avulla.
 Ohjelmoija voi antaa parametrien arvot (nimi = arvo)-pareina. Parametreille voi antaa funktion määrityksessä myös oletusarvot.
 
-*TODO: Yllä olevia avataan esimerkin kautta.*
-
 Lisäksi Python-tukee anonyymejä funktioita eli lambda-funktioita. Tällöin määritetään vain kaava tai sääntö, jolla paluuarvo tuotetaan ilman,
 että kirjoitetaan varsinaista funktiota. Lambda-funktioita käsitellään myöhemmin.
 
