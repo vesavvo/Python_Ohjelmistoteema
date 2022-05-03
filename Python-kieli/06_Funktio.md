@@ -30,7 +30,7 @@ def tervehdi():
     return
 ```
 
-Funktio määritetään varatun sanan def avulla. Sitä seuraa funktion nimi, joka on itse keksitty tunnus. Python-kielessä
+Funktio määritetään varatun sanan `def` avulla. Sitä seuraa funktion nimi, joka on itse keksitty tunnus. Python-kielessä
 on käytäntönä nimetä funktiot kuvaavilla, pienillä kirjaimilla kirjoitetuilla nimillä. Jos nimi koostuu useasta sanasta,
 lisätään erotinmerkiksi alaviiva. Tämän mallin mukaan funktiolle voitaisiin antaa nimeksi vaikkapa `tervehdi_käyttäjää`.
 
@@ -42,7 +42,7 @@ jotka suoritetaan silloin, kun funktiota kutsutaan.
 
 Funktion runkoon kuuluvat lauseet on kirjoitettava yhden askeleen verran sisennettyinä.
 
-Funktio päättyy return-lauseeseen.
+Funktio päättyy `return`-lauseeseen.
 Return-lauseella voidaan palauttaa paluuarvo, jos sellainen on. Tässä sellaista ei ole, joten palataan
 paluuarvoon myöhemmin.
 
@@ -67,7 +67,7 @@ print("Sitten siirrytään muihin asioihin.")
 
 ```
 
-Yllä oleva ohjelma koostuu funktiosta nyt tervehdi-funktiosta ja sitä seuraavasta pääohjelmasta.
+Yllä oleva ohjelma koostuu funktiosta nyt `tervehdi`-funktiosta ja sitä seuraavasta pääohjelmasta.
 Pääohjelma koostuu tässä tapauksessa kolmesta lauseesta: tulostuslauseesta, funktion kutsusta ja toisesta
 tulostuslauseesta.
 
@@ -77,7 +77,7 @@ Tästä seuraa, että pääohjelma on kirjoitettava ohjelmakoodissa viimeiseksi.
 
 Ohjelman suoritus alkaa aina pääohjelman alusta.
 
-Kun tervehdi-funktiota kutsutaan, suoritus siirtyy funktion runkoon, ja pääohjelma jää odottamaan, että funktion suoritus päättyy.
+Kun `tervehdi`-funktiota kutsutaan, suoritus siirtyy funktion runkoon, ja pääohjelma jää odottamaan, että funktion suoritus päättyy.
 Funktion suorituksen päätyttyä return-lauseeseen kutsuva ohjelmanosa jatkaa siitä mihin se jäi.
 
 Ohjelma tuottaa seuraavan tulosteen:
@@ -90,7 +90,7 @@ Sitten siirrytään muihin asioihin.
 
 ## Funktion parametrit
 
-Edellisen esimerkin tervehdi-funktio toimii aina samalla tavalla.
+Edellisen esimerkin `tervehdi`-funktio toimii aina samalla tavalla.
 Se ei kaipaa pääohjelmalta mitään lähtötietoja.
 Joskus funktiolle on välitettävä tietoja, jotta se osaa suorittaa itsensä oikein.
 Näitä funktiolle välitettäviä tietoja kutsutaan parametreiksi.
@@ -125,7 +125,7 @@ Hyvää päivää 2. kerran
 ```
 
 
-Edellä funktion kerrat-parametrimuuttujalle välitetään arvo pääohjelmalta.
+Edellä funktion `kerrat`-parametrimuuttujalle välitetään arvo pääohjelmalta.
 Kutsuja on kaksi: ensimmäisessä kutsussa välitetään arvo 5, ja toisessa kutsussa välitetään arvo 2.
 
 Välitettävä arvo on tässä "kovakoodattu" ohjelmakoodiin, mutta se voisi olla tallennettuna muuttujaan ja
@@ -176,7 +176,7 @@ Pääohjelmassa lopuksi: Helsinki
 Mitä tapahtui? Edellä luodaan kaksi eri ilmentymää muuttujasta kaupunki:
 1. Globaali muuttuja, joka luodaan pääohjelmassa
 2. Funktion sisäinen parametrimuuttuja, joka luodaan kun funktiota kutsutaan
-Kun funktiota vaihda() kutsutaan, argumenttina annettu globaalin muuttujan arvo kopioidaan saman nimisen parametrimuuttujan arvoksi (pass-by-value).
+Kun `vaihda`-funktiota kutsutaan, argumenttina annettu globaalin muuttujan arvo kopioidaan saman nimisen parametrimuuttujan arvoksi (*pass-by-value*).
 Funktion rungossa vaihdetaan tuon funktion sisäisen parametrimuuttujan arvo. Globaalin muuttujan arvo ei kuitenkaan muutu.
 
 Muuttujien näkyvyyssäännöt on tärkeää ymmärtää, jotta osaat ohjelmoijana käyttää globaaleja ja paikallisia
@@ -215,7 +215,7 @@ annettavilla lähtötiedoilla) funktioista saadaan vahvoja, monikäyttöisiä ty
 Joskus funktio tuottaa arvon, joka on palautettava kutsuvalle ohjelmanosalle. Tämä arvon palauttaminen onnistuu
 paluuarvomekanismin avulla.
 
-Funktion tuottama arvo palautetaan return-lauseella. Tähänastisissa esimerkeissä return-lause ei ole sisältänyt
+Funktion tuottama arvo palautetaan return-lauseella. Tähänastisissa esimerkeissä `return`-lause ei ole sisältänyt
 paluuarvoa. Tarkastellaan nyt paluuarvon lisäämistä.
 
 Seuraava ohjelma laskee kahden luvun neliösumman, joka saadaan kertomalla kumpikin luvuista itsellään ja
