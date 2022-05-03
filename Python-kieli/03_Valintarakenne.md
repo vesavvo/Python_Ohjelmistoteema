@@ -178,7 +178,7 @@ Silloin jos ikä oli alle 18 vuotta, siirrytään laskemaan `or`-sanan oikealla 
 15 vuotta, on sekä `or`-sanan vasemmalla että oikealla puolella olevien lausekkeiden arvo on epätosi ja
 koko `or`-lausekkeen arvo sen vuoksi epätosi. Painotieto
 luetaan vain silloin, jos tiedetään, että ikä on vähintään 15 ja alle 18 vuotta - ja juuri näissä tapauksissa kyseinen muuttuja on
-määritelty. Tästä Python-kielen piirrettä kutsutaan oikosulkemiseksi (*short-circuiting*).
+määritelty. Tätä Python-kielen piirrettä kutsutaan oikosulkemiseksi (*short-circuiting*).
 
 
 ## Kaksi toisensa poissulkevaa vaihtoehtoa
