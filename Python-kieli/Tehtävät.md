@@ -199,7 +199,7 @@ Tee sitten hätäjarrutus määräämällä nopeuden muutos -200 km/h ja tulosta
 tuntimäärässä edennyt. Esimerkki: `auto`-olion tämänhetkinen kuljettu matka on 2000 km. Nopeus on 60 km/h. Metodikutsu
 `auto.kulje(1.5)` kasvattaa kuljetun matkan lukemaan 2090 km.
 
-5. Nyt ohjelmoidaan autokilpailu. Uuden auton sijainti alustetaan automaattisesti nollaksi.
+5. Nyt ohjelmoidaan autokilpailu. Uuden auton kuljettu matka alustetaan automaattisesti nollaksi.
 Tee pääohjelman alussa lista, joka koostuu kymmenestä toistorakenteella luodusta auto-oliosta.
 Jokaisen auton huippunopeus arvotaan 100 km/h ja 200 km/h väliltä. Rekisteritunnus luodaan seuraavasti "ABC-1", "ABC-2" jne.
 Sitten kilpailu alkaa. Kilpailun aikana tehdään tunnin välein seuraavat toimenpiteet:
@@ -212,7 +212,23 @@ selkeäksi taulukoksi muotoiltuna.
 
 ## 10. Assosiaatio
 
-1. Tehtävä on jatkoa aiemmalle autokilpailutehtävälle. Kirjoita `Kilpailu`-luokka, jolla on ominaisuuksina
+1. Kirjoita `Hissi`-luokka, joka saa alustajaparametreinaan alimman ja ylimmän kerroksen numeron. Hissillä on metodit
+`siirry_kerrokseen`, `kerros_ylös` ja `kerros_alas`. Uusi hissi on aina alimmassa kerroksessa. Jos tee luodulle
+hissille `h` esimerkiksi metodikutsun `h.siirry_kerrokseen(5)`, metodi kutsuu joko `kerros_ylös`- tai `kerros_alas`-metodia niin monta kertaa, että 
+hissi päätyy viidenteen kerrokseen. Viimeksi mainitut metodit ajavat hissiä yhden kerroksen ylös- tai alaspäin ja ilmoittavat,
+missä kerroksessa hissi sen jälkeen on. Testaa luokkaa siten, että teet pääohjelmassa hissin ja käsket sen siirtymään haluamaasi kerrokseen ja
+sen jälkeen takaisin alimpaan kerrokseen.
+
+2. Jatka edellisen tehtävän ohjelmaa siten, että teet `Talo`-luokan. Talon alustajaparametreina annetaan alimman ja 
+ylimmän kerroksen numero sekä hissien lukumäärä. Talon luonnin yhteydessä talo luo tarvittavan määrän hissejä. Hissien
+lista tallennetaan talon ominaisuutena. Kirjoita taloon metodi `aja_hissiä`, joka saa parametreinaan hissin numeron
+ja kohdekerroksen. Kirjoita pääohjelmaan lauseet talon luomiseksi ja talon hisseillä ajelemiseksi.
+
+3. Jatka edellisen tehtävän ohjelmaa siten, että `Talo`-luokassa on parametriton
+metodi `palohälytys`, joka käskee kaikki hissit pohjakerrokseen. Jatka pääohjelmaa siten, että talossasi tulee
+palohälytys.
+
+5. Tehtävä on jatkoa aiemmalle autokilpailutehtävälle. Kirjoita `Kilpailu`-luokka, jolla on ominaisuuksina
 kilpailun nimi, pituus kilometreinä ja osallistuvien autojen lista. Luokassa on alustaja, joka saa parametreinaan
 nimen, kilometrimäärän ja autolistan ja asettaa ne ominaisuuksille arvoiksi. Luokassa on seuraavat metodit:
    - `tunti_kuluu`, joka toteuttaa aiemmassa autokilpailutehtävässä mainitut tunnin välein tehtävät toimenpiteet eli
@@ -230,7 +246,13 @@ kun kilpailu on päättynyt.
 
 ## 11. Periytyminen
 
-1. Kirjoita aiemmin laatimallesi `Auto`-luokalle aliluokat `Sähköauto` ja `Polttomoottoriauto`. Sähköautolla on ominaisuutena
+1. Toteuta seuraava luokkahierarkia Python-kielellä: Julkaisu voi olla kirja tai lehti. Jokaisella julkaisulla on nimi.
+Kirjalla on lisäksi kirjoittaja ja sivumäärä, kun taas lehdellä on päätoimittaja. Kirjoita luokkiin myös tarvittavat alustajat.
+Tee aliluokkiin metodi `tulosta_tiedot`, joka tudostaa kyseisen julkaisun kaikki tiedot. 
+Luo pääohjelmassa julkaisut Aku Ankka (päätoimittaja Aki Hyyppä) ja Hytti n:o 6 (kirjailija Rosa Liksom, 200 sivua). Tulosta
+molempien julkaisujen kaikki tiedot toteuttamiesi metodien avulla.
+
+2. Kirjoita aiemmin laatimallesi `Auto`-luokalle aliluokat `Sähköauto` ja `Polttomoottoriauto`. Sähköautolla on ominaisuutena
 akkukapasiteetti kilowattitunteina. Polttomoottoriauton ominaisuutena on bensatankin koko litroina. Kirjoita aliluokille
 alustajat. Esimerkiksi sähköauton alustaja saa parametreinaan rekisteritunnuksen, huippunopeuden ja akkukapasiteetin. Se kutsuu
 yliluokan alustajaa kahden ensin mainitun asettamiseksi sekä asettaa oman kapasiteettinsa. Kirjoita pääohjelma, jossa luot
