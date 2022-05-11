@@ -2,7 +2,7 @@
 
 ## Osa 1: Python-ohjelmoinnin perustaidot
 1. Ensimmäinen ohjelma, versionhallinnan käyttöönotto (GitHub)
-2. [Muuttujat ja vuorovaikutteiset ohjelmat](Muuttujat_ja_vuorovaikutteiset ohjelmat.md)
+2. [Muuttujat ja vuorovaikutteiset ohjelmat](02_Muuttujat ja vuorovaikutteiset ohjelmat.md)
 3. Valintarakenne (if)
 4. Alkuehdollinen toistorakenne (while)
 5. Listarakenne ja läpikäyvä toistorakenne (for)
