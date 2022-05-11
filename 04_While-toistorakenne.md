@@ -74,20 +74,20 @@ Hyvää huomenta
 ```
 
 Tässä esimerkissä on kaksi muuttujaa:
-1. tehdyt-nimisen muuttujan arvona on toistojen kokonaismäärä. Kun se on luettu käyttäjältä, arvo pysyy muuttumattomana koko
+1. `tehdyt`-nimisen muuttujan arvona on toistojen kokonaismäärä. Kun se on luettu käyttäjältä, arvo pysyy muuttumattomana koko
 ohjelman suorituksen ajan.
-2. kerrat-niminen muuttuja on kierrosmuuttuja. Se alustetaan nollaksi. Jokaisen kierroksen päättyessä kierrosmuuttujan arvoa
+2. `kerrat`-niminen muuttuja on kierrosmuuttuja. Se alustetaan nollaksi. Jokaisen kierroksen päättyessä kierrosmuuttujan arvoa
 kasvatetaan yhdellä.
 
-Oletetaan, että käyttäjä pyytää viisi tervehdystä. Arvo 5 tallentuu kerrat-muuttujan arvoksi.
+Oletetaan, että käyttäjä pyytää viisi tervehdystä. Arvo 5 tallentuu `kerrat`-muuttujan arvoksi.
 Kun while-toistorakenteeseen tullaan ensimmäisen kerran, tehdyt-muuttuja on alustettu nollaksi. While-toistorakenteen
 alkuehto on nyt 0<5 eli tosi. Suoritus etenee while-toistorakenteen sisälle. Siellä tulostetaan ensimmäinen tervehdys,
-ja tehdyt-kierrosmuuttujan arvoa kasvatetaan nollasta yhteen.
+ja `tehdyt`-kierrosmuuttujan arvoa kasvatetaan nollasta yhteen.
 
 Koska kyseessä oli while-rakenne, alkuehto testataan nyt uudelleen. Ehto on nyt 1<5 eli edelleen tosi. While-toistorakenteen
-sisällä tulostetaan toinen tervehdys ja kasvatetaan tehdyt-muuttujan arvoa yhdellä. Uudeksi arvoksi tulee 2.
+sisällä tulostetaan toinen tervehdys ja kasvatetaan `tehdyt`-muuttujan arvoa yhdellä. Uudeksi arvoksi tulee 2.
 
-Näin toistokierrokset jatkuvat. Viidennnen tervehdyksen tulostamisen päätteeksi tehdyt-muuttujan arvoksi tulee 5. Jälleen testataan
+Näin toistokierrokset jatkuvat. Viidennnen tervehdyksen tulostamisen päätteeksi `tehdyt`-muuttujan arvoksi tulee 5. Jälleen testataan
 while-toistorakenteen alukehto. Tällä kertaa se on 5<5, joka on epätosi. Seuraavaa toistokierrosta ei tule, ja ohjelman suoritus jatkuisi
 while-toistorakenteen jälkeisestä lauseesta. Sellaista ei ohjelmassa ole, joten suoritus päättyy.
 
@@ -117,7 +117,7 @@ Anna komento: lopeta
 Toiminnot lopetettu.
 ```
 
-Esimerkissä hyödynnetään Python-kielen mukana tulevaa random-kirjastoa.
+Esimerkissä hyödynnetään Python-kielen mukana tulevaa `random`-kirjastoa.
 Kirjasto otetaan käyttöön kirjoittamalla ohjelman alkuun sitä vastaava import-lause.
 Valmiiden kirjastojen käyttöä ei tarvitse opetella ulkoa, vaan käyttötavan
 voi aina tarkistaa dokumentaatiosta: [https://docs.python.org/]
@@ -327,4 +327,4 @@ konsoli-ikkunan laidassa olevaa pysäytyspainiketta:
 ![Uuden repositorion luonti](img/stop-nappi1.png)
 
 Jos pysäytyspainike ei pysäytä suoritusta, tarkista, että päätetoimintojen emulointi on käytössä konsoli-ikkunassa:
-valitse Run/Edit Configurations, ja aseta päälle Emulate Terminal in Output Console -valintaruutu.
+valitse **Run/Edit Configurations**, ja aseta päälle **Emulate Terminal in Output Console** -valintaruutu.
