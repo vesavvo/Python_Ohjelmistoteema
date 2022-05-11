@@ -164,7 +164,7 @@ Tavallisimmat listaoperaatiot on koottu alla olevaan taulukkoon:
 Edellä kirjoittamamme ohjelma kysyi käyttäjiltä nimiä ja tulosti sen jälkeen listamuuttujan kerralla ja kokonaisuudessaan.
 
 Tarkastellaan seuraavaksi, miten voimme käydä listan läpi alkio alkiolta. Laajennetaan ohjelmaa siten,
-että ohjelma tervehtiin jokaista listaan lisättyä henkilöä erikseen. Ohjelma kirjoitetaan seuraavasti:
+että ohjelma tervehtii jokaista listaan lisättyä henkilöä erikseen. Ohjelma kirjoitetaan seuraavasti:
 
 ```python
 nimet = []
