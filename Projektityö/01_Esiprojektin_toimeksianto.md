@@ -67,7 +67,7 @@ Voitte siis määritellä ja toteuttaa minkälaisen pelin tahansa, kunhan se tot
 2. Peli käyttää relaatiotietokantaa, jonka pohjana on opintojaksolla käytetty lentokenttätietokanta. Tietokannan skeemaa saa vapaasti muuttaa ja laajentaa.
 3. Pelissä on konkreettinen tavoite, ja se tuottaa hyvän pelikokemuksen.
 4. Peli huomioi kestävän kehityksen näkökulman.
-5. Peli on hyvien tapojen mukainen ja sovelttu myös nuorille käyttäjille (K12).
+5. Peli on hyvien tapojen mukainen ja soveltuu myös nuorille käyttäjille (K12).
 
 ## Määrittelydokumentin arviointi
 
