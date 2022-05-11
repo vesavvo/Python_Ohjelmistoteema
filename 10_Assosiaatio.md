@@ -1,4 +1,4 @@
-# Olioiden assosiaatio
+# Assosiaatio
 
 Tässä moduulissa opit kirjoittamaan ohjelmia, joissa oliot ovat vuorovaikutuksessa keskenään.
 

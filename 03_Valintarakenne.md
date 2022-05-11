@@ -1,4 +1,4 @@
-# Valintarakenne
+# Valintarakenne (if)
 
 Tässä moduulissa opit kirjoittamaan ohjelmia, jotka voivat haarautua vaihtoehtoisiin suorituspolkuihin. Näin
 saat ohjelman reagoimaan eri tavoin erilaisiin syötteisiin. Haarautuminen voi perustua myös laskutoimituksen

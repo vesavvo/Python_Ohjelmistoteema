@@ -1,4 +1,4 @@
-# Funktiot
+# Funktio
 
 Tässä moduulissa opit kirjoittamaan Python-kielen funktioita. Funktiot ovat yleiskäyttöisiä ohjelmanosia,
 joita voit käyttää toistuvasti.

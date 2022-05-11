@@ -1,4 +1,4 @@
-# Listarakenne ja for-toistorakenne
+# Listarakenne ja läpikäyvä toistorakenne (for)
 
 Tässä moduulissa opit käyttämään listoja, jotka ovat Python-kielen tärkein tietorakenne. Lista tarkoittaa järjestettyä
 joukkoa alkioita. Listarakenteen avulla voit tallentaa useita arvoja yhteen listamuuttujaan, ja voit käydä

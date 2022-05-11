@@ -1,4 +1,4 @@
-# While-toistorakenne
+# Alkuehdollinen toistorakenne (while)
 
 Seuraavaksi opit laatimaan ohjelmia, joissa sama ohjelmakoodin osa suoritetaan useampaan kertaan.
 Tämän tekee mahdolliseksi toistorakenne. Toistorakenteen avulla voidaan esimerkiksi ohjelmoida jokin

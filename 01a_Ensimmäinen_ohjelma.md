@@ -1,4 +1,5 @@
-# Tervetuloa
+# Ensimmäinen ohjelma
+
 Tervetuloa ohjelmoimaan Python-kieltä Metropolia Ammattikorkeakoulussa!
 
 ... ja sama Pythoniksi:
