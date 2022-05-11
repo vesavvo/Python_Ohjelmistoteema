@@ -45,7 +45,7 @@ Voitte jälleen määritellä ja toteuttaa minkälaisen pelin tahansa, kunhan se
 5. Pelin taustapalvelu käyttää relaatiotietokantaa, jonka pohjana on opintojaksolla käytetty lentokenttätietokanta. Tietokannan skeemaa saa vapaasti muuttaa ja laajentaa.
 6. Pelissä on konkreettinen tavoite, ja se tuottaa hyvän pelikokemuksen.
 7. Peli huomioi kestävän kehityksen näkökulman.
-8. Peli on hyvien tapojen mukainen ja sovelttu myös nuorille käyttäjille (K12).
+8. Peli on hyvien tapojen mukainen ja soveltuu myös nuorille käyttäjille (K12).
 
 ## Määrittelydokumentin arviointi
 
