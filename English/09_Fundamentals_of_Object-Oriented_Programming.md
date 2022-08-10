@@ -147,8 +147,7 @@ In the following example a class variable called `created` has been defined to s
 initializer. The definition statement of a class variable does not include the `self.` prefix. (The prior barking feature has been left out of this example).
 
 ```python
-class Dog
-
+class Dog:
     created = 0
 	
 	def __init__(self, name, birth_year, sound="Woof woof"):
