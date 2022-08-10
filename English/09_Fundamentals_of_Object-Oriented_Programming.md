@@ -15,7 +15,7 @@ birth year. Dogs also have activities (or in Python, methods) such as barking.
 Now we can write the simplest possible Dog class as follows:
 
 ```python
-class Koira:
+class Dog:
     pass
 ```
 
