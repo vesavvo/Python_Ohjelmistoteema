@@ -327,7 +327,7 @@ The execution never stops:
 A program that has entered an infinite loop must be stopped by force. In PyCharm IDE it is done by clicking
 the stop button on the side of the console window:
 
-![Stop button to stop executing the program](img/stop-button.png)
+![Stop button to stop executing the program](img/stop_button.png)
 
 If the stop button does not stop the execution, check that the terminal emulation operations are enabled in
 the console window: select **Run/Edit Configurations** and check the **Emulate Terminal in Output Console** checkbox.
