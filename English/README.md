@@ -15,7 +15,7 @@
 10. [Association](10_Association.md)
 11. [Inheritance](11_Inheritance.md)
 12. [Using External Interfaces](12_Using_External_Interfaces.md)
-13. [Setting Up a Backend Service With an Interface](13_Setting_Up_a_Backend__Service_With_an_Interface.md)
+13. [Setting Up a Backend Service With an Interface](13_Setting_Up_a_Backend_Service_With_an_Interface.md)
 
 ## Exercises
 
