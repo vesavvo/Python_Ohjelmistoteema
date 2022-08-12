@@ -1,5 +1,7 @@
 # Python-kieli
 
+## [English content available here](English)
+
 ## Osa 1: Python-ohjelmoinnin perustaidot
 1. [Ensimmäinen ohjelma](01a_Ensimmäinen_ohjelma.md) sekä [versionhallinnan käyttöönotto (GitHub)](01b_Versionhallinnan_käyttöönotto.md)
 2. [Muuttujat ja vuorovaikutteiset ohjelmat](02_Muuttujat_ja_vuorovaikutteiset_ohjelmat.md)
