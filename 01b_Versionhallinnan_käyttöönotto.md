@@ -15,7 +15,7 @@ Ajantasaiset tiedot haetaan repositoriosta työskentelyn alkaessa (tästä käyt
 muutokset päivitetään repositorioon (tätä kutsutaan termillä push).
 
 GitHub on kaikkien saatavilla oleva verkkosivusto, johon Git-projektien ohjelmakoodit voidaan tallentaa.
-Se on myös maailman suurin tähän tarkoitukseen kehitetty repositorio, ja käytännössä jokainen
+Se on myös maailman suurin tähän tarkoitukseen kehitetty sivusto, ja käytännössä jokainen
 ohjelmointialan ammattilainen käyttää tavalla tai toisella GitHubia.
 
 Jotta voit käyttää GitHubia, rekisteröidy sen käyttäjäksi osoitteessa https://github.com/.
