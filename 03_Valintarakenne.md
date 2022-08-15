@@ -40,7 +40,7 @@ Ehdollisesti suoritettavaan lohkoon kuuluvat lauseitä on sisennettävä yhden a
 sisennys saadaan kirjoittamalla rivin alkuun neljä välilyöntiä. Käytännössä neljää välilyöntiä ei kannata
 tehdä välilyöntinäppäintä napsuttelemalla vaan painamalla yhden kerran sarkainnäppäintä eli Tab-näppäintä.
 Koodin sisentäminen on tärkeä työväline Python-kielessä: sillä ilmaistaan ohjelman sisäinen hierarkia. Tässä tapauksessa
-yhden askeleen sisennys ilmaisee, mitkä lauseet kuuluvat funktion runkoon. Python-kielessä koodin oikea sisentäminen
+yhden askeleen sisennys ilmaisee, mitkä lauseet kuuluvat ehdollisesti suoritettavaan osaan. Python-kielessä koodin oikea sisentäminen
 on pakollista, ja sivutuotteena se tekee koodista myös havainnollisemman ja helpommin luettavan. Tässä Python poikkeaa
 monista tunnetuista ohjelmointikielistä, joissa koodin sisentäminen on kielen syntaksin näkökulmasta vapaaehtoista. 
 
