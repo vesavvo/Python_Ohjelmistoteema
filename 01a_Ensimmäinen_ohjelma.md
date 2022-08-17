@@ -27,7 +27,7 @@ Tällä opintojaksolla käytetään JetBrains PyCharm -kehitintä, jonka voit la
 1. Siirry osoitteeseen https://www.jetbrains.com/
 2. Valitse **Developer tools / PyCharm** ja paina **Download**.
 3. Valitse ladattavaksi Professional-versio.
-4. Saat käyttöön oikeuttavan lisenssin, kun rekisteröit ohjelmiston käyttäen Metropolian opiskelijana. Asennusohjelma opastaa sinua tässä. Käyttöönotto edellyttää JetBrains-tilin luomista ja opiskelijalisenssin hankkimista. Voit opiskelijana hankkia maksutta vuoden kerrallaan voimassa olevan lisenssin napsauttamalla JetBrains-sivuston yläreunassa olevaa ostoskärrikuvaketta ja valitsemalla **Special offers / For students and teachers**. Syötä lomakkeen tiedot käyttämällä Metropolian sähköpostiosoitetta ja viimeistele aktivointi sähköpostiin saamasi ohjeen mukaan. Kun lisenssi on vuoden päästä vanhenemassa, saat sähköpostiin automaattisesti ohjeen sen uusimisesta.  
+4. Saat käyttöön oikeuttavan lisenssin, kun rekisteröit ohjelmiston Metropolian opiskelijana. Asennusohjelma opastaa sinua tässä. Käyttöönotto edellyttää JetBrains-tilin luomista ja opiskelijalisenssin hankkimista. Voit opiskelijana hankkia maksutta vuoden kerrallaan voimassa olevan lisenssin napsauttamalla JetBrains-sivuston yläreunassa olevaa ostoskärrikuvaketta ja valitsemalla **Special offers / For students and teachers**. Syötä lomakkeen tiedot käyttämällä Metropolian sähköpostiosoitetta ja viimeistele aktivointi sähköpostiin saamasi ohjeen mukaan. Kun lisenssi on vuoden päästä vanhenemassa, saat sähköpostiin automaattisesti ohjeen sen uusimisesta.  
 
 Asennuksen jälkeen voit käynnistää PyCharm-ohjelman napsauttamalla sen kuvaketta.
 
