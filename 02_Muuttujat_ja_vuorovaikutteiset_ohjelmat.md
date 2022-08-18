@@ -110,7 +110,8 @@ muuttuja viittaa: onko muuttujan arvona esimerkiksi merkkijono vai luku?
 
 Python-kielessä on viisi muuttujan perustyyppiä:
 - merkkijono (*string*)
-- luku (*number*), joka voi olla kokonaisluku, pitkä kokonaisluku, liukuluku tai kompleksiluku 
+- luku (*number*), joka voi olla kokonaisluku, pitkä kokonaisluku, liukuluku tai kompleksiluku
+- totuusarvo (*boolean*), joka voi olla True tai False
 - lista (*list*)
 - monikko (*tuple*)
 - sanakirja (*dictionary*)
@@ -212,7 +213,7 @@ Muotoiltava lauseke muotoilukoodeineen kirjoitetaan aaltosulkeiden sisään. Esi
 arvo, joka on liukuluku.
 
 Muotoilukoodi on tässä tapauksessa `6.2f`.
-Kirjain `f` kertoo, että lauseke tulostetaan liukuluvuna.
+Kirjain `f` kertoo, että lauseke tulostetaan liukulukuna.
 Liukuluvun merkkiä `f` edeltävä merkintä `6.2` täsmentää, että tulos esitetään kuusi merkkiä leveässä kentässä,
 ja liukuluvun esitystarkkuus on kaksi desimaalia.
 
@@ -223,7 +224,7 @@ Seuraavassa on esimerkkejä muotoilukoodeista:
 - <20s : merkkijono 20 merkkiä leveään kenttään vasemman reunan mukaan tasattuna
 - 8d : kokonaisluku kahdeksan merkkiä leveään kenttään
 
-Muotoilkoodien kirjoittaminen on valinnaista. Muotoilumerkkijonoliteraalien käyttö helpottaa
+Muotoilukoodien kirjoittaminen on valinnaista. Muotoilumerkkijonoliteraalien käyttö helpottaa
 silti numeeristen ja merkkijonomuotoisten tulosteiden yhdistelemistä, kun `str`-funktioita ja muita
 muunnosfunktioita ei tarvitse välttämättä käyttää. Edellä voisimme yksinkertaisesti tulostaa Celsius-asteet
 ilman muotoilukoodia:
@@ -232,7 +233,9 @@ ilman muotoilukoodia:
 print(f"Lämpötila Celsius-asteina: {celsius}")
 ```
 
-Saman muotoiltavan merkkijonoliteraalin sisällä voi olla useita muotoiltavia lausekkeita mahdollisine koodeineen. Seuraava
+Saman muotoiltavan merkkijonoliteraalin sisällä voi olla useita muotoiltavia lausekkeita mahdollisine koodeineen.
+
+Seuraava
 ohjelma tulostaa kahden luonnonvakion, piin ja Neperin luvun, arvot siten, että kummankin vakion nimi
 tulostetaan 12 merkkiä leveään kenttään, ja vastaava arvo tulostetaan viidellä desimaalilla kymmenen merkkiä leveään kenttään:
 
