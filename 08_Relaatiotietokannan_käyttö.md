@@ -8,11 +8,14 @@ SQL-kielellä. Osaat myös suunnitella pienen tietokannan rakenteen ja perustaa 
 
 Tässä moduulissa käytetään MariaDB-tietokantaa. Muita tiedonhallintaohjelmistoja käytettäessä prosessi on samankaltainen.
 
+Ohjelmisto 1 -opintojaksolla olet perehtynyt relaatiotietokannan laadintaan ja käytön periaatteisiin opintojakson tietokantaosuudessa.
+Siinä tutustuttiin myös MariaDB-tietokantaohjelmiston asentamiseen.
+
 # Tietokanta-ajuri
 
 Relaatiotietokannan käyttö itse ohjelmoidusta ohjelmasta edellyttää tietokanta-ajurin asentamista.
 
-Tällä opintojaksolla ohjelmoimme PYthon-kielellä ja käytämme MariaDB-tiedonhallintaohjelmistoa. Tarvittava
+Tällä opintojaksolla ohjelmoimme Python-kielellä ja käytämme MariaDB-tiedonhallintaohjelmistoa. Tarvittava
 tietokanta-ajuri on MariaDB:n ja oman Python-ohjelman välissä oleva ohjelma,
 joka mahdollistaa ohjelmien välisen keskustelun.
 
