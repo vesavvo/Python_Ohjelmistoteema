@@ -26,7 +26,7 @@ Pythonin tietorakenteiden mukaisiksi.
 
 Tietokanta-ajuri riippuu sekä tiedonhallintaohjelmistosta että valitusta ohjelmointikielestä. Nyt tarvitsemme siis
 MariaDB-ajurin Python-kielelle. Koska MariaDB on yhteensopiva MySQL-tiedonhallintaohjelmiston kanssa, voimme vaihtoehtoisesti
-asentaa MySQL-ajurin Python-kielellä.
+asentaa MySQL-ajurin Python-kielelle.
 
 Voit edetä jommallakummalla alla esitetyllä tavalla:
 1. Asenna MySQL:n Connector/Python ajuri verkkosivun https://dev.mysql.com/downloads/connector/python/ ohjeen mukaan.
