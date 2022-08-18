@@ -62,7 +62,7 @@ Tämä onnistuu seuraavasti:
 
 ```python
 käyttäjä = input('Anna nimesi: ')
-print ("Hauska tavata, " + käyttäjä + "!")
+print("Hauska tavata, " + käyttäjä + "!")
 ```
 
 Käyttäjän syöte luetaan sisäänrakennetulla input-funktiolla. Funktio saa argumenttinaan tekstin, joka tulostetaan ruudulle.
@@ -83,7 +83,7 @@ Katsotaan nyt tulostuslausetta tarkemmin.
 
 Jos haluaisimme vain tulostaa käyttäjän syöttämän nimen, voisimme korvata alemman rivin seuraavalla:
 ```python
-print (käyttäjä)
+print(käyttäjä)
 ```
 Huomaa, että nyt käyttäjä on muuttujan nimi. Se ei ole merkkijonoliteraali, eikä sitä kirjoiteta lainausmerkkeihin.
 
@@ -133,12 +133,12 @@ toka = 12_456_123_180
 kolmas = 4.973
 neljäs = -4 + 2j
 
-print (eka)
-print (toka)
-print (kolmas)
-print (neljäs)
-print (neljäs.real)
-print (neljäs.imag)
+print(eka)
+print(toka)
+print(kolmas)
+print(neljäs)
+print(neljäs.real)
+print(neljäs.imag)
 ```
 
 Kokonaislukua ja pitkää kokonaislukua syötettäessä voidaan numeromerkit ryhmitellä alaviivasymbolin avulla,
@@ -234,9 +234,7 @@ print(f"Lämpötila Celsius-asteina: {celsius}")
 ```
 
 Saman muotoiltavan merkkijonoliteraalin sisällä voi olla useita muotoiltavia lausekkeita mahdollisine koodeineen.
-
-Seuraava
-ohjelma tulostaa kahden luonnonvakion, piin ja Neperin luvun, arvot siten, että kummankin vakion nimi
+Seuraava ohjelma tulostaa kahden luonnonvakion, piin ja Neperin luvun, arvot siten, että kummankin vakion nimi
 tulostetaan 12 merkkiä leveään kenttään, ja vastaava arvo tulostetaan viidellä desimaalilla kymmenen merkkiä leveään kenttään:
 
 ```python
