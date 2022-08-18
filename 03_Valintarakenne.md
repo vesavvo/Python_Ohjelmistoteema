@@ -14,7 +14,7 @@ Tässä vaiheessa joudut tekemään päätöksen siitä,
 riittävätkö rahasi latten ostoon. Tämä valintatilanne voidaan kuvata pseudokoodina:
 
 ```monospace
-jos rahaa_taskussa >=5
+jos rahaa_taskussa>=5
 	osta latte
 ```
 
@@ -94,10 +94,10 @@ ilmaisemiseksi Python-kielessä voidaan käyttää seuraavia vertailuoperaattore
 | !=       | eri suuri kuin             | 
 
 Loogisia operaattoreita on sallittua ketjuttaa. Seuraava lauseke on tosi silloin, jos henkilön pituus on
-vähintään 170 mutta alle 180 cm: `170 <= pituus < 180`.
+vähintään 170 mutta alle 180 cm: `170<= pituus<180`.
 
 Operaattoreita on mahdollista käyttää myös merkkijonotyyppisille lausekkeille.
-Esimerkiksi merkkijonoille `m1` ja `m2` lauseke `m1 < m2` on tosi silloin, jos merkkijono `m1` on
+Esimerkiksi merkkijonoille `m1` ja `m2` lauseke `m1<m2` on tosi silloin, jos merkkijono `m1` on
 aakkosjärjestyksessä ennen merkkijonoa `m2`.
 
 Seuraavassa esimerkissä verrataan merkkijonojen yhtäsuuruutta:
@@ -156,9 +156,9 @@ Lopuksi ohjelma ilmoittaa käyttäjälle, jos lääkkeen käyttö on sallittua.
 
 ```python
 ikä = int(input("Anna ikä: "))
-if 15 <= ikä < 18:
+if 15<=ikä<18:
     paino = float(input("Anna paino (kg): "))
-if (ikä >=18 or ikä>=15 and paino>=55):
+if (ikä>=18 or ikä>=15 and paino>=55):
     print("Lääkkeen käyttö on sallittua.")
 ```
 
@@ -202,9 +202,9 @@ Lisätään `else`-haara lääke-esimerkkiin:
 
 ```python
 ikä = int(input("Anna ikä: "))
-if 15 <= ikä < 18:
+if 15<=ikä<18:
     paino = float(input("Anna paino (kg): "))
-if (ikä >=18 or ikä>=15 and paino>=55):
+if (ikä>=18 or ikä>=15 and paino>=55):
     print("Lääkkeen käyttö on sallittua.")
 else:
     print("Lääkettä ei saa käyttää.")
