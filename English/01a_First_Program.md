@@ -27,7 +27,7 @@ On this course we are using the JetBrains PyCharm IDE. Please follow these instr
 1. Navigate to https://www.jetbrains.com/
 2. Select **Developer tools / PyCharm** ja click **Download**.
 3. Select the Professional version to download.
-4. Register your user account using your Metropolia email to acquire a software license to use PyCharm. The installation tool will assist you with the registration.
+4. To use PyCharm, you must create a JetBrains account with your Metropolia email to acquire a free student license. The student license is active for one year at a time. The installation tool helps you register your account. To acquire the software license, click the shopping cart icon at the top of the JetBrains website and select **Special offers / For students and teachers**. **Remember to use your Metropolia email**, and complete the registration by following the instructions in the activation email. When your license is about to expire after the first year, you will automatically receive instructions to your email on how to renew your license.
 
 Once your installation is finished, you can open PyCharm by clicking at the PyCharm icon on your computer.
 
