@@ -38,7 +38,7 @@ On this course, we use MariaDB databases. At the time of writing (August 2022), 
 driver will not support the newest
 Python 3.10 versions. For this reason, it is recommended that you install a slightly earlier Python version (e.g. version 3.9.)
 that has guaranteed support. If you choose to install the newest Python version now, you may later need to install
-another, earlier version to coexist in your computer.
+another, earlier version to coexist in your computer. 
 
 ## Installation of the IDE
 

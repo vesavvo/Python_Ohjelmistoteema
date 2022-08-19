@@ -13,7 +13,7 @@ Python on maailman yleisimpiä ohjelmointikieliä. Kun opiskelet Pythonia, voit:
 - soveltaa tekoälyä kattavien koneoppimiskirjastojen ansiosta
 
 Ensimmäisenä opiskeluvuonna saat vankat Python-ohjelmoinnin perustaidot. Syvennät osaamistasi myöhemmissä opinnoissa,
-ja opit käyttämään Python-kieltä työkaluna ohjelmointi- ja ohjelmistotuotantoprojekteissa.
+ja opit käyttämään Python-kieltä työkaluna ohjelmointi- ja ohjelmistotuotantoprojekteissa. 
 
 Tässä ensimmäisessä moduulissa asennat Python-kehitystyökalut ja opit kirjoittamaan ja ajamaan ensimmäisen Python-ohjelmasi.
 
