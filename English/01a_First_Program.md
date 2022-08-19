@@ -18,9 +18,31 @@ deepen your knowledge in the Python language and learn to use Python efficiently
 
 In this first module, you will install the Python development tools and learn to write and run your first Python program.
 
-## Installation
+## Installation of the Python Interpreter
 
-Let's start by installing the development environment (IDE), which is short for *Integrated Development Environment*.
+First, we install the Python interpreter. The Python interpreter is a program that translates the Python language
+statements in a program one at a time into instructions
+accepted by the computer's central processing unit (CPU).
+
+The installation of the Python interpreter proceeds as follows:
+
+1. Navigate to https://www.python.org/downloads/ with your browser.
+2. Select **Downloads / All releases**.
+3. Scroll to the section titled **Looking for a specific release?**.
+Click Download for the version of your choice (any version between 3.7.X and 3.9.X should do). The minor revision number
+X can be any number.
+4. Download the Python interpreter by clicking the link *Windows installer (64-bit)* at the bottom of the page.
+The wizard will guide you in the installation process. It is recommended to use the default folder for the installation.
+
+On this course, we use MariaDB databases. At the time of writing (August 2022), the MySQL Connection/Python database
+driver will not support the newest
+Python 3.10 versions. For this reason, it is recommended that you install a slightly earlier Python version (e.g. version 3.9.)
+that has guaranteed support. If you choose to install the newest Python version now, you may later need to install
+another, earlier version to coexist in your computer.
+
+## Installation of the IDE
+
+Next, we install the development environment (IDE), which is short for *Integrated Development Environment*.
 IDEs are professional software tools used for writing, executing, and testing program code.
 
 On this course we are using the JetBrains PyCharm IDE. Please follow these instructions to install PyCharm:

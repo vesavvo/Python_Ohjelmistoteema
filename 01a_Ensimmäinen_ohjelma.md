@@ -76,8 +76,8 @@ Näytön vasempaan reunaan ilmestyy projektipuu, joka näyttää projektiin kuul
 Jokainen ohjelma kirjoitetaan tiedostoon projektin kansiohierarkian sisälle. Voit tehdä ensimmäistä
 ohjelmaa varten uuden tiedoston napsauttamalla projektin nimeä projektipuussa hiiren kakkospainikkeella.
 Valitse sitten **New / Python file** ja kirjoita avautuvaan valintaikkunaan tiedoston nimi, esimerkiksi
-`hello`.
-Projektipuuhun ilmestyy kuvassa näkyvä tiedosto nimeltä `hello.py`. Python-ohjelma kirjoitetaan tiedostoihin, joiden päättenä on ´.py´. 
+`heimaailma`.
+Projektipuuhun ilmestyy kuvassa näkyvä tiedosto nimeltä `heimaailma.py`. Python-ohjelma kirjoitetaan tiedostoihin, joiden päättenä on ´.py´. 
 
 
 ## Ohjelman kirjoitus, tallennus ja ajo
