@@ -23,12 +23,25 @@ Jotta voit käyttää GitHubia, rekisteröidy sen käyttäjäksi osoitteessa htt
 Kun olet luonut itsellesi käyttäjätilin GitHubiin, voit luoda sinne repositorioita eli tallennuspaikkoja
 projekteille.
 
-Voit luoda omille Python-koodeillesi repositorion kahdella tavalla: joko suoraan GitHubista tai PyCharm-kehittimen
-kautta. Tarkastellaan ensin mainittua tapaa.
+Voit luoda omille Python-koodeillesi repositorion kahdella tavalla: joko PyCharm-kehittimen kautta tai suoraan GitHubista.
 
-## Repositorion luominen GitHubissa
+## Repositorion luominen PyCharm-kehittimen kautta (suositeltava tapa)
 
-Aloitetaan luomalla oma GitHub-repositorio projektia varten:
+Repositorion luominen olemassaolevan PyCharmilla tehdyn projektin kautta on suoriteltavaa, koska tällöin virtuaaliympäristön määritykset
+voidaan tehdä helposti projektia luotaessa. Yhteys versionhallintaan määritetään näin:
+
+1. Valitse GitHub-tili, jota käytät. Paina **Ctrl/Alt S** tai **CMD/,**. Valitse **Version Control / Github /Add**, ja syötä
+GitHub-kirjautumistietosi.
+
+2. Valitse PyCharm-kehittimessä 
+**VCS / Share project on GitHub**. Rastita **Private**, jotta saat yksityisen repositorion.
+3. Valitse repositorioon aluksi tulevat tiedostot. Voit lisätä tiedostoja myöhemmin.
+4. Kun yhteys GitHub-repositorioon on muodostettu,
+ilmestyy PyCharm-kehittimen valikkoriville uusi Git-valikko. Lisää haluamiasi tiedostoja toiminnolla **Git/Add**. PyCharm kysyy aina uutta tiedostoa luotaessa, liitetäänkö se repositorioon.
+
+## Repositorion luominen GitHubissa (vaihtoehtoinen tapa)
+
+Vaihtoehtoisesti voit luoda repositorion GitHub-sivustolla:
 
 1. Rekisteröidy GitHubin käyttäjäksi osoitteessa https://github.com/.
 2. Kirjauduttuasi sisään paina **Repositories**-otsikon vieressä olevaa **New**-painiketta.
@@ -36,7 +49,7 @@ Aloitetaan luomalla oma GitHub-repositorio projektia varten:
 
 ![Uuden repositorion luonti](img/uusi_repo2.png)
 
-Tämän jälkeen PyCharm-kehittimelle annetaan pääsy GitHubiin ja täsmennetään käytettävä repositorio.
+Tämän jälkeen PyCharm-kehittimelle annetaan pääsy GitHubiin ja täsmennetään käytettävä repositorio:
 
 1. Valitse GitHub-tili, jota käytät. Paina **Ctrl/Alt S** tai **CMD/,**. Valitse **Version Control / Github /Add**, ja syötä
 GitHub-kirjautumistietosi.
@@ -45,11 +58,7 @@ GitHub-kirjautumistietosi.
 Version Control**, ja hae GitHubissa luomasi Git-repositorio napsauttamalla **Clone**. PyCharm luo uuden 
 projektin, joka käyttää GitHub-reposiota.
 
-Jos GitHub-repositoriota ei ole ennalta olemassa, voit korvata toisen askeleen valitsemalla PyCharm-kehittimessä valinnalla
-**VCS / create Git Repository**. Tällöin repositorio luodaan PyCharm-projektin pohjalta, ja voit valita,
-mitä tiedostoja sinne tallenetaan.
-
-Kun yhteys GitHub-repositorioon on muodostettu, ilmestyy PyCharm-kehittimen valikkoriville uusi Git-valikko.
+Tässäkin tapauksessa PyCharm-kehittimen valikkoriville imesttyy uusi Git-valikko.
 
 ## Repositorion käyttö
 
