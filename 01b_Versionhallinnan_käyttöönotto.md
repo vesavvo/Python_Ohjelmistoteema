@@ -38,7 +38,7 @@ Aloitetaan luomalla oma GitHub-repositorio projektia varten:
 
 Tämän jälkeen PyCharm-kehittimelle annetaan pääsy GitHubiin ja täsmennetään käytettävä repositorio.
 
-1. Valitse GitHub-tili, jota käytät. Paina **Ctrl/Alt S**. Valitse **Version Control / Github /Add**, ja syötä
+1. Valitse GitHub-tili, jota käytät. Paina **Ctrl/Alt S** tai **CMD/,**. Valitse **Version Control / Github /Add**, ja syötä
 GitHub-kirjautumistietosi.
 
 2. Ota repositorio käyttöön Python-projektissasi. valitse PyCharm-kehittimessä **VCS / Get from
