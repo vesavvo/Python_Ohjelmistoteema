@@ -115,9 +115,10 @@ In Python, variables and their type do not have to be declared in advance. The t
 is determined automatically in the assignment statement. Variable type is the type of data a variable
 refers to: is the value for example a string or a number?
 
-Python has five basic types of variables:
+Python has six basic types of variables:
 - string
 - number, that can either be integer, long, float or complex
+- boolean, that is either True or False
 - list
 - tuple
 - dictionary
