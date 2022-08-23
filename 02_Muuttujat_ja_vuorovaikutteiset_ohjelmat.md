@@ -108,7 +108,7 @@ Python-kielessä muuttujia ei tarvitse etukäteen esitellä, eikä niiden tyyppi
 muuttujan tyyppi määrittyy automaattisesti sijoituslauseen seurauksena. Tyyppi tarkoittaa sitä, minkälaiseen tietoon
 muuttuja viittaa: onko muuttujan arvona esimerkiksi merkkijono vai luku?
 
-Python-kielessä on viisi muuttujan perustyyppiä:
+Python-kielessä on kuusi muuttujan perustyyppiä:
 - merkkijono (*string*)
 - luku (*number*), joka voi olla kokonaisluku, pitkä kokonaisluku, liukuluku tai kompleksiluku
 - totuusarvo (*boolean*), joka voi olla True tai False
