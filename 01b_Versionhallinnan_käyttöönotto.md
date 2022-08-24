@@ -32,7 +32,6 @@ voidaan tehdä helposti projektia luotaessa. Yhteys versionhallintaan määritet
 
 1. Valitse GitHub-tili, jota käytät. Paina **Ctrl/Alt S** tai **CMD/,**. Valitse **Version Control / Github /Add**, ja syötä
 GitHub-kirjautumistietosi.
-
 2. Valitse PyCharm-kehittimessä 
 **VCS / Share project on GitHub**. Rastita **Private**, jotta saat yksityisen repositorion.
 3. Valitse repositorioon aluksi tulevat tiedostot. Voit lisätä tiedostoja myöhemmin.
@@ -69,12 +68,10 @@ käyttöön kehitystiimin yhteistyöalustana
 kannattaa perehtyä vasta myöhemmin projektityön alkaessa.
 
 Työskentelyssä kannattaa ottaa tavaksi seuraavat käytännöt:
+
 - Kun aloitat työskentelyn, anna komento **Git / Pull**. Komento hakee mahdolliset muuttuneet tiedot GitHub-palvelussa olevasta repositoriosta.
-- Kun olet saanut uusia tuotoksia aikaan, sitouta muutokset komennon **Git / Commit** avulla. Muutosten pohjalta syntyy uusi
-tallennuspiste, johon on mahdollista myöhemmin palata, jos tarvetta ilmenee. Sitouta muutokset aina viimeistään siinä vaiheessa, kun olet lopettamassa
-työskentelyä.
-- Kun lopetat työskentelyn, anna komento **Git / Push**. Komento kopioi paikallisella koneessa olevat sitoutetut muutokset GitHub-palvelussa
-olevaan repositorioon.
+- Kun olet saanut uusia tuotoksia aikaan, sitouta muutokset komennon **Git / Commit** avulla. Muutosten pohjalta syntyy uusi tallennuspiste, johon on mahdollista myöhemmin palata, jos tarvetta ilmenee. Sitouta muutokset aina viimeistään siinä vaiheessa, kun olet lopettamassa työskentelyä. **Git / Add** toiminnolla voi valita tiedostoja mukaan seuraavaan tallennuspisteeseen (commit).
+- Kun lopetat työskentelyn, anna komento **Git / Push**. Komento kopioi paikallisella koneessa olevat sitoutetut muutokset GitHub-palvelussa olevaan repositorioon.
 
 Voit tutkia kehityshaaraa tallennuspisteineen GitHub-palvelussa.
 
@@ -82,3 +79,13 @@ Aina kun luot uuden tiedoston, PyCharm kysyy, otetaanko se mukaan versionhallint
 arvokkaat tiedostot on syytä tallentaa GitHubiin. Toisaalta konfiguraatiotiedostot ja muu ajoympäristöön liittyvä
 silppu kannattaa jättää versionhallinnan ulkopuolelle. Myöskään salasanoja sisältäviä tiedostoja ei tietoturvasyistä
 tule tallentaa versionhallintaan.
+
+## Tehtävien palautus GitHubin avulla
+
+Palauta Omassa oleviin tehtäviin aina suoraan kyseisen moduulin tehtävien ratkaisuun osoittava linkki. Se onnistuu helpoiten niin, että navigoit selaimella GitHubissa oikeaan kansioon ja kopioit linkin suoraan selaimen osoiteriviltä. Nimeä python-tiedostosi ja kansiosi niin, että niistä voi päätellä suoraan, minkä tehtävien ratkaisut ne sisältävät.
+
+![Linkin kopioiminen](img/copy-task-link.png)
+
+Jotta opettajat näkevät tiedostosi GitHubissa, sinun pitää lisätä opettajien käyttäjätunnukset GitHub-projektiisi käyttäjiksi. Tämä tapahtuu _Settings_-välilehdeltä kohdasta _Collaborators_. Opettajien tunnukset kerrotaan Oma-työtilan kautta. Vaihtoehtoisesti voit määritellä projektisi näkyvyyden julkiseksi (public).
+
+![Käyttäjien lisääminen](img/add-collaborator.png)
