@@ -85,13 +85,13 @@ Jos haluaisimme vain tulostaa käyttäjän syöttämän nimen, voisimme korvata 
 ```python
 print(käyttäjä)
 ```
-Huomaa, että nyt käyttäjä on muuttujan nimi. Se ei ole merkkijonoliteraali, eikä sitä kirjoiteta lainausmerkkeihin.
+Huomaa, että nyt `käyttäjä` on muuttujan nimi. Se ei ole merkkijonoliteraali, eikä sitä kirjoiteta lainausmerkkeihin.
 
 Haluamme kuitenkin, että ohjelma tulostaa pelkän nimen sijasta kokonaisen tervehdystekstin.
 Tulostettava merkkijono voidaan koostaa osamerkkijonoista siten, että osat liitetään toisiinsa plusmerkin (+) avulla.
 Alkuperäisen ohjelman alempi rivi koostaa tulosteen kolmesta osasta:
 1. merkkijonoliteraalista "Hauska tavata, ",
-2. muuttujan käyttäjä arvosta, sekä
+2. muuttujan `käyttäjä` arvosta, sekä
 3. merkkijonoliteraalista "!".
 
 Ohjelma toimii siis seuraavasti:
