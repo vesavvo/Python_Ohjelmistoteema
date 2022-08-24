@@ -48,6 +48,8 @@ Massa nykymittojen mukaan:
    - kolmenumeroisen koodin, jonka kukin numeromerkki on väliltä 0..9.
    - nelinumeroisen koodin, jonka kukin numeromerkki on väliltä 1..6.
 
+Vihje: tutustu random.randint()-funktion käyttöön.
+
 ## 3. Valintarakenne (if)
 
 1. Kirjoita ohjelma, joka kysyy kalastajalta kuhan pituuden senttimetreinä. Jos kuha on alamittainen, ohjelma käskee laskea kuhan takaisin järveen ilmoittaen samalla käyttäjälle, montako senttiä alimmasta sallitusta pyyntimitasta puuttuu.
