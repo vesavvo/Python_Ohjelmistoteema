@@ -238,12 +238,15 @@ Seuraava ohjelma tulostaa kahden luonnonvakion, piin ja Neperin luvun, arvot sit
 tulostetaan 12 merkkiä leveään kenttään, ja vastaava arvo tulostetaan viidellä desimaalilla kymmenen merkkiä leveään kenttään:
 
 ```python
+import math
+
 print(f"{'Pii':12s}:{math.pi:10.5f}")
 print(f"{'Neperin luku':12s}:{math.e:10.5f}")
 ```
 
 Edellä luonnonvakiot pii ja Neperin luku tulostettiin Pythonin matematiikkakirjaston avulla. Niihin viitattiin
-ilmauksilla `math.pi` ja `math.e`.
+ilmauksilla `math.pi` ja `math.e`. Matematiikkakirjastoa voidaan käyttää, kun ohjelman alkuun on lisätty kirjaston
+tuontilause `import math`.
 
 Lopuksi mainittakoon, että Python tarjoaa useita tapoja tulostuksen muotoiluun. Tässä kuvatut muotoilumerkkijonoliteraalit
 ovat uudehko tapa, joka on ollut tarjolla Python-versiosta 3.6. alkaen. Yhden hyvän tavan opettelu riittää,
