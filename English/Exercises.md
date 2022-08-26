@@ -61,7 +61,7 @@ You must use an if/elif/else structure in your solution.
    - LUX: upper-deck cabin with a balcony.
    - A: above the car deck, equipped with a window.
    - B: windowless cabin above the car deck.
-   - B: windowless cabin below the car deck.
+   - C: windowless cabin below the car deck.
 
    If the user enters an invalid cabin class, the program outputs an error message `Invalid cabin class`.
 
