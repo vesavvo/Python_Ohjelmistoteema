@@ -94,7 +94,7 @@ ilmaisemiseksi Python-kielessä voidaan käyttää seuraavia vertailuoperaattore
 | !=       | eri suuri kuin             | 
 
 Loogisia operaattoreita on sallittua ketjuttaa. Seuraava lauseke on tosi silloin, jos henkilön pituus on
-vähintään 170 mutta alle 180 cm: `170<= pituus<180`.
+vähintään 170 mutta alle 180 cm: `170 <= pituus < 180`.
 
 Operaattoreita on mahdollista käyttää myös merkkijonotyyppisille lausekkeille.
 Esimerkiksi merkkijonoille `m1` ja `m2` lauseke `m1<m2` on tosi silloin, jos merkkijono `m1` on
