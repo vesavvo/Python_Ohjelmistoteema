@@ -204,12 +204,14 @@ heitot_keskimäärin = heitot_yhteensä/toistot
 print(f"Heitot keskimäärin: {heitot_keskimäärin:6.2f}")
 ```
 
-Heittokierroskohtiasen tulostuslauseen eteen on lisätty kommenttimerkki, jotta konsoli ei täyty sadastatuhannesta tulosteesta.
+Heittokierroskohtaisen tulostuslauseen eteen on lisätty kommenttimerkki, jotta konsoli ei täyty sadastatuhannesta tulosteesta.
 
 Tulosteesta nähdään keskimääräinen vaadittujen heittojen lukumäärä. Vaikka toistoja on paljon, satunnaisvaihtelu
 vaikuttaa hieman tulokseen:
 
+```monospace
 Heitot keskimäärin:  35.86
+```
 
 Nähdään, että heittoja tarvitaan keskimäärin 36 kappaletta. Tämä vastaa laskemalla saatavaa tulosta. Teimme juuri
 empiirisen simulaation, jossa arvio teoreettisesta tuloksesta saadaan jäljittelemällä ilmiötä tietokoneella.
@@ -324,7 +326,7 @@ Suoritus ei pääty koskaan:
 Ikuiseen silmukkaan joutunut ohjelma on pysäytettävä väkisin. PyCharm-kehittimessä se tehdään napsauttamalla
 konsoli-ikkunan laidassa olevaa pysäytyspainiketta:
 
-![Uuden repositorion luonti](img/stop-nappi1.png)
+![Pysäytyspainike](img/stop-nappi1.png)
 
 Jos pysäytyspainike ei pysäytä suoritusta, tarkista, että päätetoimintojen emulointi on käytössä konsoli-ikkunassa:
 valitse **Run/Edit Configurations**, ja aseta päälle **Emulate Terminal in Output Console** -valintaruutu.
