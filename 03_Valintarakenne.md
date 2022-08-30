@@ -195,7 +195,7 @@ ehto oli epätosi. Tämä voidaan tehdä lisäämällä `if`-lauseeseen `else`-h
 if (ehto):
     lohko, joka suoritetaan, jos ehto on tosi
 else:
-    lohko, joka suoritetaan jos ehto on epätosi
+    lohko, joka suoritetaan, jos ehto on epätosi
 ```
 
 Lisätään `else`-haara lääke-esimerkkiin:
