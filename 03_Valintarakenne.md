@@ -27,7 +27,7 @@ Ehdollisesti suoritettava ohjelmanosa (eli latten osto) suoritetaan täsmälleen
 Python-kielessä ehdollisesti suoritettava ohjelmanosa toteutetaan `if`-lauseen avulla. Lauseen rakenne on seuraava:
 
 ```monospace
-if (ehto):
+if ehto:
 	ehdollisesti suoritettava lohko
 ```
 
