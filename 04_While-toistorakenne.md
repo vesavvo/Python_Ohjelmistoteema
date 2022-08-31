@@ -117,10 +117,6 @@ Anna komento: lopeta
 Toiminnot lopetettu.
 ```
 
-Esimerkissä hyödynnetään Python-kielen mukana tulevaa `random`-kirjastoa.
-Kirjasto otetaan käyttöön kirjoittamalla ohjelman alkuun sitä vastaava import-lause.
-Valmiiden kirjastojen käyttöä ei tarvitse opetella ulkoa, vaan käyttötavan
-voi aina tarkistaa dokumentaatiosta: [https://docs.python.org/]
 
 ## Esimerkki 3: vaihteleva määrä toistoja
 
@@ -147,6 +143,10 @@ Tarvittiin 17 heittoa.
 Tarvittiin 37 heittoa.
 ```
 
+Esimerkissä hyödynnetään Python-kielen mukana tulevaa `random`-kirjastoa.
+Kirjasto otetaan käyttöön kirjoittamalla ohjelman alkuun sitä vastaava import-lause.
+Valmiiden kirjastojen käyttöä ei tarvitse opetella ulkoa, vaan käyttötavan
+voi aina tarkistaa dokumentaatiosta: [https://docs.python.org/]
 
 ## Sisäkkäiset toistorakenteet
 
