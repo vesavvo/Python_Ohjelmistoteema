@@ -37,7 +37,7 @@ Toistorakenteesta päästään pois vasta, kun alkuehto on epätosi.
 Pythonissa alkuehdollinen toistorakenne toteutetaan  while-lauseen avulla.
 
 ```monospace
-while (ehto):
+while ehto:
 	toistettava lohko
 ```
 
