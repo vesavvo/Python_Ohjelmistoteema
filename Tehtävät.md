@@ -74,8 +74,9 @@ Vuosi on karkausvuosi, jos se on jaollinen neljällä. Sadalla jaolliset vuodet 
 ## 4. Alkuehdollinen toistorakenne (while)
 
 1. Kirjoita `while`-toistorakennetta käyttävä ohjelma, joka tulostaa kolmella jaolliset luvut väliltä 1..1000.
-2. Kirjoita ohjelma, joka muuntaa tuumia senttimetreiksi niin kauan kunnes käyttäjä antaa negatiivisen tuumamäärän. `1 tuuma = 2,51cm
+2. Kirjoita ohjelma, joka muuntaa tuumia senttimetreiksi niin kauan kunnes käyttäjä antaa negatiivisen tuumamäärän.
 Sen jälkeen ohjelma lopettaa toimintansa.
+`1 tuuma = 2,51cm`
 3. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja siihen saakka, kunnes tämä syöttää tyhjän merkkijonon lopetusmerkiksi.
 Lopuksi ohjelma tulostaa saaduista luvuista pienimmän ja suurimman.
 4. Kirjoita peli, jossa tietokone arpoo kokonaisluvun väliltä 1..10.
