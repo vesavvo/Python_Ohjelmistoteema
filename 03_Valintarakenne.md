@@ -19,7 +19,7 @@ jos rahaa_taskussa>=5
 ```
 
 Pseudokoodista nähdään, että päätös tehdään ehdon toteutumisen perusteella. Ehtona on tässä tapauksessa se, että
-rahaaa on vähintään viisi euroa. Ehto voi olla tosi tai epätosi: jos rahaa on esimerkiksi seitsemän euroa, on lauseke muotoa 
+rahaa on vähintään viisi euroa. Ehto voi olla tosi tai epätosi: jos rahaa on esimerkiksi seitsemän euroa, on lauseke muotoa 
 7>=5, joka on tosi. Toisaalta jos taskusta löytyy vain 4,85 euroa, on ehto muotoa 4,85>=5, joka on epätosi.
 
 Ehdollisesti suoritettava ohjelmanosa (eli latten osto) suoritetaan täsmälleen silloin, kun ehto on tosi.
