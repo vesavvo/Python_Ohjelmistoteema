@@ -218,7 +218,7 @@ annettavilla lähtötiedoilla) funktioista saadaan vahvoja, monikäyttöisiä ty
 Joskus funktio tuottaa arvon, joka on palautettava kutsuvalle ohjelmanosalle. Tämä arvon palauttaminen onnistuu
 paluuarvomekanismin avulla.
 
-Funktion tuottama arvo palautetaan return-lauseella. Tähänastisissa esimerkeissä `return`-lause ei ole sisältänyt
+Funktion tuottama arvo palautetaan `return`-lauseella. Tähänastisissa esimerkeissä `return`-lause ei ole sisältänyt
 paluuarvoa. Tarkastellaan nyt paluuarvon lisäämistä.
 
 Seuraava ohjelma laskee kahden luvun neliösumman, joka saadaan kertomalla kumpikin luvuista itsellään ja
