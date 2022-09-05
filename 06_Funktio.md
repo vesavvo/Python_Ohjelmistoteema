@@ -279,7 +279,7 @@ Sinulla on seuraavat tavarat:
 - Linkkuveitsi
 ```
 
-Muutetaan nyt ohjelmaa hieman. Muokataan alihojelmaa siten, että se tyhjentää listan sen tulostettuaan:
+Muutetaan nyt ohjelmaa hieman. Muokataan aliohjelmaa siten, että se tyhjentää listan sen tulostettuaan:
 
 ```python
 def inventaario(tavarat):
