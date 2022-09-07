@@ -97,6 +97,21 @@ Edellisessä esimerkissä kaikki joukon alkiot olivat merkkijonoja, joten ne oli
 Mainittakoon, että samantyyppisyyden vaatimusta ei ole. On siis sallittua luoda joukko, jonka yksi alkio on 
 kokonaisluku, toinen alkio on merkkijono ja kolmas vaikkapa lista.
 
+Tarkastellaan lopuksi tilannetta, jossa luodaan tyhjä joukko.
+Tyhjä joukko luodaan edellä esitetystä poiketen `set`-funktion avulla. Tyhjän joukon
+luominen pelkkien tyhjien aaltosulkeiden kautta ei siis onnistu.
+Seuraava ohjelma luo ensin tyhjän joukon, lisää siihen sen jälkeen yhden alkion ja tulostaa
+lopuksi joukon `print`-lauseella:
+```python
+nimet = set()
+nimet.add("Viivi")
+print(nimet)
+```
+Tuloste on seuraavanlainen:
+```monospace
+{'Viivi'}
+```
+
 ## Sanakirja
 
 Sanakirja (*dictionary*) on Pythonin käytetyimpiä tietorakenteita.
