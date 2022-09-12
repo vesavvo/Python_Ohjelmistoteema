@@ -49,6 +49,11 @@ poikkeaa materiaalissa esitetystä, ja ajurin toiminnassa voi olla vähäisiä e
 Jos ajuri on asentunut oikein, mitään ei tapahdu. Jos asennuksessa on ollut ongelma, saat virheilmoituksen. Korjaa asennus
 tarvittaessa.
 
+Asennuksen yhteydessä saatat saada virheilmoituksen, jonka mukaan tietokoneesta puuttuu Microsoftin Visual C++ -kirjasto. Jos näin kävisi,
+asenna puuttuva kirjasto Microsoftin sivuilta https://www.microsoft.com/en-us/download/default.aspx hyödyntäen sivuston hakutoimintoa.
+Virheilmoitus kertoo yksityiskohdat hakua varten.
+
+
 
 ## Tietokantayhteyden muodostaminen
 
