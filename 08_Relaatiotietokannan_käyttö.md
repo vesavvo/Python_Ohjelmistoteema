@@ -25,19 +25,20 @@ ohjelmasta voidaan lähettää SQL-lauseita
 Pythonin tietorakenteiden mukaisiksi.
 
 Tietokanta-ajuri riippuu sekä tiedonhallintaohjelmistosta että valitusta ohjelmointikielestä. Nyt tarvitsemme siis
-MariaDB-ajurin Python-kielelle. Koska MariaDB on yhteensopiva MySQL-tiedonhallintaohjelmiston kanssa, voimme vaihtoehtoisesti
+MariaDB-ohjelmistoa tukevan ajurin Python-kielelle. Koska MariaDB on yhteensopiva MySQL-tiedonhallintaohjelmiston kanssa, voimme 
 asentaa MySQL-ajurin Python-kielelle.
 
-Voit edetä jommallakummalla alla esitetyllä tavalla:
-1. Asenna MySQL:n Connector/Python ajuri verkkosivun https://dev.mysql.com/downloads/connector/python/ ohjeen mukaan.
-2. Asenna MariaDB:n Connector/Python-ajuri verkkosivun https://mariadb.com/docs/clients/mariadb-connectors/connector-python/install/
+Voit asentaa MySQL:n Python-ajurin jommallakummalla alla esitetyistä tavoista. Valitse asennustavoista vain toinen.
+- Valitse PyCharmissa **View/Tools Windows/Python Packages**. Kirjoita hakukenttään
+hakusanaksi **connector** ja etsi luettelosta vaihtoehto **mysql-connector-python**. Napsauta kyseistä vaihtoehtoa ja paina **Install**.
+- Vaihtoehtoisesti voit asentaa ajurin verkkosivun https://dev.mysql.com/downloads/connector/python/ ohjeen mukaan.
+
+Tässä materiaalissa oletetaan, että käytämme MySQL-ajuria käyttöönoton helppouden ja käytön ongelmattomuuden vuoksi
+sekä MySQL-ajurin pitkän historian takia (ensimmäinen MariaDB-ajuri julkaistiin vasta vuonna 2020).
+ Niinpä vaihtoehto 1 on tämän opintojakson näkökulmasta suositeltava. Jos haluat kuitenkin asentaa  MariaDB:n Connector/Python-ajuri, voit tehdä sen verkkosivun https://mariadb.com/docs/clients/mariadb-connectors/connector-python/install/
 ohjeen mukaan.
 
-Tässä materiaalissa oletetaan, että käytämme MySQL-ajuria (vaihtoehto 1) käyttöönoton helppouden ja käytön ongelmattomuuden vuoksi
-sekä MySQL-ajurin pitkän historian takia (ensimmäinen MariaDB-ajuri julkaistiin vasta vuonna 2020).
- Niinpä vaihtoehto 1 on tämän opintojakson näkökulmasta suositeltava.
-
-Kun olet asentanut MySQL-ajurin, voit testata sen toiminnan kirjoittamalla yhdestä `import`-lauseesta koostuvan ohjelman:
+Kun olet asentanut MySQL:n tietokanta-ajurin, voit testata sen toiminnan kirjoittamalla yhdestä `import`-lauseesta koostuvan ohjelman:
 ```python
 import mysql.connector
 ```
