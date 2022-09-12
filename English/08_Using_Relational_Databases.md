@@ -22,7 +22,7 @@ established, the driver allows for SQL statements (such as `SELECT` statements) 
 Furthermore, the driver converts the result sets to corresponding Python data structures.
 
 The correct database driver depends on both the chosen database manager software as well as the programming language
-used. We need a MariaDB-compatible driver for Python language. As MariaDB is compatible with MySQL database manager, we can
+used. Thus, we need a MariaDB-compatible driver for Python language. As MariaDB is compatible with MySQL database manager, we can
 install a MySQL driver for Python.
 
 You can proceed in one of the two ways presented below. Choose one option.
