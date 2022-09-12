@@ -95,6 +95,24 @@ In the previous example all of the items in the set were strings, so they were a
 However, there is no requirement for the items to be the same type. As an example, it is possible to create a set
 where one of the items is an integer, the second one a string and the third one a list.
 
+Finally, let's see how an empty set is constructed.
+An empty set is created and initialized with the `set` function.
+Thus, it is not possible to construct an empty set by simply adding 'empty' braces to
+the source code in this manner: `names = {}`.
+The following program correctly creates an empty set, adds one element into it, and outputs
+the set's contents with a `print` statement:
+
+```python
+names = set()
+names.add("Mary")
+print(names)
+```
+The program produces the following output:
+```monospace
+{'Mary'}
+```
+
+
 ## Dictionary
 
 Dictionary is one of the most commonly used Python data structures.
