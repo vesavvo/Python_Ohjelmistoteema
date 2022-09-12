@@ -48,6 +48,12 @@ presented here. There may also be slight differences in how the driver works com
 If the driver was successfully installed, nothing happens. If there were problems in the installation, you get an error message.
 Repair the installation if needed.
 
+During the installation, you may see an error message saying that a library called 
+**Microsoft Visual C++ runtime** is missing. Should this happen, go to the Microsoft's download page at 
+https://www.microsoft.com/en-us/download/default.aspx. Locate the missing library
+with the Search functionality, and install it. You can use the library details in the error message
+as search terms.
+
 ## Establishing connection to the database
 
 Let's look at an example database called `person`. The file consists of a single table called Employee. The following image
