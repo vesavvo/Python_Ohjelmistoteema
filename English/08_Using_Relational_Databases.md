@@ -22,15 +22,19 @@ established, the driver allows for SQL statements (such as `SELECT` statements) 
 Furthermore, the driver converts the result sets to corresponding Python data structures.
 
 The correct database driver depends on both the chosen database manager software as well as the programming language
-used. We need a MariaDB driver for Python language. As MariaDB is compatible with MySQL database manager, we can
-alternatively install a MySQL driver for Python.
+used. We need a MariaDB-compatible driver for Python language. As MariaDB is compatible with MySQL database manager, we can
+install a MySQL driver for Python.
 
-You can proceed in one of the two ways presented below:
-1. Install a MySQL Connector/Python driver by following the instructions on this website: https://dev.mysql.com/downloads/connector/python/
-2. Install a MariaDB Connector/Python driver by following the instructions on this website: https://mariadb.com/docs/clients/mariadb-connectors/connector-python/install/
+You can proceed in one of the two ways presented below. Choose one option.
+1. In PyCharm, click **View / Tools Windows / Python Packages**. Type **connector** as a search term,
+and select the **mysql-connector-python** option. Press **Install**.
+2. Alternatively, you can install the driver by following the instructions on this website: https://dev.mysql.com/downloads/connector/python/.
 
-The material here assumes that we are using a MySQL driver (option 1) due to easy installation and ease of use as well as the long
+The material here assumes that we are using a MySQL driver due to easy installation and ease of use as well as the long
 history of MySQL drivers (the first MariaDB driver was not published until 2020). Based on this, following option 1 is recommended.
+If you prefer installing the MariaDB Connector/Python driver instead, you can do so by
+following the instructions on this website: https://mariadb.com/docs/clients/mariadb-connectors/connector-python/install/.
+
 
 Once you have installed the MySQL driver, you can test that it works by writing a program with this single `import` statement:
 
