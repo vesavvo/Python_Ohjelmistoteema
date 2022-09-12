@@ -35,7 +35,7 @@ hakusanaksi **connector** ja etsi luettelosta vaihtoehto **mysql-connector-pytho
 
 Tässä materiaalissa oletetaan, että käytämme MySQL-ajuria käyttöönoton helppouden ja käytön ongelmattomuuden vuoksi
 sekä MySQL-ajurin pitkän historian takia (ensimmäinen MariaDB-ajuri julkaistiin vasta vuonna 2020).
- Niinpä vaihtoehto 1 on tämän opintojakson näkökulmasta suositeltava. Jos haluat kuitenkin asentaa  MariaDB:n Connector/Python-ajuri, voit tehdä sen verkkosivun https://mariadb.com/docs/clients/mariadb-connectors/connector-python/install/
+ Niinpä vaihtoehto 1 on tämän opintojakson näkökulmasta suositeltava. Jos haluat kuitenkin asentaa MariaDB:n Connector/Python-ajuri, voit tehdä sen verkkosivun https://mariadb.com/docs/clients/mariadb-connectors/connector-python/install/
 ohjeen mukaan.
 
 Kun olet asentanut MySQL:n tietokanta-ajurin, voit testata sen toiminnan kirjoittamalla yhdestä `import`-lauseesta koostuvan ohjelman:
