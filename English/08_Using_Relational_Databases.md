@@ -21,7 +21,7 @@ The database driver is needed already when establishing a connection to the data
 established, the driver allows for SQL statements (such as `SELECT` statements) to be sent to the database server.
 Furthermore, the driver converts the result sets to corresponding Python data structures.
 
-The correct database driver depends on both the chosen database manager software as well as the programming language
+The correct database driver depends on both the chosen database manager software and the programming language
 used. Thus, we need a MariaDB-compatible driver for Python language. As MariaDB is compatible with MySQL database manager, we can
 install a MySQL driver for Python.
 
