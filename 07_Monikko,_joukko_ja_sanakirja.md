@@ -39,7 +39,7 @@ Anna viikonpäivän järjestysnumero (1-7): 3
 
 Edellisessä esimerkissä monikon lueteltujen alkioiden ympärillä on kaarisulkeet.
 Kaarisulkeiden käyttö ei yleensä ole välttämätöntä, vaan monikko voidaan myös kirjoittaa ilman
-niitä. Seuraava lause luo ja tulostaa monikon, joka sisältää kolme merkkijonoa:
+niitä. Seuraavan ohjelma luo ja tulostaa monikon, joka sisältää kolme merkkijonoa:
 
 ```python
 hedelmät = "Appelsiini", "Banaani", "Omena"
@@ -50,6 +50,16 @@ Ohjelma tulostaa:
 ```monospace
 ('Appelsiini', 'Banaani', 'Omena')
 ```
+
+Kaarisulkeiden käyttö voi tulla pakolliseksi tilanteessa, jossa monikko on toisen tietorakenteen
+sisällä. Esimerkiksi sijoituslauseessa
+`arvot = 1, (2, 3), 4` kaarisulkeet ilmaisevat, että `arvot`-muuttujaan sijoitettavan monikon toinen alkio
+on itsessään monikko.
+
+Vaikka kaarisulkeiden käyttö monikkojen yhteydessä ei yleensä ole välttämätöntä, monet
+Python-kehittäjät pitävät sitä hyvänä ohjelmointikäytäntönä, joka parantaa koodin luettavuutta.
+
+### Monikon arvojen purku muuttujiin
 
 Monikon sisältämät arvot voidaan purkaa muuttujiin seuraavan esimerkin osoittamalla tavalla:
 ```python
@@ -62,6 +72,8 @@ Tämä ohjelma tuottaa seuraavan tulosteen:
 ```monospace
 Hedelmiä ovat Appelsiini, Banaani ja Omena.
 ```
+
+### Monikko funktion paluuarvona
 
 Aiemmin käsittelimme funktioita, joilla tarkoitetaan tarvittaessa kutsuttavia aliohjelmia.
 Monikkojen avulla voidaan helposti kiertää sitä rajoitetta, että funktiolla voi olla vain
@@ -87,15 +99,6 @@ Tulosteesta nähdään, että yhdellä funktiokutsulla saadaan kahden heiton tul
 ```monospace
 Nopista tuli 5 ja 6.
 ```
-
-Viimeisessä esimerkissä monikoita käytettiin ilman kaarisulkeita. Kaarisulkeita on pakko käyttää
- tilanteissa, joissa monikko sisältää monikoita. Esimerkiksi sijoituslauseessa
-`arvot = 1, (2, 3), 4` kaarisulkeet ilmaisevat, että `arvot`-muuttujaan sijoitettavan monikon toinen alkio
-on itsessään monikko.
-
-Vaikka kaarisulkeiden käyttö monikkojen yhteydessä ei yleensä ole välttämätöntä, monet
-Python-kehittäjät pitävät sitä hyvänä ohjelmointikäytäntönä, joka parantaa koodin luettavuutta.
-
 
 ## Joukko
 
