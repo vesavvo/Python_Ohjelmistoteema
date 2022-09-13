@@ -47,6 +47,7 @@ browser functionality.
 4. The communication between the backend service and the browser is implemented using API requests and JSON responses.
 5. The game's backend service utilizes a relational database that is based on the airport database used on this course. The schema of 
 the database can be modified and extended freely as needed.
+6. The game's backend service communicates with at least one external data source (besides the map service).
 6. The game has a concrete goal and it offers a good gaming experience.
 7. The game takes sustainable development factors into account.
 8. The game follows a good gaming etiquette and courtesy and is also suitable for young users (12+).
