@@ -29,12 +29,77 @@ day = days_of_the_week[day_number-1]
 print (f"Day number {day_number} is {day}.")
 ```
 
-When run, the program works as follows:
+When executed, the program works as follows:
 
 ```monospace
 Enter the day number (1-7): 3
 Day number 3 is Wednesday.
 ```
+
+In the previous example, the elements inside the tuple are written between parentheses.
+In many cases, these parentheses can be omitted. The following
+program creates a tuple of three strings, and outputs its contents:
+
+```python
+fruits = "Orange", "Banana", "Apple"
+print(fruits)
+```
+
+The output is:
+```monospace
+('Orange', 'Banana', 'Apple')
+```
+
+If data structures are nested, the use of parentheses may become necessary to avoid
+ambiguity. For example,
+in statement `values = 1, (2, 3), 4` the parentheses indicate that numbers 2 and 3 constitute
+a tuple that is, in turn, inside a tuple.
+
+Even though the use of parentheses around a tuple is not mandatory in most cases, many Python
+developers consider it a good practice that improves code readability.
+
+### Tuple unpacking
+
+The elements inside a tuple can be unpacked into variables in the following way:
+```python
+fruits = "Orange", "Banana", "Apple"
+(first, second, third) = fruits
+print (f"The fruits are: {first}, {second} and {third}.")
+```
+
+This program makes the following output:
+```monospace
+The fruits are: Orange, Banana and Apple.
+```
+
+### Tuples as return values
+
+Earlier on the course we learned about functions that are callable subroutines.
+Tuples provide an easy way to circumvent the limitation that a function can have only one return
+value. If the developer wants to return, for example, two values, he/she can create a
+tuple that holds both values and return that tuple as the return value. From a technical
+point of view, there's still one return value, but it is a tuple that can in turn contain
+more than one value.
+
+The following example illustrates the use of a tuple as a return value. The program contains
+a die-casting function for the Monopoly board game. In Monopoly, one always casts two dice at a time.
+
+```python
+import random
+
+def cast():
+    first, second = random.randint(1,6), random.randint(1,6)
+    return first, second
+
+die1, die2 = cast()
+print(f"The dice show {die1} and {die2}.")
+```
+
+The output reveals that we get a result for both casts with a single function call:
+```monospace
+The dice show 2 and 4.
+```
+
 
 ## Set
 
