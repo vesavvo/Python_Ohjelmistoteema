@@ -37,6 +37,66 @@ Anna viikonpäivän järjestysnumero (1-7): 3
 3. viikonpäivä on keskiviikko.
 ```
 
+Edellisessä esimerkissä monikon lueteltujen alkioiden ympärillä on kaarisulkeet.
+Kaarisulkeiden käyttö ei yleensä ole välttämätöntä, vaan monikko voidaan myös kirjoittaa ilman
+niitä. Seuraava lause luo ja tulostaa monikon, joka sisältää kolme merkkijonoa:
+
+```python
+hedelmät = "Appelsiini", "Banaani", "Omena"
+print(hedelmät)
+```
+
+Ohjelma tulostaa:
+```monospace
+('Appelsiini', 'Banaani', 'Omena')
+```
+
+Monikon sisältämät arvot voidaan purkaa muuttujiin seuraavan esimerkin osoittamalla tavalla:
+```python
+hedelmät = "Appelsiini", "Banaani", "Omena"
+(eka, toka, kolmas) = hedelmät
+print (f"Hedelmiä ovat {eka}, {toka} ja {kolmas}.")
+```
+
+Tämä ohjelma tuottaa seuraavan tulosteen:
+```monospace
+Hedelmiä ovat Appelsiini, Banaani ja Omena.
+```
+
+Aiemmin käsittelimme funktioita, joilla tarkoitetaan tarvittaessa kutsuttavia aliohjelmia.
+Monikkojen avulla voidaan helposti kiertää sitä rajoitetta, että funktiolla voi olla vain
+yksi paluuarvo: Jos arvoja halutaan palauttaa kaksi, rakennetaan niistä monikko ja palautetaan
+se paluuarvona. Teknisesti paluuarvoja on edelleen yksi, mutta se on tyypiltään monikko, joka
+voi sisältää useamman kuin yhden arvon.
+
+Seuraava esimerkki havainnollistaa monikon käyttöä paluuarvona. Ohjelmassa tehdään nopanheittofunktio
+Monopoli-lautapeliä varten. Monopoli-pelissä heitetään aina kahta noppaa.
+
+```python
+import random
+
+def heitä():
+    eka, toka = random.randint(1,6), random.randint(1,6)
+    return eka, toka
+
+noppa1, noppa2 = heitä()
+print(f"Nopista tuli {noppa1} ja {noppa2}.")
+```
+
+Tulosteesta nähdään, että yhdellä funktiokutsulla saadaan kahden heiton tulos:
+```monospace
+Nopista tuli 5 ja 6.
+```
+
+Viimeisessä esimerkissä monikoita käytettiin ilman kaarisulkeita. Kaarisulkeita on pakko käyttää
+ tilanteissa, joissa monikko sisältää monikoita. Esimerkiksi sijoituslauseessa
+`arvot = 1, (2, 3), 4` kaarisulkeet ilmaisevat, että `arvot`-muuttujaan sijoitettavan monikon toinen alkio
+on itsessään monikko.
+
+Vaikka kaarisulkeiden käyttö monikkojen yhteydessä ei yleensä ole välttämätöntä, monet
+Python-kehittäjät pitävät sitä hyvänä ohjelmointikäytäntönä, joka parantaa koodin luettavuutta.
+
+
 ## Joukko
 
 Joukko (*set*) on järjestämätön tietorakenne, eli sen alkiot voivat olla missä tahansa järjestyksessä. Koska joukon alkioille
