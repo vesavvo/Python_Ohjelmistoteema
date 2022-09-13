@@ -40,7 +40,7 @@ Voitte jälleen määritellä ja toteuttaa minkälaisen pelin tahansa, kunhan se
 
 1. Käyttäjä pelaa peliä vuorovaikutteisesti selaimessa. Selaimessa näytetään satelliitti- tai karttadataa graafisesti.
 2. Käyttöliittymä on toteutettu HTML-sivunmääritykielen ja CSS-tyylisivujen avulla. Välttämättömän selaintoiminnallisuuden toteuttamiseen käytetään JavaScript-kieltä.
-3. Pelin toimintologiikka on toteutettu Python-kielisenä taustapalveluna, joka tarjoaa selaimelle rajapinnan (API).
+3. Pelin toimintalogiikka on toteutettu Python-kielisenä taustapalveluna, joka tarjoaa selaimelle rajapinnan (API).
 4. Taustapalvelun ja selaimen välinen kommunikaatio toteutetaan API-pyynnöin ja JSON-vastauksin.
 5. Pelin taustapalvelu käyttää relaatiotietokantaa, jonka pohjana on opintojaksolla käytetty lentokenttätietokanta. Tietokannan skeemaa saa vapaasti muuttaa ja laajentaa.
 6. Pelissä on konkreettinen tavoite, ja se tuottaa hyvän pelikokemuksen.
