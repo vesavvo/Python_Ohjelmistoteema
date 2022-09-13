@@ -51,7 +51,7 @@ myös kuvana, jonka tueksi laaditaan tekstiselostus. Selostakaa tässä vapaamuo
 etenee, ja millaisia vaiheita pelaaja käy läpi?
 
 Luku 3 (Toiminnalliset vaatimukset) kuvaa periaatteessa kaiken, mitä käyttäjä voi pelillä tehdä. Toiminnalliset vaatimukset esitetään tyypillisesti käyttäjätarinoina, joissa on tekijä, toimenpide ja tavoite. Esimerkki käyttäjätarinasta on "Pelaajana
-voin valita karttapohjalla näkyvistä kaupungeista seuraavan lentokentän, jotta sähkölentokoneeni siirtyy sinne". Käyttäjätarinassa kuvataa siis tekijä (pelaaja), toimenpide (kentän valinta) sekä käyttäjää hyödyttävä tavoite,
+voin valita karttapohjalla näkyvistä kohteista seuraavan lentokentän, jotta sähkölentokoneeni siirtyy sinne". Käyttäjätarinassa kuvataan siis tekijä (pelaaja), toimenpide (kentän valinta) sekä käyttäjää hyödyttävä tavoite,
 joka toimenpiteestä seuraa (kohteeseen siirtyminen). Käyttäjätarinoita laaditaan niin monta, että ne yhdessä kuvaavat pelin toiminnallisuuden. Lentopelille käyttäjätarinoita tarvittaneen useita kymmeniä. Jokaisen käyttäjätarinan on oltava yksiselitteinen ja konkreettinen. Käyttäjätarinan pohjalta on voitava aikanaan todentaa, onko vastaava toiminnallisuus toteutettu ohjelmistossa.
  
 Luku 4 (Laadulliset vaatimukset) tarkentaa, millaisia muita kuin toiminnallisia vaatimuksia lentopelillä on. Näitä voivat olla esimerkiksi suorituskykyvaatimukset ("Lentokentän tietojen haku tietokannasta saa kestää korkeintaan kaksi sekuntia") tai
