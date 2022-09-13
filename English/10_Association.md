@@ -191,7 +191,7 @@ class Car:
 
 class PaintShop:
     def paint(self, car, colour):
-        auto.colour = colour
+        car.colour = colour
 
 paint_shop = PaintShop()
 car = Car("ABC-123", "blue")
