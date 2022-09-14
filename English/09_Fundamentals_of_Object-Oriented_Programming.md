@@ -165,7 +165,6 @@ The value of a class variable is referenced by writing both the name of the clas
 
 The program produces the following output:
 
-Ohjelma tuottaa seuraavan tulosteen:
 ```monospace
 2 dogs have been created so far.
 ```
