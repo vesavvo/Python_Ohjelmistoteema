@@ -39,7 +39,7 @@ dog.birth_year = 2022
 print (f"{dog.name:s} was born in {dog.birth_year:d}." )
 ```
 
-The first statement in the maing program creates a Dog object that is referenced by the variable `dog`. The dog is given
+The first statement in the main program creates a Dog object that is referenced by the variable `dog`. The dog is given
 the name Bubbles and birth year of 2022. These are properties of the object we created and specific to that exact object.
 We could create multiple dogs each with their own name and year of birth. We could also specify a breed for some of the dogs
 and a nickname for others. Therefore, the properties of objects can vary from each other.
