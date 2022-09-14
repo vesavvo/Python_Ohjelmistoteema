@@ -155,7 +155,7 @@ def change(city):
 
 city = "Helsinki"
 print("At the beginning in the main program: " + city)
-vaihda(city)
+change(city)
 print("At the end of the main program: " + city)
 ```
 
