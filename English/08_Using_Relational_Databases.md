@@ -68,7 +68,7 @@ We will extend the program so that it can establish a database connection to the
 ```python
 import mysql.connector
 
-yhteys = mysql.connector.connect(
+connection = mysql.connector.connect(
          host='127.0.0.1',
          port= 3306,
          database='people',
