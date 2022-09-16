@@ -172,6 +172,15 @@ airport. For example, the ICAO code of Helsinki-Vantaa Airport is EFHK. You can 
 
 ## 8. Using relational databases
 
+>Some users have faced surprising problems with the latest driver version 8.0.30.
+>If you encounter an error message saying `mysql.connector.errors.ProgrammingError: Character set 'utf8' unsupported`,
+>you can solve this by reverting to version 8.0.29:
+> In PyCharm, select View/Tool Windows/Python Packages.
+>Search for the mysql-connector-python package. Remove the installation of version 8.0.30 by right-clicking
+> the three dots on the right and selecting Delete.
+> Change the version from "Latest" to  "8.0.29" and click Install.
+
+
 1. Write a program that asks the user to enter the ICAO code of an airport. The program fetches and prints out the corresponding
 airport name and location (town) from the airport database used on this course.
 
