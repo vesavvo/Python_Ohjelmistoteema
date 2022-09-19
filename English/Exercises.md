@@ -182,7 +182,7 @@ airport. For example, the ICAO code of Helsinki-Vantaa Airport is EFHK. You can 
 
 
 1. Write a program that asks the user to enter the ICAO code of an airport. The program fetches and prints out the corresponding
-airport name and location (town) from the airport database used on this course.
+airport name and location (town) from the airport database used on this course. The ICAO codes are stored in the ident column of the airport table.
 
 2. Write a program that asks the user to enter the area code (for example `FI`) and prints out the airports located in that country
 ordered by airport type. For example, Finland has 65 small airports, 15 helicopter airports and so on.
