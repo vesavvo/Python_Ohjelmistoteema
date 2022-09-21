@@ -173,8 +173,8 @@ response = cursor.fetchall()
 The method call fetches the entire result set. In case the result set is exceptionally large, it is be possible to 
 fetch the records in smaller parts using the `fetchmany` and `fetchone` methods. This is rarely necessary.
 
-The result set stored in the `result` variable is a list structure where the elements are also lists. Each item
-in the outer list corresponds to one row in the result set. Each row is likewise presented as a list where the
+The result set stored in the `result` variable is a list structure where the elements are tuples. Each item
+in the outer structure (list) corresponds to one row in the result set. Each row is  presented as a tuple where the
 items are the field values in the order they were written in the `SELECT` statement. 
 
 The result set of the example can be visualized as follows:
