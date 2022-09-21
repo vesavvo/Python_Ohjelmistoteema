@@ -170,6 +170,8 @@ The example program produces the following output:
 Variables and constants can be used in mathematical operations. The order of the operations can be defined
 with brackets if needed.
 
+The arithmetic operations are addition (`+`), subtraction (`-`), multiplication (`*`) and division (`+`). In addition, there is the modulo operator (`%`) for the remainder, as well as the floor division operator (`//`) and the exponential operator (`**`).
+
 The program below asks for a temperature in Fahrenheit and converts it to Celsius. The conversion is done by
 subtracting 32 from the Fahrenheit degrees and multiplying the difference with a constant 5/9.
 
