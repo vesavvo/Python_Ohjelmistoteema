@@ -173,8 +173,8 @@ tulos = kursori.fetchall()
 Metodikutsu hakee tulosjoukon kokonaisuudessaan. Jos tulosjoukko olisi erittäin suuri, olisi mahdollista hakea sen
 tietueita pienissä määrin `fetchmany` ja `fetchone`-metodeilla. Tähän on harvoin tarvetta.
 
-`Tulos`-muuttujaan tallennettu tulosjoukko on rakenteeltaan lista, jonka alkiot ovat listoja. Ulomman listan kukin
-alkio vastaa yhtä tulosjoukon riviä. Jokainen rivi esitetään niin ikään listana, ja sen alkioina ovat kenttien arvot
+`Tulos`-muuttujaan tallennettu tulosjoukko on rakenteeltaan lista, jonka alkiot ovat monikoita. Ulomman rakenteen (listan) kukin
+alkio vastaa yhtä tulosjoukon riviä. Jokainen rivi esitetään monikkona, ja sen alkioina ovat kenttien arvot
 siinä järjestyksessä kuin ne `SELECT`-lauseessa määriteltiin.
 
 Esimerkin tapauksessa tulosjoukkoa voi visualisoida seuraavasti:
