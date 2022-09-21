@@ -167,6 +167,8 @@ Esimerkkiohjelma tuottaa seuraavan tulosteen:
 Muuttujilla ja vakioilla voidaan tehdä laskutoimituksia. Laskutoimitusten laskujärjestys voidaan
 tarvittaessa osoittaa sulkeilla.
 
+Laskutoimituksia ovat yhteenlasku (`+`), vähennyslasku (`+`), kertolasku (`*`) ja jakolasku (`+`). Lisäksi on olemassa jakojäännösoperaatio (`%`), pelkän kokonaisosan palauttava jakolasku (`//`) sekä potenssiinkorotus (`**`).
+
 Alla oleva ohjelma kysyy lämpötilan Fahrenheit-asteina ja muuntaa sen Celsius-asteiksi. Muunnos tehdään
 siten, että Fahrenheit-asteista vähennetään 32, ja erotus kerrotaan vakiolla 5/9.
 
