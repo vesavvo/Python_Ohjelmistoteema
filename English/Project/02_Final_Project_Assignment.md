@@ -43,7 +43,7 @@ of a game you want as long as it fulfills these conditions:
 1. The user playes the game in an interactive way on a browser. Satellite of map data is shown graphically on the browser.
 2. The user interface (UI) is implemented using HTML language and CSS style sheets. JavaScript is used for implementing the necessary 
 browser functionality.
-3. The operation logic of the game is implemented as a Python-based backend service that provides an API for the browser. The program utiizes the object-oriented features of Python.
+3. The operation logic of the game is implemented as a Python-based backend service that provides an API for the browser. The program utilizes the object-oriented features of Python.
 4. The communication between the backend service and the browser is implemented using API requests and JSON responses.
 5. The game's backend service utilizes a relational database that is based on the airport database used on this course. The schema of 
 the database can be modified and extended freely as needed.
