@@ -231,5 +231,5 @@ esiintyvän avaimen.
 
 Entä ovatko sanakirjan alkiot - eli avain-arvoparit - järjestettyjä? Tämän osalta tilanne riippuu Pythonin versiosta:
 versiosta 3.7 lukien alkiot ovat järjestettyjä, eli ajoympäristö takaa, että sanakirjan iterointijärjestys on
-sama kuin järjestys, jossa alkiot sanakirjaan syötetiin. Vanhemmissa Python-versioissa tätä ei taata.
+sama kuin järjestys, jossa alkiot sanakirjaan syötettiin. Vanhemmissa Python-versioissa tätä ei taata.
 
