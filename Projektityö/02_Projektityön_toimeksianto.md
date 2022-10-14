@@ -15,10 +15,11 @@ Voitte hyödyntää esiprojektin määrittelydokumentin sisältöä ja osia uude
 
 Projektityön määrittelydokumentin on sisällettävä ainakin seuraavat luvut:
 1. Johdanto
-2. Lähtötilanteen kuvaus
-3. Visio
-4. Toiminnalliset vaatimukset
+2. Visio
+3. Läpäisykuvaus
+4. Poikkeavat suorituspolut
 5. Laadulliset vaatimukset
+6. Muut seikat
 
 Luku 1 (Johdanto) kuvaa, mikä dokumentin tarkoitus on ja kenelle se on suunnattu. Johdannossa voidaan myös esitellä dokumentin rakenne.
 
