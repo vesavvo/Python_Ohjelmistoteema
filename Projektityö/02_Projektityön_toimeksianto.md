@@ -11,7 +11,7 @@ että tuloksena on **karttapalvelua ja ulkoista tietolähdettä käyttävä sela
 ## Määrittelydokumentti
 
 Projektityön määrittelydokumentti kuvaa, mitä projektityön tuotoksena saatavalla, laajennetulla lentopelillä voidaan tehdä.
-Voitte hyödyntää esiprojektin määrittelydokumentin sisältöä ja osia uudessa määrittelydokumentissanne.
+Voitte hyödyntää esiprojektin määrittelydokumentin sisältöä ja osia uudessa määrittelydokumentissanne. Määrittelyvaiheessa hyödynnetään Projektityö-kansiossa olevaa valmista määrittelydokumentin pohjaa.
 
 Projektityön määrittelydokumentin on sisällettävä ainakin seuraavat luvut:
 1. Johdanto
@@ -22,16 +22,19 @@ Projektityön määrittelydokumentin on sisällettävä ainakin seuraavat luvut:
 
 Luku 1 (Johdanto) kuvaa, mikä dokumentin tarkoitus on ja kenelle se on suunnattu. Johdannossa voidaan myös esitellä dokumentin rakenne.
 
-Luku 2 (Lähtötilanteen kuvaus) selostaa projektityön lähtökohdan: mitä rakentamallanne lentopelin prototyypillä voi tehdä?
-
-Luku 3 (Visio) kuvaa uuden, laajennetun lentopelin yleisidean. Miten käyttäjä pelaa peliä, ja mitä pelissä tapahtuu?
+Luku 2 (Visio) kuvaa uuden, laajennetun lentopelin yleisidean. Miten käyttäjä pelaa peliä, ja mitä pelissä tapahtuu?
 Visio voidaan jälleen esittää
 myös kuvana, jonka tueksi laaditaan tekstiselostus.
 
-Luku 4 (Toiminnalliset vaatimukset) kuvaa, mitä käyttäjä voi laajennetulla pelillä tehdä.
-Kirjoittakaa käyttäjätarinoita samaan tapaan kuin esiprojektin määrittelydokumentissa.
+Luku 3 (Läpäisykuvaus) kuvaa konkreettisesti, miten pelin kulku etenee tyypillisellä käyttökerralla.
+
+Luku 4 (Poikkeavat suorituspolut) kuvaa toiminnan siltä osin, kuin se ei ilmene läpäisykuvauksesta. Tässä kuvataan muun muassa vika- ja virhetilanteiden käsittely
 
 Luku 5 (Laadulliset vaatimukset) tarkentaa, millaisia muita kuin toiminnallisia vaatimuksia lentopelillä on. Näitä voivat olla esimerkiksi vasteaika- ja käytettävyysvaatimukset.
+
+Luku 6 (Muut seikat) esittelee muut mahdolliset määrittelyvaiheessa esiin tulevat seikat.
+
+
 
 ## Pelin reunaehdot
 
