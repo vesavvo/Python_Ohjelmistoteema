@@ -67,7 +67,7 @@ Ensimmäinen parametri, eli liukuluvuksi muunnettu parametri "13" päätyy `luku
 toinen parametri, merkkijono "28" muutetaan liukuluvuksi ja annetaan muuttujan `luku2` arvoksi.
 Summa lasketaan, ja se muunnetaan merkkijonoksi sekä palautetaan funktion paluuarvona.
 
-Kun taustapalvelua kutsutaan selaimesta, vastauksena oleva luku nähdään selainikkunassa:
+Kun taustapalvelua kutsutaan selaimesta, vastauksena oleva luku nähdään selainikkunassa (kuvan porttinumero poikkeaa esimerkissä käytetystä):
 
 ![Taustapalvelun palauttama vastaus selainikkunassa](img/flaskvastaus.png)
 
@@ -110,7 +110,7 @@ if __name__ == '__main__':
 ```
 
 Nyt ohjelma tuottaa JSON-vastauksen, jonka ohjelmallinen käsittely on helppoa vaikkapa selaimessa ajettavan
-JavaScript-kielen avulla (kuvassa on käytössä porttinumero 5000):
+JavaScript-kielen avulla (kuvan porttinumero poikkeaa esimerkissä käytetystä):
 
 ![JSON-vastaus selainikkunassa](img/flask_json.png)
 
