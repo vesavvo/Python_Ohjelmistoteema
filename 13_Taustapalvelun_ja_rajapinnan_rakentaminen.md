@@ -110,7 +110,7 @@ if __name__ == '__main__':
 ```
 
 Nyt ohjelma tuottaa JSON-vastauksen, jonka ohjelmallinen käsittely on helppoa vaikkapa selaimessa ajettavan
-JavaScript-kielen avulla:
+JavaScript-kielen avulla (kuvassa on käytössä porttinumero 5000):
 
 ![JSON-vastaus selainikkunassa](img/flask_json.png)
 
