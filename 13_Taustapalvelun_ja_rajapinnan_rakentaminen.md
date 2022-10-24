@@ -41,19 +41,19 @@ def summa():
     return str(summa)
 
 if __name__ == '__main__':
-    app.run(use_reloader=True, host='127.0.0.1', port=5000)
+    app.run(use_reloader=True, host='127.0.0.1', port=3000)
 
 ```
 
 Aloitetaan ohjelmaan perehtyminen sen viimeisestä rivistä. Sillä oleva `app.run`-metodin kutsu käynnistää taustapalvelun.
 Palvelu avataan IP-osoitteessa 127.0.0.1, joka on omaa tietokonetta vastaava erikoisosoite. Tämä tarkoittaa, että
-yhteys tuohon IP-osoitteeseen voidaan ottaa vain samasta tietokoneesta, jossa ohjelmaa ajetaan. Porttinumero 5000 kertoo,
-että taustapalvelin odottaa mainittuja saman koneen yhteydenottoja tietoliikenneportin 5000 kautta. 
+yhteys tuohon IP-osoitteeseen voidaan ottaa vain samasta tietokoneesta, jossa ohjelmaa ajetaan. Porttinumero 3000 kertoo,
+että taustapalvelin odottaa mainittuja saman koneen yhteydenottoja tietoliikenneportin 3000 kautta. 
 
 Ohjelman rivi `@app.route('summa')` määrittää niin kutsutun päätepisteen. Se kertoo, että seuraavan rivin funktio
 nimeltä `summa` ajetaan silloin,
 kun taustapalvelun käyttäjä lähettää pyynnön, jossa IP-osoiteosan jälkeen esiintyy merkkijono `/summa`.
-Funktiota voidaan siis kutsua esimerkiksi selaimesta kirjoittamalla verkko-osoitteeksi `http://127.0.0.1:5000/summa`.
+Funktiota voidaan siis kutsua esimerkiksi selaimesta kirjoittamalla verkko-osoitteeksi `http://127.0.0.1:3000/summa`.
 Teknisesti selain lähettää tällöin HTTP-yhteyskäytännön mukaisen GET-pyynnön, johon Flaskin avulla toteutettu
 taustapalvelu vastaa.
 
@@ -62,7 +62,7 @@ yhteenlaskettavat. Ne voidaan välittää GET-pyynnön parametreina, jotka käsi
 avulla.
 
 Näin taustapalvelua voidaan kutsua kirjoittamalla selaimeen vaikkapa
-osoite `http://127.0.0.1:5000/summa?luku1=13&luku2=28`.
+osoite `http://127.0.0.1:3000/summa?luku1=13&luku2=28`.
 Ensimmäinen parametri, eli liukuluvuksi muunnettu parametri "13" päätyy `luku1`-muuttujan arvoksi. Vastaavasti
 toinen parametri, merkkijono "28" muutetaan liukuluvuksi ja annetaan muuttujan `luku2` arvoksi.
 Summa lasketaan, ja se muunnetaan merkkijonoksi sekä palautetaan funktion paluuarvona.
@@ -106,7 +106,7 @@ def summa():
     return vastaus
 
 if __name__ == '__main__':
-    app.run(use_reloader=True, host='127.0.0.1', port=5000)
+    app.run(use_reloader=True, host='127.0.0.1', port=3000)
 ```
 
 Nyt ohjelma tuottaa JSON-vastauksen, jonka ohjelmallinen käsittely on helppoa vaikkapa selaimessa ajettavan
