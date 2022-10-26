@@ -20,7 +20,7 @@ class Employee:
         self.first_name = first_name
         self.last_name = last_name
 
-    def printInformation(self):
+    def print_information(self):
         print(f"{self.employee_number}: {self.first_name} {self.last_name}")
 
 employees = []
@@ -28,7 +28,7 @@ employees.append(Employee("Viivi", "Virta"))
 employees.append(Employee("Ahmed", "Habib"))
 
 for e in employees:
-    e.printInformation()
+    e.print_information()
 ```
 
 The program creates two employees: Viivi and Ahmed, adds them to the employee list and prints out the contents
@@ -71,7 +71,7 @@ class Employee:
         self.first_name = first_name
         self.last_name = last_name
 
-    def printInformation(self):
+    def print_information(self):
         print(f"{self.employee_number}: {self.first_name} {self.last_name}")
 
 class HourlyPaid(Employee):
@@ -80,8 +80,8 @@ class HourlyPaid(Employee):
         self.hourly_pay = hourly_pay
         super().__init__(first_name, last_name)
 
-    def printInformation(self):
-        super().printInformation()
+    def print_information(self):
+        super().print_information()
         print(f"Hourly pay: {self.hourly_pay}")
 
 class MonthlyPaid(Employee):
@@ -90,8 +90,8 @@ class MonthlyPaid(Employee):
         self.monthly_pay = monthly_pay
         super().__init__(irst_name, last_name)
 
-    def printInformation(self):
-        super().printInformation()
+    def print_information(self):
+        super().print_information()
         print(f"Monthly pay: {self.monthly_pay}")
 
 
@@ -102,7 +102,7 @@ employees.append(Employee("Pekka", "Puro"))
 employees.append(HourlyPaid("Olga", "Glebova", 14.92))
 
 for e in employees:
-    e.printInformation()
+    e.print_information()
 
 ```
 
@@ -137,15 +137,15 @@ Properties defined in the base class are automatically visible in the subclass. 
 
 ## Overriding methods
 
-When we look at the example above, we notice that the `Employee` base class has a `printInformation` method that
+When we look at the example above, we notice that the `Employee` base class has a `print_information` method that
 prints out the first and last name of the employee. The method works well when a person has been created as an 
 instance of the `Employee` class regardless of their contract type. On the other hand, for printing the information
 of hourly paid employees for example the method is too concise: it prints out the name information but cannot access
 the hourly pay defined in the subclass.
 
-The problem can be solved by overriding the `printInformation` method. Overriding means that another implementation
+The problem can be solved by overriding the `print_information` method. Overriding means that another implementation
 of a method that exists in the base class is written into the subclass. The overridden method in the subclass overrides
-the method defined in the base class. Therefore, when we write `e.printInformation()` for an object of the `HourlyPaid`
+the method defined in the base class. Therefore, when we write `e.print_information()` for an object of the `HourlyPaid`
 class, it automatically calls the version of the method defined in the `HourlyPaid` class. If the same method call
 is written for an object from the `Employee` class, the version of the same method in the base class is called.
 
@@ -155,7 +155,7 @@ loop structure:
 
 ```
 for e in employees:
-    e.printInformation()
+    e.print_information()
 ```
 
 Variants of the called method and technical details of the implementation are hidden where they belong: the implementing classes.
