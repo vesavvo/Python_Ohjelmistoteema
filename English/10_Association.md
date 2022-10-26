@@ -76,17 +76,17 @@ class Hotel:
     def __init__(self):
         self.dogs = []
 
-    def dogCheckIn(self, dog):
+    def dog_checkin(self, dog):
         self.dogs.append(dog)
         print(dog.nimi + " checked in")
         return
 
-    def dogCheckOut(self, dog):
+    def dog_checkout(self, dog):
         self.dogs.remove(dog)
         print(koira.name + " checked out")
         return
 
-    def greetDogs(self):
+    def greet_dogs(self):
         for dog in self.dogs:
             dog.bark(1)
 
@@ -97,12 +97,12 @@ dog2 = Dog("Boi", 2022, "Yip yip yip")
 
 hotel = Hotel()
 
-hotel.dogCheckIn(dog1)
-hotel.dogCheckIn(dog2)
-hotel.greetDogs()
+hotel.dog_checkin(dog1)
+hotel.dog_checkin(dog2)
+hotel.greet_dogs()
 
-hotel.dogCheckOut(dog1)
-hotel.greetDogs()
+hotel.dog_checkout(dog1)
+hotel.greet_dogs()
 ```
 
 The example program consists of three parts:
@@ -123,13 +123,13 @@ the hotel. The newly created hotel does not have any guests yet, but it has an e
 Next, the first dog (Rascal) is checked in to the hotel:
 
 ```python
-hotel.dogCheckIn(dog1)
+hotel.dog_checkin(dog1)
 ```
 
 This is a method provided by the hotel: the check-in is clearly an activity of the hotel, which is why it has been
 programmed into the `Hotel` class. It is necessary to know which dog is going to be checked in, so the corresponding
 Dog object (or actually a reference to the object) is passed as an argument in the method call. When the method is called,
-the execution moves to the `dogCheckIn` method where the dog received as a parameter is added to the dog list of the hotel.
+the execution moves to the `dog_checkin` method where the dog received as a parameter is added to the dog list of the hotel.
 
 The second dog Boi is checked in to the hotel the same way.
 
@@ -137,7 +137,7 @@ Now it is time for the caretaker to do a round in the hotel and greet all the do
 in the `Hotel` class is called:
 
 ```python
-hotel.greetDogs()
+hotel.greet_dogs()
 ```
 
 This method was implemented without parameters. The greeting is targeted to all dogs that are currently in the hotel and
