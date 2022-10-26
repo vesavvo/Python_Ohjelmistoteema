@@ -20,7 +20,7 @@ class Työntekijä:
         self.etunimi = etunimi
         self.sukunimi = sukunimi
 
-    def tulostaTiedot(self):
+    def tulosta_tiedot(self):
         print(f"{self.työntekijänumero}: {self.etunimi} {self.sukunimi}")
 
 työntekijät = []
@@ -28,7 +28,7 @@ työntekijät.append(Työntekijä("Viivi", "Virta"))
 työntekijät.append(Työntekijä("Ahmed", "Habib"))
 
 for t in työntekijät:
-    t.tulostaTiedot()
+    t.tulosta_tiedot()
 ```
 
 Ohjelma luo kaksi työntekijä: Viivin ja Ahmedin, lisää heidät työntekijälistaan ja tulostaa listan sisällön:
@@ -73,7 +73,7 @@ class Työntekijä:
         self.etunimi = etunimi
         self.sukunimi = sukunimi
 
-    def tulostaTiedot(self):
+    def tulosta_tiedot(self):
         print(f"{self.työntekijänumero}: {self.etunimi} {self.sukunimi}")
 
 class Tuntipalkkainen(Työntekijä):
@@ -82,8 +82,8 @@ class Tuntipalkkainen(Työntekijä):
         self.tuntipalkka = tuntipalkka
         super().__init__(etunimi, sukunimi)
 
-    def tulostaTiedot(self):
-        super().tulostaTiedot()
+    def tulosta_tiedot(self):
+        super().tulosta_tiedot()
         print(f" Tuntipalkka: {self.tuntipalkka}")
 
 class Kuukausipalkkainen(Työntekijä):
@@ -92,8 +92,8 @@ class Kuukausipalkkainen(Työntekijä):
         self.kuukausipalkka = kuukausipalkka
         super().__init__(etunimi, sukunimi)
 
-    def tulostaTiedot(self):
-        super().tulostaTiedot()
+    def tulosta_tiedot(self):
+        super().tulosta_tiedot()
         print(f" Kuukausipalkka: {self.kuukausipalkka}")
 
 
@@ -104,7 +104,7 @@ työntekijät.append(Työntekijä("Pekka", "Puro"))
 työntekijät.append(Tuntipalkkainen("Olga", "Glebova", 14.92))
 
 for t in työntekijät:
-    t.tulostaTiedot()
+    t.tulosta_tiedot()
 
 ```
 
@@ -140,15 +140,15 @@ Yliluokassa määritetyt ominaisuudet näkyvät automaattisesti aliluokkaan. Voi
 
 ## Metodien ylikirjoittaminen
 
-Kun tarkastelemme edellä olevaa esimerkkiä, havaitsemme, että `Työntekijä`-yliluokkaan kirjoitettu `tulostaTiedot`-metodi 
+Kun tarkastelemme edellä olevaa esimerkkiä, havaitsemme, että `Työntekijä`-yliluokkaan kirjoitettu `tulosta_tiedot`-metodi 
 tulostaa henkilön etu- ja sukunimen. Metodi toimii hyvin silloin, kun henkilö on luotu `Työntekijä`-luokan
 ilmentymäksi ottamatta kantaa siihen, onko hän tunti- vai kuukausipalkkainen. Toisaalta esimerkiksi tuntipalkkaisten
 työntekijöiden tietojen tulostamiseen metodi on liian suppea: se tulostaa nimitiedot mutta ei pääse käsiksi
 aliluokassa määritettyyn tuntipalkkaan.
 
-Ongelma ratkeaa ylikirjoittamalla `tulostaTiedot`-metodi. Ylikirjoittaminen tarkoittaa sitä, että aliluokkaan
+Ongelma ratkeaa ylikirjoittamalla `tulosta_tiedot`-metodi. Ylikirjoittaminen tarkoittaa sitä, että aliluokkaan
 luodaan toinen toteutus yliluokassa olevasta metodista. Aliluokassa oleva, ylikirjoitettu metodi menee edelle
-yliluokassa määritellystä metodista. Kun siis kirjoitamme `t.tulostaTiedot()` oliolle, joka on
+yliluokassa määritellystä metodista. Kun siis kirjoitamme `t.tulosta_tiedot()` oliolle, joka on
 `Tuntipalkkainen`-luokan ilmentymä, kutsutaan automaattisesti `Tuntipalkkainen`-luokassa olevaa versiota metodista.
 Jos sama metodikutsu kirjoitetaan `Työntekijä`-luokan ilmentymäksi luodulle oliolle, kutsutaan yliluokassa
 olevaa versiota.
@@ -159,7 +159,7 @@ tulostettua yksinkertaisella toistorakenteella:
 
 ```
 for t in työntekijät:
-    t.tulostaTiedot()
+    t.tulosta_tiedot()
 ```
 
 Kutsuttavan metodin muunnelmat ja toteutustekniset yksityiskohdat on piilotettu sinne minne ne kuuluvat: toteuttaviin luokkiin.
