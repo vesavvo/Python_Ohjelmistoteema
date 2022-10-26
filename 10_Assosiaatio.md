@@ -76,17 +76,17 @@ class Hoitola:
     def __init__(self):
         self.koirat = []
 
-    def koiraSisään(self, koira):
+    def koira_sisään(self, koira):
         self.koirat.append(koira)
         print(koira.nimi + " kirjattu sisään")
         return
 
-    def koiraUlos(self, koira):
+    def koira_ulos(self, koira):
         self.koirat.remove(koira)
         print(koira.nimi + " kirjattu ulos")
         return
 
-    def tervehdiKoiria(self):
+    def tervehdi_koiria(self):
         for koira in self.koirat:
             koira.hauku(1)
 
@@ -97,12 +97,12 @@ koira2 = Koira("Rekku", 2022, "Viu viu viu")
 
 hoitola = Hoitola()
 
-hoitola.koiraSisään(koira1)
-hoitola.koiraSisään(koira2)
-hoitola.tervehdiKoiria()
+hoitola.koira_sisään(koira1)
+hoitola.koira_sisään(koira2)
+hoitola.tervehdi_koiria()
 
-hoitola.koiraUlos(koira1)
-hoitola.tervehdiKoiria()
+hoitola.koira_ulos(koira1)
+hoitola.tervehdi_koiria()
 ```
 
 Esimerkkiohjelma koostuu kolmesta osasta:
@@ -122,19 +122,19 @@ olemassa lista, johon koirat voidaan aikanaan lisätä.
 
 Tämän jälkeen ensimmäinen koira (Muro) kirjataan sisään hoitolaan:
 ```python
-hoitola.koiraSisään(koira1)
+hoitola.koira_sisään(koira1)
 ```
 Kyseessä on hoitolan tarjoama metodi: sisäänkirjaus on selkeästi hoitolan toiminto, ja se on sen vuoksi ohjelmoitu
 `Hoitola`-luokkaan. Sisäänkirjauksen yhteydessä on tietenkin kerrottava, mitä koiraa ollaan kirjaamassa. Tätä varten
 `Koira`-olio (tai oikeastaan viittaus siihen) annetaan metodikutsun argumenttina. Metodikutsun seurauksena suoritus siirtyy
-`koiraSisään`-metodiin, jossa parametrina saatu koira lisätään hoitolan koiralistaan.
+`koira_sisään`-metodiin, jossa parametrina saatu koira lisätään hoitolan koiralistaan.
 
 Samaan tapaan hoitolaan lisätään toinen koira, Rekku.
 
 Sitten hoitajan on aika tehdä hoitolassa kierros ja tervehtiä kaikkia koiria. Tätä varten kutsutaan vastaavaa `Hoitola`-luokkaan
 kirjoitettua metodia:
 ```python
-hoitola.tervehdiKoiria()
+hoitola.tervehdi_koiria()
 ```
 Tämä metodi toteutettiin parametrittomana. Tervehtiminen kohdistuu kaikkiin hoitolassa kulloinkin oleviin koiriin, ja
 hoitola itse tietää, mitä koiria siellä kulloinkin on hoidossa. Metodi käy läpi koirien listan ja käskee
