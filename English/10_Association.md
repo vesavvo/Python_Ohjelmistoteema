@@ -78,12 +78,12 @@ class Hotel:
 
     def dog_checkin(self, dog):
         self.dogs.append(dog)
-        print(dog.nimi + " checked in")
+        print(dog.name + " checked in")
         return
 
     def dog_checkout(self, dog):
         self.dogs.remove(dog)
-        print(koira.name + " checked out")
+        print(dog.name + " checked out")
         return
 
     def greet_dogs(self):
