@@ -210,8 +210,8 @@ Tässä tapauksessa emme voi `Polkupyörä`-luokan alustajasta viitata molempien
 
 ```python
 # Toimimattomat alustajien kutsut
-super.__init__(nopeus)
-super.__init__(paino)
+super().__init__(nopeus)
+super().__init__(paino)
 ```
 Yliluokka, johon `super`-funktio viittaa, määräytyy Pythonin metodien etsintäjärjestyksen perusteella. Tässä tapauksessa
 kumpikin lause kutsuisi `Kulkuneuvo`-luokassa olevaa alustajaa, ja ohjelma toimisi väärin.
