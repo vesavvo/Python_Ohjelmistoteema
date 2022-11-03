@@ -46,7 +46,7 @@ Rajapintapyynnöt noudattavat HTTP-yhteyskäytäntöä. HTTP on asiakas-palvelin
 ja minkälaisina niihin saatavat vastaukset toimitetaan. HTTP-yhteyskäytäntö määrittelee kuvaannollisesti ilmaisten kirjekuoren, johon pyynnöt ja vastaukset
 sujautetaan, jotta ne voidaan toimittaa Internetissä perille ja saada niihin vastaus: yhteyskäytäntö määrittää esimerkiksi,
 että kukin vastaus koostuu otsikko-osasta ja rungosta ja että vastauksen mukana toimitetaan pyynnön onnistumista kuvaava
-virhekoodi.
+statuskoodi.
 
 HTTP-yhteyskäytäntö määrittelee viisi pyynnöissä yleisesti käytettyä operaatiota:
 - GET lukee sisältökohteen
