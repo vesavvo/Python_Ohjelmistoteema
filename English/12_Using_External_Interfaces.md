@@ -104,7 +104,7 @@ Now we can replace the printing statement in the program with a `for` loop that 
 of the found programs.
 
 ```python
-for a in vastaus:
+for a in response:
     print(a["show"]["name"])
 ```
 
