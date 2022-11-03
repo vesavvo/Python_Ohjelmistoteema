@@ -1,16 +1,54 @@
 # Ulkoisen rajapinnan käyttö
 
-Tässä moduulissa opit käyttämään ulkoisia ohjelmointirajapintoja.
+Tässä moduulissa opit käyttämään ulkoisia ohjelmointirajapintoja, joiden avulla tietokoneet voivat
+vaihtaa tietoja keskenään.
 
 Internetin julkiset palveluntarjoajat kuten sääpalvelut ja avoimet tietokantapalvelut antavat mahdollisuuden
 käyttää niitä ohjelmallisesti. Tuo ohjelmallinen käyttö tapahtuu niin kutsutun ohjelmointirajapinnan kautta.
 Palveluntarjoaja päättää, millaisen ohjelmointirajapinnan se tarjoaa ja miten sitä käytetään. Rajapinnan
 käyttö edellyttääkin aina rajapinnan dokumentaatioon perehtymistä.
 
+## Tiedon siirto Internetissä
+
+Tarkastellaan aluksi Internet-verkon toimintaa siitä näkökulmasta, miten verkkoon kytkettävät laitteet
+kommunikoivat keskenään. Näin opimme ymmärtämään lähtökohdat laitteiden välisen kommunikaation toteuttamiseksi.
+
+Tiedonsiirto Internetissä perustuu asiakas-palvelin-malliin. Palvelin tarkoittaa verkkoon kytkettyä tietokonetta,
+joka odottaa siihen kohdistuvia yhteydenottoja. Käytännössä verkkoon kytketystä tietokoneesta tekee palvelinlaitteen se,
+että tietokoneeseen  on asennettu palvelinohjelmisto, johon tuo yhteydenoton odottelu on ohjelmoitu.
+
+Kun arkikielessä puhumme palvelimesta, voimme siis tarkoittaa sillä:
+
+- verkkoon kytkettyä tietokonetta, joka toimii palvelinlaitteena, tai
+- palvelinlaitteeseen asennettua palvelinohjelmistoa.
+
+Asiakas-palvelin-mallin mukaisesti se laite, joka ottaa yhteyden palvelinkoneeseen (ja siinä olevaan palvelinlaitteeseen),
+lähettää aluksi pyynnön (request). Palvelin käsittelee pyynnön ja tuottaa vastauksen (response):
+
+![Asiakas-palvelin-malli](img/asiakas-palvelin.png)
+
+Internetin verkkosivujen haku ja tarjoaminen nojaa asiakas-palvelinmalliin. Kun esimerkiksi kirjoitat selaimeen web-osoitteen (tai napsautat sivulla olevaa
+linkkiä), lähtee pyyntö web-palvelimelle. Web-palvelin palauttaa vastauksena HTML-tiedoston, joka sisältää verkkosivun määrityksen.
+Jos verkkosivu tarvitsee tuekseen kuvia, tyylimäärityksiä tai muita resursseja, lähtee jokaisesta uusi pyyntö web-palvelimelle,
+ja pyydetyt resurssit saadaan vastauksena.
+
+Vastaavalla tavalla voimme hakea paitsi verkkosivuja myös dataa. Voimme esimerkiksi kirjoittaa Python-ohjelman, joka hakee 
+tämän päivän säätilan tai (kuten hetken päästä teemme) tietoa käyttäjän valitsemasta TV-sarjasta ulkopuoliselta palvelinkoneelta.
+Tällöin oma Python-ohjelmamme lähettää pyynnön ulkopuoliselle palvelinkoneelle ja saa siihen vastauksen.
+
+Palveluiden tarjoajat (kuten sääpalvelu tai TV-sarjojen hakupalvelu) tarjoavat niin kutsutuun palvelurajapinnan. Rajapinnan
+kuvaus määrittää, minkälaisia pyyntöjä siihen voi lähettää ja missä muodossa vastaus saadaan.
+
+
 ## Pyynnön lähettäminen
 
-Rajapintapyynnöt noudattavat HTTP-yhteyskäytäntöä. Yhteyskäytäntö määrittelee neljä yleisesti käytettyä operaatiota tähän 
-tarkoitukseen:
+Rajapintapyynnöt noudattavat HTTP-yhteyskäytäntöä. HTTP on asiakas-palvelinmalliin perustuva sopimus siitä, miten pyynnöt lähetetään
+ja minkälaisina niihin saatavat vastaukset toimitetaan. HTTP-yhteyskäytäntö määrittelee kuvaannollisesti ilmaisten kirjekuoren, johon pyynnöt ja vastaukset
+sujautetaan, jotta ne voidaan toimittaa Internetissä perille ja saada niihin vastaus: yhteyskäytäntö määrittää esimerkiksi,
+että kukin vastaus koostuu otsikko-osasta ja rungosta ja että vastauksen mukana toimitetaan pyynnön onnistumista kuvaava
+virhekoodi.
+
+HTTP-yhteyskäytäntö määrittelee viisi pyynnöissä yleisesti käytettyä operaatiota:
 - GET lukee sisältökohteen
 - PUT korvaa olemassa olevan sisältökohteen
 - POST luo uuden sisältökohteen
