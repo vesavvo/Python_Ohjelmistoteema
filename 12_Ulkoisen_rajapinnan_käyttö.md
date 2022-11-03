@@ -100,11 +100,16 @@ Anna hakusana: python
 ```
 
 Pyynnön lähetys onnistuu ja vastaus saadaan.
-Vastauksesta rakennettua JSON-rakennetta on käsiteltävä, jotta siitä saadaan tulostettua halutut tiedot.
+Rajapinta palauttaa vastauksen JSON-muodossa, joka saadaan muutettua Python-kielen sanakirjarakenteeksi
+vastausolion perimällä `json`-metodilla. (JSON on JavaScript-kielen syntaksia noudattava siirtoformaattina
+yleisesti käytetty esitysmuoto.
+Käsitteellisesti se on erittäin lähellä Python-kielen sanakirjarakennetta.)
+
+Sanakirjaksi muunnettua vastausta on vielä tutkittava ja käsiteltävä, jotta saamme siitä tulostettua halutut tiedot.
 
 ## Vastauksen käsittely
 
-Edellä JSON-vastaus tuotettiin muuttujaan nimeltä `vastaus`. Sen rakenteen hahmottamiseksi voidaan käyttää
+Edellä JSON-siirtoformaatista tuotettu sanakirjamuotoinen vastaus sijoitettiin muuttujaan nimeltä `vastaus`. Sen rakenteen hahmottamiseksi voidaan käyttää
 funktiota `json.dumps`, joka muotoilee vastauksen paremmaksi. Kirjoitetaan tulostuslauseen tilalle:
 ```python
 print(json.dumps(vastaus, indent=2))
