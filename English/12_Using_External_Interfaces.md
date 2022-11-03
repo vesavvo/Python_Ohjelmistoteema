@@ -7,9 +7,49 @@ to use their publicly available resources in programs. The resources are accesse
 The provider of a service decided the type of API it offers and how it is used. Using an API requires
 for a programmer to become familiar with the documentation of the API.
 
+
+## Data transfer in Internet
+
+Let us first examine what happens when computers connected to the Internet communicate with each other.
+This provides us the foundations for understanding and implementing cross-device communication.
+
+Data communication in the Internet is based on client-server model. A computer that is connected
+to the Internet, waiting for other computers to connect to it, is called a server.
+In practice, a computer 
+becomes a server when in runs a dedicated server application that instructs the computer to wait for upcoming connections.
+
+Informally, when we talk about servers, we may mean:
+
+- a computer connected to the Internet that acts as a server, or
+- a server application that runs in a server computer.
+
+In accordance with the client-server model, the computer that initiates a connection to the server machine (and the
+server application therein) first sends a request. The server handles the request and provides a response:
+
+![Client server model](img/client-server.png)
+
+The retrieval of web pages follows the client-server model. As you write a web address into the browser's address
+bar (or click a link on a web page), a request is sent to the web server. The web server then sends an HTML file
+describing the web page as a response. If the web page requires additional resources (such as images or stylesheets),
+new requests are generated, and the requested resources are received as responses. 
+
+In a similar fashion to web pages, we can also retrieve any data from an external server. For example, we can write a Python program that retrieves
+todays weather data, or (as we will soon do), information about a TV show selected by the user. In this case, our
+own Python client sends a request to the external server, and receives a response.
+
+The service providers (such as the weather service or the TV show search service) provide so-called APIs, or application
+programming interfaces. The documentation of an interface specifies what kind of requests it understands, and what the
+format for the response will be.
+
 ## Sending requests
 
-API requests follow the HTTP protocol. The protocol defines five general operations (or resource methods):
+API requests follow the HTTP protocol. HTTP is an agreement on how the requests are sent and what the overall shape of the responses will be.
+Speaking figuratively, HTTP defines the envelope which the requests are slipped into so that they can be sent via
+the Internet. Likewise, it specifies the overall structure of the response: for example, HTTP defines each response
+to contain both a header part and a body part. Moreover, a status code is sent with each response to provide
+information on the success or failure of the request.
+
+The HTTP protocol defines five general operations (or resource methods):
 
 - GET retrieves/reads a data object
 - PUT replaces an existing data object
