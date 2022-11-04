@@ -120,3 +120,36 @@ labmda function which is not discussed here.
 
 The simple backend service presented here can be used to build a more versatile backend service with the required amount of 
 endpoints.
+
+## Parsing the URI
+
+In the previous examples, the parameter values were provided as HTTP request parameters, separated from the domain and country parts
+with a question mark (`?`). This is a traditional way to send parameters in HTTP requests.
+
+An alternative way is to specify the resource targeted by the request in the body of the web address.
+The following simple example implements an "echo service" that echoes, or doubles, the string provided
+by the client. In the example, the string is not given as a parameter but as a part of the actual web address.
+Flask provides an easy approach for handling parts of the web address:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+@app.route('/echo/<text>')
+def echo(text):
+    response = {
+        "echo" : text + " " + text
+    }
+    return response
+
+if __name__ == '__main__':
+    app.run(use_reloader=True, host='127.0.0.1', port=3000)
+```
+
+The service looks like this when viewed via a web browser:
+
+![Echo service in web browser](img/address.png)
+
+The developer of the backend service can freely choose how the handling of the web address part after the domain and the country code is done.
+Particularly, the REST architecture style encourages the latter approach where the targeted resource is given
+as part of the actual web address instead of providing it as a parameter value.
