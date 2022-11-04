@@ -149,6 +149,8 @@ if __name__ == '__main__':
 
 Selaimessa palvelu näyttäytyy näin:
 
+![Kaikupalvelu selainikkunassa](img/osoite.png)
+
 Taustapalvelun ohjelmoija voi täysin päättää, miten verkko-osoitteena domain-osan ja maatunnuksen jälkeinen osa käsitellään.
 Erityisesti REST-arkkitehtuurityylissä suositaan lähestymistapaa, jossa käsiteltävä resurssi kuvataan
 viimeksi esitellyllä tavalla, osana verkko-osoitetta.
