@@ -121,7 +121,7 @@ labmda function which is not discussed here.
 The simple backend service presented here can be used to build a more versatile backend service with the required amount of 
 endpoints.
 
-## Parsing the URI
+## Parsing the request
 
 In the previous examples, the parameter values were provided as HTTP request parameters, separated from the domain and country parts
 with a question mark (`?`). This is a traditional way to send parameters in HTTP requests.
