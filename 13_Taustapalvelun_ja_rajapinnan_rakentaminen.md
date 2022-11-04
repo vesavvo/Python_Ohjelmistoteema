@@ -121,7 +121,7 @@ jota ei tässä käsitellä.
 Edellä kuvatun yksinkertaisen taustapalvelun idean pohjalta on mahdollista
 rakentaa monipuolinen taustapalvelu, jossa on tarpeellinen määrä päätepisteitä.
 
-## URI:n jäsentäminen
+## Pyynnön jäsentäminen
 
 Edellä kuvatuissa esimerkeissä päätepisteeseen liittyvät parametriarvot annettiin HTTP-pyynnön parametreina, jotka eroteltiin
 domain- ja maaosasta kysymysmerkillä (`?`). Tämä on perinteinen tapa välittää parametreja HTTP-pyynnön yhteydessä.
