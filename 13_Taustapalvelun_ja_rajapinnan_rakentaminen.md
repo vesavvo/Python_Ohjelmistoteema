@@ -120,3 +120,35 @@ jota ei tässä käsitellä.
 
 Edellä kuvatun yksinkertaisen taustapalvelun idean pohjalta on mahdollista
 rakentaa monipuolinen taustapalvelu, jossa on tarpeellinen määrä päätepisteitä.
+
+## URI:n jäsentäminen
+
+Edellä kuvatuissa esimerkeissä päätepisteeseen liittyvät parametriarvot annettiin HTTP-pyynnön parametreina, jotka eroteltiin
+domain- ja maaosasta kysymysmerkillä (`?`). Tämä on perinteinen tapa välittää parametreja HTTP-pyynnön yhteydessä.
+
+Vaihtoehtoinen tapa on kuvata pyynnön kohteena
+oleva resurssi osana varsinaista verkko-osoitetta. Seuraava yksinkertainen esimerkki tuottaa "kaikupalvelun",
+joka palauttaa annetun merkkijonon JSON-rakenteessa kaiutettuna eli kahdennettuna. Esimerkissä merkkijonoa ei anneta
+parametrina vaan ikään kuin osana verkko-osoitetta. Flask tarjoaa suoraviivaisen tavan verkko-osoitteen osien
+käsittelyyn:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+@app.route('/kaiku/<teksti>')
+def kaiku(teksti):
+    vastaus = {
+        "kaiku" : teksti + " " + teksti
+    }
+    return vastaus
+
+if __name__ == '__main__':
+    app.run(use_reloader=True, host='127.0.0.1', port=3000)
+```
+
+Selaimessa palvelu näyttäytyy näin:
+
+Taustapalvelun ohjelmoija voi täysin päättää, miten verkko-osoitteena domain-osan ja maatunnuksen jälkeinen osa käsitellään.
+Erityisesti REST-arkkitehtuurityylissä suositaan lähestymistapaa, jossa käsiteltävä resurssi kuvataan
+viimeksi esitellyllä tavalla, osana verkko-osoitetta.
