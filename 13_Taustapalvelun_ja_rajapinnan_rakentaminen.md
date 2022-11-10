@@ -81,11 +81,10 @@ Object Notation*) on esitysmuoto, joka mukailee JavaScript-kielen oliorakennetta
 myös Python-kielen olioihin tottuneelle kehittäjälle.
 
 Muokataan esimerkin `summa`-funktiota siten, että se ei enää palauta merkkijonoa vaan tuottaa vastauksen JSON-muodossa.
-Muodon tuottamiseen käytetään `json`-nimistä kirjastoa, jota vastaava `import`-lause on lisätty ohjelmakoodin alkuun:
+Muodon tuottamiseen onnistuu suoraan Pythonin sanakirjarakenteesta:
 
 ```python
 from flask import Flask, request
-import json
 
 app = Flask(__name__)
 @app.route('/summa')
