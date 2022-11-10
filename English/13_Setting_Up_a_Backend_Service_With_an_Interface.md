@@ -79,14 +79,10 @@ Object Notation*) is a presentation format that complies with the structure of J
 intuitive for developers accustomed to objects in Python language.
 
 Let's modify the `sum` function in the example so that it no longer returns a string but instead produces a response in JSON format.
-This is done by using the `json` library which we will have to import by adding the corresponding `import` statement again at the 
-beginning of our program:
-
-
+This will be done automatically from the Python dictionary structure:
 
 ```python
 from flask import Flask, request
-import json
 
 app = Flask(__name__)
 @app.route('/sum')
@@ -102,8 +98,6 @@ def sum():
         "sum" : sum
     }
 
-    json_data = json.dumps(response, default=lambda o: o.__dict__, indent=4)
-
     return response
 
 if __name__ == '__main__':
@@ -113,10 +107,6 @@ if __name__ == '__main__':
 Now the program produces a JSON response which is easy to process for example by running a JavaScript code on a browser:
 
 ![JSON response in a browser window](img/flask_json.png)
-
-The JSON presentation in the example is built based on the Python object structure and using the `json.dumps` method. The
-quite cryptic-looking method call transforms the object structure into a JSON structure. The statement utilizes an anonymous
-labmda function which is not discussed here.
 
 The simple backend service presented here can be used to build a more versatile backend service with the required amount of 
 endpoints.
