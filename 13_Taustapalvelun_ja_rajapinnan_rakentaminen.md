@@ -101,8 +101,6 @@ def summa():
         "summa" : summa
     }
 
-    json_data = json.dumps(vastaus, default=lambda o: o.__dict__, indent=4)
-
     return vastaus
 
 if __name__ == '__main__':
@@ -113,10 +111,6 @@ Nyt ohjelma tuottaa JSON-vastauksen, jonka ohjelmallinen käsittely on helppoa v
 JavaScript-kielen avulla (kuvan porttinumero poikkeaa esimerkissä käytetystä):
 
 ![JSON-vastaus selainikkunassa](img/flask_json.png)
-
-Esimerkissä JSON-esitys luodaan Pythonin oliorakenteesta `json.dumps`-metodin avulla. Melko kryptisen näköinen
-metodikutsu muuntaa oliorakenteen JSON-rakenteeksi. Lause hyödyntää anonyymiä lambda-funktiota,
-jota ei tässä käsitellä.
 
 Edellä kuvatun yksinkertaisen taustapalvelun idean pohjalta on mahdollista
 rakentaa monipuolinen taustapalvelu, jossa on tarpeellinen määrä päätepisteitä.
