@@ -143,3 +143,85 @@ The service looks like this when viewed via a web browser:
 The developer of the backend service can freely choose how the handling of the web address part after the domain and the country code is done.
 Particularly, the REST architecture style encourages the latter approach where the targeted resource is given
 as part of the actual web address instead of providing it as a parameter value.
+
+## Error handling
+
+Let's return to the earlier example on calculating the sum of two numbers. We assume that the program
+has been amended so that the two numbers are provided as part of the body of the web address. Thus,
+a valid request looks like this: `http://127.0.0.1:3000/sum/42/117`.
+
+In the earlier example, we assumed that the request is always error-free.
+
+However, at least the following errors are possible and should be dealt with:
+1. The user tries to call an erroneous endpoint: `http://127.0.0.1:3000/dum/42/117`
+2. A correct endpoint is called, but the sum cannot be computed because of an invalid number as input:
+`http://127.0.0.1:3000/summa/4t23/117`
+
+
+In the first case, the Flask backend service automatically returns the error code 404 (Not found).
+In the latter case, the status code 500 (Internal server error) is returned. The originator
+of the request can handle the error situations programmatically. However, as the authors
+of the backend service, we have the option to handle the error situations as they emerge,
+producing the request sender more detailed information about the potential cause
+of the error.
+
+The following program handles the error situations in a more elegant fashion:
+1. A request to an invalid endpoint produces the status code 404 with a JSON response:
+`{"status": 404, "message": "Invalid endpoint"}`.
+2. Should the conversion of a parameter to float type fail, the following JSON is sent:
+`{"status": 400, "teksti": "Invalid number as addend"}`. The backend service now returns the more suitable HTTP status code
+400 (Bad Request) instead of the default code 500 (Internal server error).
+
+Also, the program adds the status code to the body of the JSON response. The code in the body is sent just as
+additional information for the client. The 'real' HTTP status code is provided as the statuscode parameter
+of the Response object. (The Response object must be created whenever we want to send something else than the JSON auto-converted
+from the dictionary accompanied with the default error code 200 (OK).
+Unfortunately, we cannot take advantage of the dictionary-to-JSON auto-conversion in this case, but
+we must use the `json.dumps` method instead.).
+
+As the Response object is created, we need to specify the so-called MIME type. A MIME type tells the client
+how the content should be interpreted. In this case, the MIME type is set to `"application/json"`.
+
+The expanded program is as follows:
+```python
+import json
+
+from flask import Flask, Response
+
+app = Flask(__name__)
+@app.route('/sum/<number1>/<number2>')
+def summa(number1, number2):
+    try:
+        number1 = float(number1)
+        number2 = float(number2)
+        sum = number1+number2
+        response = {
+            "number1" : number1,
+            "number2" : number2,
+            "sum" : sum,
+            "status" : 200
+        }
+        return response
+
+    except ValueError:
+        response = {
+            "message": "Invalid number as addend",
+            "status": 400
+        }
+        json_response = json.dumps(response)
+        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        return http_response
+
+@app.errorhandler(404)
+def page_not_found(error_code):
+    response = {
+        "message": "Invalid endpoint",
+        "status": 404
+    }
+    json_response = json.dumps(response)
+    http_response = Response(response=json_response, status=404, mimetype="application/json")
+    return http_response
+
+if __name__ == '__main__':
+    app.run(use_reloader=True, host='127.0.0.1', port=5000)
+```
