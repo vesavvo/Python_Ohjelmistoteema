@@ -216,7 +216,7 @@ def summa(luku1, luku2):
 @app.errorhandler(404)
 def page_not_found(virhekoodi):
     vastaus = {
-        "status" : "404"
+        "status" : "404",
         "teksti" : "Virheellinen päätepiste"
     }
     jsonvast = json.dumps(vastaus)
