@@ -150,7 +150,12 @@ viimeksi esitellyllä tavalla, osana verkko-osoitetta.
 
 ## Virhetilanteiden käsittely
 
-Edellä esitetyissä esimerkeissä oletettiin, että käyttäjän lähettämä pyyntö on virheetön.
+Tarkastellaan aiempaa summan laskentaesimerkkiä, jota on muunnettu siten, että
+molemmat yhteenlaskettavat annetaan osana osoitepolkua. Kelvollinen pyyntö voidaan siis
+antaa esimerkiksi seuraavasti: `http://127.0.0.1:3000/summa/42/117`.
+
+Esimerkeissä oletettiin, että käyttäjän lähettämä pyyntö on virheetön.
+
 Jos virheenkäsittelyä ei erikseen ohjelmoida, ovat ainakin seuraavat virhetilanteet
 mahdollisia:
 1. Käyttäjä yrittää kutsua virheellistä päätepistettä: `http://127.0.0.1:3000/sumka/42/117`
