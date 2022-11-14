@@ -147,3 +147,76 @@ Selaimessa palvelu näyttäytyy näin:
 Taustapalvelun ohjelmoija voi täysin päättää, miten verkko-osoitteena domain-osan ja maatunnuksen jälkeinen osa käsitellään.
 Erityisesti REST-arkkitehtuurityylissä suositaan lähestymistapaa, jossa käsiteltävä resurssi kuvataan
 viimeksi esitellyllä tavalla, osana verkko-osoitetta.
+
+## Virhetilanteiden käsittely
+
+Edellä esitetyissä esimerkeissä oletettiin, että käyttäjän lähettämä pyyntö on virheetön.
+Jos virheenkäsittelyä ei erikseen ohjelmoida, ovat ainakin seuraavat virhetilanteet
+mahdollisia:
+1. Käyttäjä yrittää kutsua virheellistä päätepistettä: `http://127.0.0.1:3000/sumka/42/117`
+2. Käsittely ohjautuu oikeaan päätepisteeseen, mutta vastauksen tuottaminen epäonnistuu virheellisen
+yhteenlaskettavan vuoksi: `http://127.0.0.1:3000/summa/4t23/117`
+
+Ensimmäisessä tapauksessa Flask-taustapalvelu palauttaa automaattisesti virhekoodin 404 (Not found).
+Jälkimmäisessä tapauksessa palautuu statuskoodi 500 (Internal server error). Pyynnön
+lähettäjä voi toki käsitellä nuo virheilmoitukset ohjelmallisesti. Taustapalvelun
+ohjelmoijina meidän on kuitenkin mahdollisuus käsitellä virhetilanteet samalla kun ne
+syntyvät ja tarjota palvelun käyttäjälle (asiakasohjelmalle) seikkaperäisempää tietoa
+virheen syystä.
+
+Seuraava ohjelma käsittelee virhetilanteet edellä esitettyä yksityiskohtaisemmin:
+1. Kutsu virheelliseen päätepisteeseen tuottaa statuskoodin 404 ja JSON-vastauksen `{"status": 404, "teksti": "Virheellinen päätepiste"}`.
+2. Jos parametrin muunnos liukuluvuksi ei onnistu, tulostuu `{"status": 400, "teksti": "Virheellinen yhteenlaskettava"}`.
+Taustapalvelu palauttaa nyt kuvaavamman HTTP-statuskoodin 400 (Bad Request) eikä oletusarvoista koodia 500 (Internal server error).
+
+Ohjelma lisää statuskoodin myös onnistuneesta operaatiosta rakennettavan vastauksen runkoon.
+Rungossa oleva statuskoodi on vain lisätiedoksi. Varsinainen HTTP-yhteyskäytännön
+mukainen statuskoodi annetaan Response-olion statuscode-parametrina. (Response-olio on luotava
+silloin, kun vastauksena palautetaan muutakin kuin paljas sanakirjarakenteesta tuotettu JSON
+ja oletusstatuskoodi 200.
+Response-oliota luotaessa määritetään ns. mime-tyyppi. Se antaa lisätietona selaimelle
+tiedon siitä, miten vastaus on tarkoitus tulkita.)
+
+Laajennettu ohjelma on seuraavanlainen:
+```python
+from flask import Flask, Response
+import json
+
+app = Flask(__name__)
+@app.route('/summa/<luku1>/<luku2>')
+def summa(luku1, luku2):
+    try:
+        luku1 = float(luku1)
+        luku2 = float(luku2)
+        summa = luku1+luku2
+
+        tilakoodi = 200
+        vastaus = {
+            "status": tilakoodi,
+            "luku1": luku1,
+            "luku2": luku2,
+            "summa": summa
+        }
+
+    except ValueError:
+        tilakoodi = 400
+        vastaus = {
+            "status": tilakoodi,
+            "teksti": "Virheellinen yhteenlaskettava"
+        }
+
+    jsonvast = json.dumps(vastaus)
+    return Response(response=jsonvast, status=tilakoodi, mimetype="application/json")
+
+@app.errorhandler(404)
+def page_not_found(virhekoodi):
+    vastaus = {
+        "status" : "404"
+        "teksti" : "Virheellinen päätepiste"
+    }
+    jsonvast = json.dumps(vastaus)
+    return Response(response=jsonvast, status=404, mimetype="application/json")
+
+if __name__ == '__main__':
+    app.run(use_reloader=True, host='127.0.0.1', port=3000)
+```
