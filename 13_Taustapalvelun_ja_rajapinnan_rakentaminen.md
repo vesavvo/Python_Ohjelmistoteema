@@ -154,7 +154,7 @@ Tarkastellaan aiempaa summan laskentaesimerkkiä, jota on muunnettu siten, että
 molemmat yhteenlaskettavat annetaan osana osoitepolkua. Kelvollinen pyyntö voidaan siis
 antaa esimerkiksi seuraavasti: `http://127.0.0.1:3000/summa/42/117`.
 
-Esimerkeissä oletettiin, että käyttäjän lähettämä pyyntö on virheetön.
+Esimerkissä oletettiin, että käyttäjän lähettämä pyyntö on virheetön.
 
 Jos virheenkäsittelyä ei erikseen ohjelmoida, ovat ainakin seuraavat virhetilanteet
 mahdollisia:
