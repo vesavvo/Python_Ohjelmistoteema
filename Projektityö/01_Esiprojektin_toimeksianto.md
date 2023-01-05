@@ -1,6 +1,6 @@
 # Esiprojektin toimeksianto
 
-Tavoitteenanne on rakentaa **toiminnallinen prototyyppi lentopelistä**.
+Tavoitteenanne on rakentaa **toiminnallinen prototyyppi pelistä**.
 
 ![Sähkölentokone](img/Pipistrel_WATTsUP_airplane.jpg)
 
@@ -20,7 +20,7 @@ Projekti etenee neljässä vaiheessa:
 3. Määrittelyn tarkennus projektityötä varten
 4. Projektityön toteutus ja testaus
 
-Ensimmäiset kaksi vaihetta tehdään Ohjelmisto 1 -opintojakson aikana. Tällöin toteutettavassa esiprojektissa on tarkoitus rakentaa lentopelistä toiminnallinen prototyyppi, joka toteutetaan Python-kielellä ja joka hyödyntää relaatiotietokantaa.
+Ensimmäiset kaksi vaihetta tehdään Ohjelmisto 1 -opintojakson aikana. Tällöin toteutettavassa esiprojektissa on tarkoitus rakentaa pelistä toiminnallinen prototyyppi, joka toteutetaan Python-kielellä ja joka hyödyntää relaatiotietokantaa.
 
 Jälkimmäiset kaksi vaihetta tehdään Ohjelmisto 2 -opintojakson kuluessa. Projektityössä esiprojektin tuloksena syntynyttä toiminnallista prototyyppiä laajennetaan ja muokataan siten, että pelillä on selaimessa toimiva karttapalvelua hyödyntävä käyttöliittymä. Lisäksi peli ohjelmoidaan käyttämään ulkoista tietolähdettä, esimerkiksi sääpalvelua.
 
