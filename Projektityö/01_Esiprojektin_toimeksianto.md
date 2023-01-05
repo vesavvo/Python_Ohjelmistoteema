@@ -64,7 +64,7 @@ Määrittelyn pohjaksi asetetaan joukko reunaehtoja. Reunaehtojen tarkoitus on v
 Voitte siis määritellä ja toteuttaa minkälaisen pelin tahansa, kunhan se toteuttaa alla kuvatut reunaehdot:
 
 1. Käyttäjä pelaa peliä vuorovaikutteisesti näppäimistön avulla.
-2. Peli käyttää relaatiotietokantaa, jonka pohjana on opintojaksolla käytetty lentokenttätietokanta. Tietokannan skeemaa saa vapaasti muuttaa ja laajentaa.
+2. Peli käyttää relaatiotietokantaa, jonka pohjana on opintojaksolla käytetty lentokenttätaulu. Tietokannan skeemaa saa vapaasti muuttaa ja laajentaa.
 3. Pelissä on konkreettinen tavoite, ja se tuottaa hyvän pelikokemuksen.
 4. Peli huomioi kestävän kehityksen näkökulman.
 5. Peli on hyvien tapojen mukainen ja soveltuu myös nuorille käyttäjille (K12).
