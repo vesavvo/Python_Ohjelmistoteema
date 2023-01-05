@@ -7,7 +7,7 @@ Tavoitteenanne on rakentaa **toiminnallinen prototyyppi pelistä**.
 <sub><sup>Pipistrel WATTsUP -sähkölentokoneen kuva: Ymmo, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</sup></sub>
 
 
-Lentopelin prototyyppi on peli, jonka
+Pelin prototyyppi on peli, jonka
 avulla käyttäjä voi matkustaa joko koko maailmassa tai sallimallanne alueella. Peli hyödyntää
 todellisten lentokenttien sijanteja.
 
