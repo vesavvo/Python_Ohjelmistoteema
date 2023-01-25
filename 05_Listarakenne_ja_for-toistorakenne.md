@@ -169,13 +169,13 @@ että ohjelma tervehtii jokaista listaan lisättyä henkilöä erikseen. Ohjelma
 ```python
 nimet = []
 
-nimi = input("Anna ensimmäinen nimi tai lopeta painamalla Enter: ")
-while nimi!="":
-    nimet.append(nimi)
-    nimi = input("Anna seuraava nimi tai lopeta painamalla Enter: ")
+etunimi = input("Anna ensimmäinen nimi tai lopeta painamalla Enter: ")
+while etunimi ! = "":
+    nimet.append(etunimi)
+    etunimi = input("Anna seuraava nimi tai lopeta painamalla Enter: ")
 
-for n in nimet:
-    print (f"Moi, {n}!")
+for nimi in nimet:
+    print (f"Moi, {nimi}!")
 ```
 
 Ohjelma toimii näin:
