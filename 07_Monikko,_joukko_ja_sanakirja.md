@@ -63,7 +63,7 @@ Python-kehittäjät pitävät sitä hyvänä ohjelmointikäytäntönä, joka par
 
 Monikon sisältämät arvot voidaan purkaa muuttujiin seuraavan esimerkin osoittamalla tavalla:
 ```python
-hedelmät = "Appelsiini", "Banaani", "Omena"
+hedelmät = ("Appelsiini", "Banaani", "Omena")
 (eka, toka, kolmas) = hedelmät
 print (f"Hedelmiä ovat {eka}, {toka} ja {kolmas}.")
 ```
