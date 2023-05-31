@@ -40,7 +40,7 @@ system. This environment variable contains a list of directories that the operat
 system automatically searches for executable programs. Adding Python to the `PATH`
 is recommended because it allows you to use the `python` command from any directory
 in the command prompt, and the Python interpreter will be found automatically.
-(This is beneficial for future Hardware 1 and 2 courses, where Python is also used.)
+(This is beneficial for the upcoming Hardware 1 and 2 courses, where Python is also used.)
 
 The following image shows the checkbox from which the addition is made:
 
