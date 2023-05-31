@@ -34,7 +34,19 @@ X can be any number.
 4. Download the Python interpreter by clicking the link *Windows installer (64-bit)* at the bottom of the page.
 The wizard will guide you in the installation process. It is recommended to use the default folder for the installation.
 
-On this course, we use MariaDB databases. At the time of writing (August 2022), the MySQL Connection/Python database
+**Important:** The guided installation process provides the opportunity to add
+the Python interpreter to the `PATH` environment variable in the Windows operating
+system. This environment variable contains a list of directories that the operating
+system automatically searches for executable programs. Adding Python to the `PATH`
+is recommended because it allows you to use the python command from any directory
+in the command prompt, and the Python interpreter will be found automatically.
+(This is beneficial for future Hardware 1 and 2 courses, where Python is also used.)
+
+The following image shows the checkbox from which the addition is made:
+
+![Updating the PATH environmental variable](img/path_envvar.png)
+
+> On this course, we also use MariaDB databases. At the time of writing (August 2022), the MySQL Connection/Python database
 driver will not support the newest
 Python 3.10 versions. For this reason, it is recommended that you install a slightly earlier Python version (e.g. version 3.9.)
 that has guaranteed support. If you choose to install the newest Python version now, you may later need to install
