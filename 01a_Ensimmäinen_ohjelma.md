@@ -35,7 +35,18 @@ Lataa Python-tulkki käyttöösi seuraavasti:
 5. Etene ohjatun toiminnon
 esittämällä tavalla, ja asenna Python asennusohjelman ehdottamaan oletussijaintiin.
 
-Tällä kurssilla käytetään MariaDB-tietokantaa. Sen vaatima MySQL Connector/Python -ajuri ei tätä kirjoitettaessa (elokuu 2022)
+**Tärkeää:** Ohjattu asennustoiminto tarjoaa mahdollisuuden lisätä Python-tulkki Windows-käyttöjärjestelmän
+`PATH`-ympäristömuuttujaan. Kyseinen ympäristömuuttuja sisältää luettelon kansioista, joista
+käyttöjärjestelmä etsii suoritettavia ohjelmia automaattisesti. Lisäys kannattaa tehdä: sen
+ansiosta voit antaa komentoikkunassa komennon `python` mistä tahansa kansiosta, ja Python-tulkki
+löytyy automaattisesti. (Tästä on hyötyä tulevilla Laitteisto 1 ja 2 -opintojaksoilla, joilla myös työskennellään Pythonilla.)
+
+Seuraava kuva näyttää valintaruudun, josta lisäys tehdään:
+
+![PATH-ympäristömuuttujan päivittäminen](img/path_envvar.png)
+
+
+>Tällä kurssilla käytetään myös MariaDB-tietokantaa. Sen vaatima MySQL Connector/Python -ajuri ei tätä kirjoitettaessa (elokuu 2022)
 vielä tue uusimpia Python 3.10 -versioita. Tästä syystä kannattaa valita hieman vanhempi versio (esimerkiksi 3.9), jolle
 tuki on jo olemassa. Jos lataat nyt uusimman Python-version, voit myöhemmin joutua asentamaan aiemman version rinnalle.
 
