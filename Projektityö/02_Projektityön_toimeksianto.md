@@ -55,7 +55,7 @@ Seuraavat seikat eivät ole välttämättömiä, mutta ne katsotaan eduksi:
 
 1. Selaimessa näytetään satelliitti- tai karttadataa graafisesti.
 2. Ohjelmoinnissa hyödynnetään Pythonin oliopiirteitä.
-3. Pelin taustapalvelu kommunikoi karttapalvelun ja/tai ainakin yhden muun ulkoisen tietolähteen kanssa.
+3. Pelin taustapalvelu kommunikoi ulkoisten tietolähteiden kanssa.
 
 ## Määrittelydokumentin arviointi
 
