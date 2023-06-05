@@ -40,17 +40,22 @@ requirements relating to response time or usability.kattavuus
 The finished flight simulator game must follow the boundary conditions listed below. You are again free to design and implement any type 
 of a game you want as long as it fulfills these conditions:
 
-1. The user playes the game in an interactive way on a browser. Satellite of map data is shown graphically on the browser.
+1. The user playes the game in an interactive way on a browser.
 2. The user interface (UI) is implemented using HTML language and CSS style sheets. JavaScript is used for implementing the necessary 
 browser functionality.
-3. The operation logic of the game is implemented as a Python-based backend service that provides an API for the browser. The program utilizes the object-oriented features of Python.
+3. The operation logic of the game is implemented as a Python-based backend service that provides an API for the browser.
 4. The communication between the backend service and the browser is implemented using API requests and JSON responses.
 5. The game's backend service utilizes a relational database that is based on the airport database used on this course. The schema of 
 the database can be modified and extended freely as needed.
-6. The game's backend service communicates with at least one external data source (besides the map service).
 6. The game has a concrete goal and it offers a good gaming experience.
 7. The game takes sustainable development factors into account.
 8. The game follows a good gaming etiquette and courtesy and is also suitable for young users (12+).
+
+The following criteria are not mandatory but they will be regarded as merits:
+1. Satellite or map data is shown graphically on the browser.
+2. The program utilizes the object-oriented features of Python.
+3. The game's backend service communicates with at least one external data source and/or the map service.
+
 
 ## Evaluation of the requirements specification document
 
