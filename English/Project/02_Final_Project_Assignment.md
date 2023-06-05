@@ -54,7 +54,7 @@ the database can be modified and extended freely as needed.
 The following criteria are not mandatory but they will be regarded as merits:
 1. Satellite or map data is shown graphically on the browser.
 2. The program utilizes the object-oriented features of Python.
-3. The game's backend service communicates with at least one external data source and/or the map service.
+3. The game's backend service communicates with external data sources.
 
 
 ## Evaluation of the requirements specification document
