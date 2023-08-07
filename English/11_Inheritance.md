@@ -186,9 +186,9 @@ class Bicycle(Vehicle, SportsItem):
         self.gears = gears
 
 b = Bicycle(45, 18.7, 3)
-print (b.gears)
-print (b.speed)
-print (b.weight)
+print(b.gears)
+print(b.speed)
+print(b.weight)
 ```
 
 We create a Bicycle object and print out the number of gears, speed and weight. The number of gears is defined in the `Bicycle` class.
