@@ -73,7 +73,7 @@ class Dog:
 
 dog = Dog("Bubbles", 2022)
 
-print (f"{dog.name:s} was born in {dog.birth_year:d}." )
+print(f"{dog.name:s} was born in {dog.birth_year:d}." )
 ```
 
 A Python initializer is defined inside a class by writing a function with the name `__init__`. The first parameter of the
@@ -158,7 +158,7 @@ class Dog:
 
 dog1 = Dog("Rascal", 2018)
 dog2 = Dog("Boi", 2022, "Yip yip yip")
-print (f"{Dog.created} dogs have been created so far.")
+print(f"{Dog.created} dogs have been created so far.")
 ```
 
 The value of a class variable is referenced by writing both the name of the class and the class variable, in this example `Dog.created`.
