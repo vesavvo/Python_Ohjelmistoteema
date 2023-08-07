@@ -34,12 +34,12 @@ from flask import Flask, request
 
 app = Flask(__name__)
 @app.route('/sum')
-def sum():
+def calculate_sum():
     args = request.args
     number1 = float(args.get("number1"))
     number2 = float(args.get("number2"))
-    sum = number1+number2
-    return str(sum)
+    total_sum = number1+number2
+    return str(total_sum)
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)
@@ -86,16 +86,16 @@ from flask import Flask, request
 
 app = Flask(__name__)
 @app.route('/sum')
-def sum():
+def calculate_sum():
     args = request.args
     number1 = float(args.get("number1"))
     number2 = float(args.get("number2"))
-    sum = number1+number2
+    total_sum = number1+number2
 
     response = {
         "number1" : number1,
         "number2" : number2,
-        "sum" : sum
+        "total_sum" : total_sum
     }
 
     return response
@@ -155,7 +155,7 @@ In the earlier example, we assumed that the request is always error-free.
 However, at least the following errors are possible and should be dealt with:
 1. The user tries to call an erroneous endpoint: `http://127.0.0.1:3000/dum/42/117`
 2. A correct endpoint is called, but the sum cannot be computed because of an invalid number as input:
-`http://127.0.0.1:3000/summa/4t23/117`
+`http://127.0.0.1:3000/sum/4t23/117`
 
 
 In the first case, the Flask backend service automatically returns the error code 404 (Not found).
@@ -190,15 +190,15 @@ from flask import Flask, Response
 
 app = Flask(__name__)
 @app.route('/sum/<number1>/<number2>')
-def summa(number1, number2):
+def calculate_sum(number1, number2):
     try:
         number1 = float(number1)
         number2 = float(number2)
-        sum = number1+number2
+        total_sum = number1+number2
         response = {
             "number1" : number1,
             "number2" : number2,
-            "sum" : sum,
+            "total_sum" : total_sum,
             "status" : 200
         }
         return response
