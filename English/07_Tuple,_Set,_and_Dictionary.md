@@ -64,7 +64,7 @@ The elements inside a tuple can be unpacked into variables in the following way:
 ```python
 fruits = "Orange", "Banana", "Apple"
 (first, second, third) = fruits
-print (f"The fruits are: {first}, {second} and {third}.")
+print(f"The fruits are: {first}, {second} and {third}.")
 ```
 
 This program makes the following output:
@@ -211,7 +211,7 @@ print(numbers)
 
 name = input("Enter name: ")
 if name in numbers:
-    print (f"{name}'s phone number is {numbers[name]}.")
+    print(f"{name}'s phone number is {numbers[name]}.")
 ```
 
 The program produces the following output:
