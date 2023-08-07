@@ -95,7 +95,7 @@ The following list has five items. The idea is to reference the fifth item in th
 starts from zero - the index 5 in the program actually refers to the sixth item. This results in an error:
 
 ```python
-nimet = ["Viivi", "Ahmed", "Pekka", "Olga", "Mary"]
+names = ["Viivi", "Ahmed", "Pekka", "Olga", "Mary"]
 # Illegal reference
 print(names[5])
 ```
