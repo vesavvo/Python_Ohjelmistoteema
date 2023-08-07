@@ -103,11 +103,11 @@ In the next program the number of repetitions is not known when entering the loo
 The program asks the user to give text commands until the user enters a stop command:
 
 ```python
-command = input ("Enter command: ")
+command = input("Enter command: ")
 while command!="stop":
-    print ("Executing command: " + command)
+    print("Executing command: " + command)
     command = input("Enter command: ")
-print ("Execution stopped.")
+print("Execution stopped.")
 ```
 
 The amount of repetitions depends on user input:
@@ -228,13 +228,13 @@ value of the condition is no longer calculated.
 In the following example the command MAYDAY is used to break out of the loop entirely and immediately:
 
 ```python
-command = input ("Enter command: ")
+command = input("Enter command: ")
 while command!="stop":
     if command=="MAYDAY":
         break
-    print ("Executing command: " + command)
+    print("Executing command: " + command)
     command = input("Enter command: ")
-print ("Execution stopped.")
+print("Execution stopped.")
 ```
 
 When the user has given the MAYDAY command, the condition of the while loop permits the start of a new round.
@@ -265,15 +265,15 @@ if a `break` statement is used to exit the loop.
 Let's look at the following example:
 
 ```python
-command = input ("Enter command: ")
+command = input("Enter command: ")
 while command!="stop":
     if command=="MAYDAY":
         break
-    print ("Executing command: " + command)
+    print("Executing command: " + command)
     command = input("Enter command: ")
 else:
-	print("Goodbye.")
-print ("Execution stopped.")
+    print("Goodbye.")
+print("Execution stopped.")
 ```
 
 The program outputs the Goodbye text once when the loop is exited normally after the condition is tested false:
@@ -310,7 +310,7 @@ The next faulty program causes an infinite loop to occur:
 
 number = 1
 while number<5:
-    print (number)
+    print(number)
 
 # This part is never reached:
 print("All ready.")
