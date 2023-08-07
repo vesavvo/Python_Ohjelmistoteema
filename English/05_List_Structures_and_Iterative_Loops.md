@@ -77,7 +77,7 @@ The last example statement prints out the whole list.
 The length of a list can be retrieved using the Python built-in `len` function.
 
 ```python
-print (len(names))
+print(len(names))
 ```
 
 This outputs the length of the list, which is one larger than the index of the last item.
@@ -97,14 +97,14 @@ starts from zero - the index 5 in the program actually refers to the sixth item.
 ```python
 nimet = ["Viivi", "Ahmed", "Pekka", "Olga", "Mary"]
 # Illegal reference
-print (names[5])
+print(names[5])
 ```
 
 A runtime exception occurs and a description of the error is printed on the console:
 ```monospace
 Traceback (most recent call last):
   File "C:/Users/olliv/PycharmProjects/Python_Ohjelmistoteema/Esimerkit/listaesimerkki.py", line 4, in <module>
-    print (names[5])
+    print(names[5])
 IndexError: list index out of range
 
 Process finished with exit code 1
@@ -175,7 +175,7 @@ while name!="":
     name = input("Enter the next name or quit by pressing Enter: ")
 
 for n in names:
-    print (f"Hello, {n}!")
+    print(f"Hello, {n}!")
 ```
 
 The program works as follows:
@@ -192,7 +192,7 @@ Moi, Aamu!
 Accessing the list items one by one was implemented using a `for` loop:
 ```python
 for n in names:
-    print (f"Hello, {n}!")
+    print(f"Hello, {n}!")
 ```
 
 These repetitive strucutres are great for looping through a list. The loop variable is assigned the value of each list
@@ -225,7 +225,7 @@ a number a bit larger than 30.
 
 ```python
 for number in range(3,31,3):
-    print (number)
+    print(number)
 ```
 
 Program output:
