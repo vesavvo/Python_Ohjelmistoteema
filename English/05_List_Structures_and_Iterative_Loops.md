@@ -130,7 +130,7 @@ while name!="":
     names.append(name)
     name = input("Enter the next name or quit by pressing Enter: ")
 
-print(nimet)
+print(names)
 ```
 
 An example on how the program works below:
