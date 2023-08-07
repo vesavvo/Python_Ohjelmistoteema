@@ -248,5 +248,5 @@ program prints string "Hello!" six times:
 
 ```python
 for luku in range(6):
-    print ("Hello!")
+    print("Hello!")
 ```
