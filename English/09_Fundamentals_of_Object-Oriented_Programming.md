@@ -36,7 +36,7 @@ dog = Dog()
 dog.name = "Bubbles"
 dog.birth_year = 2022
 
-print (f"{dog.name:s} was born in {dog.birth_year:d}." )
+print(f"{dog.name:s} was born in {dog.birth_year:d}." )
 ```
 
 The first statement in the main program creates a Dog object that is referenced by the variable `dog`. The dog is given
