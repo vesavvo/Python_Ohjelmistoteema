@@ -98,12 +98,12 @@ Let's look at an example program:
 ```python
 def greet(times):
     for i in range(times):
-        print ("Round " + str(i+1) + " of saying hello.")
+        print("Round " + str(i+1) + " of saying hello.")
     return
 
-print ("A new day starts with greetings.")
+print("A new day starts with greetings.")
 greet(5)
-print ("Let's greet some more.")
+print("Let's greet some more.")
 greet(2)
 ```
 
@@ -190,7 +190,7 @@ Let's look at the following example program:
 ```python
 def greet(greeting, times):
     for i in range(times):
-        print (greeting + " round: " + str(i+1))
+        print(greeting + " round: " + str(i+1))
     return
 ```
 
@@ -252,7 +252,7 @@ as a parameter and then lists all the list elements:
 def inventory(items):
     print("You have the following items:")
     for item in items:
-        print ("- " + item)
+        print("- " + item)
     return
 
 backpack = ["Water bottle", "Map", "Compass"]
@@ -281,7 +281,7 @@ printed out:
 def inventory(items):
     print("You have the following items:")
     for item in items:
-        print ("- " + item)
+        print("- " + item)
 	# Items disappear during the invetory
     items.clear()
     return
