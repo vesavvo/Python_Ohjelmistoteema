@@ -52,7 +52,7 @@ of your own computer. This means that the connection to that IP address can only
 program is running. Port number 5000 tells that the backend server listens to port 5000 for communication from the same
 computer.
 
-Line `@app.route('sum')` defines a so called endpoint. It means that the function `sum` on the next line is executed when
+Line `@app.route('sum')` defines a so called endpoint. It means that the function `calculate_sum` on the next line is executed when
 a user of the backend sends a request to the IP address followed by the string `/sum`. This means that the function can be
 called from the browser by typing `http://127.0.0.1:5000/sum` as the web address. Technically, the browser then sends an
 HTTP protocol GET request that the backend service built with Flask responds to.
