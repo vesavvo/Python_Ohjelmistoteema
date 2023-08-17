@@ -11,10 +11,10 @@ uses the locations of real airports.
 
 The project consists of four phases:
 
-1. Defining the requirements for the game in the preliminary project.
-2. Implementation and testing of the preliminary project.
-3. A more detailed list of requirements for the final project work.
-4. Implementation and testing of the final project work.
+1. Defining the requirements for the game in the preliminary project. (During Software 1)
+2. Implementation and testing of the preliminary project. (During Software 1)
+3. A more detailed list of requirements for the final project work. (During Software 2)
+4. Implementation and testing of the final project work. (During Software 2)
 
 The first two phases are completed during the Software 1 study module. The goal of the preliminary project is to build 
 a functional prototype of the flight simulator that utilizes Python and a relational database. 
