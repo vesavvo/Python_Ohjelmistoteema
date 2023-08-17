@@ -15,10 +15,10 @@ todellisten lentokenttien sijanteja.
 
 Projekti etenee neljässä vaiheessa:
 
-1. Pelin määrittely esiprojektia varten
-2. Esiprojektin toteutus ja testaus
-3. Määrittelyn tarkennus projektityötä varten
-4. Projektityön toteutus ja testaus
+1. Pelin määrittely esiprojektia varten (Ohjelmisto 1)
+2. Esiprojektin toteutus ja testaus (Ohjelmisto 1)
+3. Määrittelyn tarkennus projektityötä varten (Ohjelmisto 2)
+4. Projektityön toteutus ja testaus (Ohjelmisto 2)
 
 Ensimmäiset kaksi vaihetta tehdään Ohjelmisto 1 -opintojakson aikana. Tällöin toteutettavassa esiprojektissa on tarkoitus rakentaa pelistä toiminnallinen prototyyppi, joka toteutetaan Python-kielellä ja joka hyödyntää relaatiotietokantaa.
 
