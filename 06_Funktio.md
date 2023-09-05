@@ -162,7 +162,6 @@ Ohjelma tulostaa seuraaavan tulosteen:
 
 ```monospace
 Pääohjelmassa aluksi: Helsinki
-Funktiossa aluksi: Helsinki
 Funktiossa lopuksi: Vantaa
 Pääohjelmassa lopuksi: Helsinki
 ```
