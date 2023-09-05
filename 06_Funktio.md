@@ -142,18 +142,12 @@ Tällaisia funktion sisällä olevia muuttujia kutsutaan paikallisiksi muuttujik
 Funktioiden ulkopuolella määriteltyjä muuttujia kutsutaan globaaleiksi muuttujiksi.
 Niiden arvot näkyvät kaikkialle, myös funktioiden sisälle.
 
-Tällöin funktion sisällä voitaisiin periaatteessa muuttaa globaalin muuttujan arvoa.
-Tätä kutsutaan funktion sivuvaikutukseksi. Niitä pidetään ei-toivottavina.
-
-Parametrien käyttö estää funktion sivuvaikutukset.
-Kun alkeistyypin (kokonaisluku, liukuluku, merkkijono) arvo annetaan argumenttina, kopioidaan sen arvo parametrimuuttujaan funktiota kutsuttaessa.
-Tällöin parametrimuuttujaan funktion sisällä tehdyt muutokset eivät vaikuta funktion ulkopuolelle.
+Jos muuttujan arvoa muutetaan funktion sisällä, muuttuja tulkitaan automaattisesti paikalliseksi muuttujaksi.
 
 Tarkastellaan asian havainnollistamiseksi esimerkkiohjelmaa:
 
 ```python
-def vaihda(kaupunki):
-    print("Funktiossa aluksi: " + kaupunki)
+def vaihda():
     kaupunki = "Vantaa"
     print("Funktiossa lopuksi: " + kaupunki)
     return
