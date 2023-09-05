@@ -168,9 +168,7 @@ Pääohjelmassa lopuksi: Helsinki
 
 Mitä tapahtui? Edellä luodaan kaksi eri ilmentymää muuttujasta kaupunki:
 1. Globaali muuttuja, joka luodaan pääohjelmassa
-2. Funktion sisäinen parametrimuuttuja, joka luodaan kun funktiota kutsutaan
-Kun `vaihda`-funktiota kutsutaan, argumenttina annettu globaalin muuttujan arvo kopioidaan saman nimisen parametrimuuttujan arvoksi (*pass-by-value*).
-Funktion rungossa vaihdetaan tuon funktion sisäisen parametrimuuttujan arvo. Globaalin muuttujan arvo ei kuitenkaan muutu.
+2. Funktion sisäinen muuttuja, joka on saman niminen kuin globaali muuttuja. Sen arvon muuttaminen ei muuta globaalin muuttujan arvoa.
 
 Muuttujien näkyvyyssäännöt on tärkeää ymmärtää, jotta osaat ohjelmoijana käyttää globaaleja ja paikallisia
 muuttujia tarkoituksenmukaisesti sekä osaat välittää parametreja funktioille oikein.
