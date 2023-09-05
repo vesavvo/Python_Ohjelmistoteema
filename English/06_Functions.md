@@ -163,11 +163,7 @@ At the end of the main program: Helsinki
 
 So, what happened here? First two instances of the city variable were created:
 1. A global variable, which was created in the main program
-2. A local parameter variable inside the function that was created on the function call
-
-When the `change` function is called, the value of the global variable given as an argument is copied to the parameter variable with the
-same name (*pass-by-value*). Inside the function body the value of the local variable is modified. The value of the global variable,
-however, remains unchanged.
+2. A local variable inside a function that shares the same name as the global variable. Changing the value of the local variable does not affect the value of the global variable.
 
 It is important to understand the rules of variable scope, so that as a programmer you can use both global and local
 variables effectively and pass values to functions the correct way.
