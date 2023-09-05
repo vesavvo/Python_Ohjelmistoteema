@@ -137,18 +137,12 @@ the function.
 Variables defined outside functions are called global variables. The values of global variables are visible everywhere
 inside the program, including functions.
 
-In principle, the values of global variables could be changed inside functions. This is referred to as a function side effect.
-Function side effects are considered undesirable.
-
-Function side effects can be avoided by using parameters. When the value of a basic data type (integer, float, string) is given
-as an argument, its value is copied to the parameter variable when the function is called. In that case the changes made to the
-value inside the function do not affect the variable outside the function.
+If the value of a variable is changed inside a function, the variable is automatically interpreted as local.
 
 To demonstrate this effect, let's look at the following example program:
 
 ```python
-def change(city):
-    print("At the beginning of the function: " + city)
+def change():
     city = "Vantaa"
     print("At the end of the function: " + city)
     return
@@ -163,7 +157,6 @@ The program provides the following output:
 
 ```monospace
 At the beginning in the main program: Helsinki
-At the beginning of the function: Helsinki
 At the end of the function: Vantaa
 At the end of the main program: Helsinki
 ```
