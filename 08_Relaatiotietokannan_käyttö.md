@@ -57,7 +57,7 @@ Virheilmoitus kertoo yksityiskohdat hakua varten.
 
 ## Tietokantayhteyden muodostaminen
 
-Tarkastellaan esimerkkitietokantaa nimeltä `ihmiset`. Tiedosto koostuu yhdestä Työntekijä-nimisestä taulukosta,
+Tarkastellaan esimerkkitietokantaa nimeltä `ihmiset`. Teitokanta sisältää Työntekijä-nimisen taulukon,
 jonka rakenne ja sisältö ilmenevät seuraavasta näytteestä:
 
 ![Työntekijä-taulukon datanäyte](img/skeema.png)
