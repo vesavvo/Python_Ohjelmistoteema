@@ -56,7 +56,7 @@ as search terms.
 
 ## Establishing connection to the database
 
-Let's look at an example database called `person`. The file consists of a single table called Employee. The following image
+Let's look at an example database called `people`. The file consists of a single table called Employee. The following image
 shows the structure and contents of the table:
 
 ![Data example from the Employee table](img/schema.png)
