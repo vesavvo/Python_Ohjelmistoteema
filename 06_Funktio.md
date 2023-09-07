@@ -154,7 +154,7 @@ def vaihda():
 
 kaupunki = "Helsinki"
 print("Pääohjelmassa aluksi: " + kaupunki)
-vaihda(kaupunki)
+vaihda()
 print("Pääohjelmassa lopuksi: " + kaupunki)
 ```
 
