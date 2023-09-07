@@ -33,7 +33,7 @@ are named with descriptive names written in lowercase letters. If the name of th
 words are separated with underscores. Following these rules, the same greeting function here could also be
 called `greet_user` for example.
 
-The curly brackets after the function name can be used to define parameters for the function. We will get back to these
+The brackets after the function name can be used to define parameters for the function. We will get back to these
 later. If no parameters are used, empty pair of brackets is written after the function name as in the example above.
 
 The brackets are followed by a colon. The statements that belong to the function body are written after the colon. The
