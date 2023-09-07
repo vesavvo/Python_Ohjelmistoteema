@@ -149,7 +149,7 @@ def change():
 
 city = "Helsinki"
 print("At the beginning in the main program: " + city)
-change(city)
+change()
 print("At the end of the main program: " + city)
 ```
 
