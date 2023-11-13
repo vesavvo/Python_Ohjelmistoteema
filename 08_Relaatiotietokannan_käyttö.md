@@ -213,7 +213,7 @@ def päivitä_palkkaa(numero, uusi_palkka):
 Lisätään pääohjelman loppuun syötteen luku- ja funktion kutsulauseet:
 ```python
 numero = int(input("Anna numero: "))
-uusiPalkka = float(input("Anna uusi palkka: "))
+uusi_palkka = float(input("Anna uusi palkka: "))
 päivitä_palkkaa(numero, uusi_palkka)
 ```
 
