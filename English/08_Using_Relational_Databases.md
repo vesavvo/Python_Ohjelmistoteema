@@ -103,8 +103,7 @@ records from the database and presents each employee:
 import mysql.connector
 
 def getEmployeesByLastName(last_name):
-    sql = "SELECT Number, Last_name, First_name, Salary FROM Employee"
-    sql += " WHERE Last_name='" + last_name + "'"
+    sql = f"SELECT Number, Last_name, First_name, Salary FROM Employee WHERE Last_name='{last_name}'"
     print(sql)
     cursor = connection.cursor()
     cursor.execute(sql)
@@ -201,8 +200,8 @@ Let's write another global function for updating the salary information. The fun
 corresponding `UPDATE` statement:
 
 ```python
-def updateSalary(number, newSalary):
-    sql = "UPDATE Employee SET Salary=" + str(newSalary) + " WHERE Number=" + str(number)
+def update_salary(number, new_salary):
+    sql = f"UPDATE Employee SET Salary={new_salary} WHERE Number={number}"
     print(sql)
     cursor = connection.cursor()
     cursor.execute(sql)
