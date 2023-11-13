@@ -201,8 +201,8 @@ Kirjoitetaan tietokannassa olevan palkan päivittämiseksi toinen globaali funkt
 joka rakentaa ja suorittaa sitä vastaavan `UPDATE`-lauseen:
 
 ```python
-def päivitä_palkkaa(numero, uusiPalkka):
-    sql = f"UPDATE Työntekijä SET Palkka={uusiPalkka} WHERE Numero={numero}"
+def päivitä_palkkaa(numero, uusi_palkka):
+    sql = f"UPDATE Työntekijä SET Palkka={uusi_palkka} WHERE Numero={numero}"
     print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql)
@@ -214,7 +214,7 @@ Lisätään pääohjelman loppuun syötteen luku- ja funktion kutsulauseet:
 ```python
 numero = int(input("Anna numero: "))
 uusiPalkka = float(input("Anna uusi palkka: "))
-päivitä_palkkaa(numero, uusiPalkka)
+päivitä_palkkaa(numero, uusi_palkka)
 ```
 
 Juuri kirjoitettu funktio vahvistaa tietokantaan tehdyn muutoksen:
