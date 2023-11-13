@@ -102,7 +102,7 @@ records from the database and presents each employee:
 ```python
 import mysql.connector
 
-def getEmployeesByLastName(last_name):
+def get_employees_by_last_name(last_name):
     sql = f"SELECT Number, Last_name, First_name, Salary FROM Employee WHERE Last_name='{last_name}'"
     print(sql)
     cursor = connection.cursor()
@@ -124,7 +124,7 @@ connection = mysql.connector.connect(
          )
 
 last_name = input("Enter last name: ")
-getEmployeesByLastName(last_name)
+get_employees_by_last_name(last_name)
 
 ```
 
@@ -213,7 +213,7 @@ The main program is extended by adding a statement for reading input and a call 
 ```python
 number = int(input("Enter number: "))
 newSalary = float(input("Enter new salary: "))
-updateSalary(number, newSalary)
+update_salary(number, newSalary)
 ```
 
 The function we added confirms that the change was made to the database:
