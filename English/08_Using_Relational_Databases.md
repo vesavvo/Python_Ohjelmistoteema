@@ -212,8 +212,8 @@ def update_salary(number, new_salary):
 The main program is extended by adding a statement for reading input and a call to the function:
 ```python
 number = int(input("Enter number: "))
-newSalary = float(input("Enter new salary: "))
-update_salary(number, newSalary)
+new_salary = float(input("Enter new salary: "))
+update_salary(number, new_salary)
 ```
 
 The function we added confirms that the change was made to the database:
