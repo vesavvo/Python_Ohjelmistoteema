@@ -104,7 +104,7 @@ hakee sitä vastaavien työntekijöiden tiedot tietokannasta ja esittelee kunkin
 ```python
 import mysql.connector
 
-def haeTyöntekijätSukunimellä(sukunimi):
+def hae_työntekijät_sukunimellä(sukunimi):
     sql = f"SELECT Numero, Sukunimi, Etunimi, Palkka FROM Työntekijä where Sukunimi='{sukunimi}'"
     print(sql)
     kursori = yhteys.cursor()
@@ -126,7 +126,7 @@ yhteys = mysql.connector.connect(
          )
 
 sukunimi = input("Anna sukunimi: ")
-haeTyöntekijätSukunimellä(sukunimi)
+hae_työntekijät_sukunimellä(sukunimi)
 
 ```
 
