@@ -105,8 +105,7 @@ hakee sitä vastaavien työntekijöiden tiedot tietokannasta ja esittelee kunkin
 import mysql.connector
 
 def haeTyöntekijätSukunimellä(sukunimi):
-    sql = "SELECT Numero, Sukunimi, Etunimi, Palkka FROM Työntekijä"
-    sql += " WHERE Sukunimi='" + sukunimi + "'"
+    sql = f"SELECT Numero, Sukunimi, Etunimi, Palkka FROM Työntekijä where Sukunimi='{sukunimi}'"
     print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql)
@@ -202,8 +201,8 @@ Kirjoitetaan tietokannassa olevan palkan päivittämiseksi toinen globaali funkt
 joka rakentaa ja suorittaa sitä vastaavan `UPDATE`-lauseen:
 
 ```python
-def päivitäPalkkaa(numero, uusiPalkka):
-    sql = "UPDATE Työntekijä SET Palkka=" + str(uusiPalkka) + " WHERE Numero=" + str(numero)
+def päivitä_palkkaa(numero, uusiPalkka):
+    sql = f"UPDATE Työntekijä SET Palkka={uusiPalkka} WHERE Numero={numero}"
     print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql)
@@ -215,7 +214,7 @@ Lisätään pääohjelman loppuun syötteen luku- ja funktion kutsulauseet:
 ```python
 numero = int(input("Anna numero: "))
 uusiPalkka = float(input("Anna uusi palkka: "))
-päivitäPalkkaa(numero, uusiPalkka)
+päivitä_palkkaa(numero, uusiPalkka)
 ```
 
 Juuri kirjoitettu funktio vahvistaa tietokantaan tehdyn muutoksen:
