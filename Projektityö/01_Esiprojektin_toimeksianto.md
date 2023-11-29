@@ -57,6 +57,15 @@ joka toimenpiteestä seuraa (kohteeseen siirtyminen). Käyttäjätarinoita laadi
 Luku 4 (Laadulliset vaatimukset) tarkentaa, millaisia muita kuin toiminnallisia vaatimuksia lentopelillä on. Näitä voivat olla esimerkiksi suorituskykyvaatimukset ("Lentokentän tietojen haku tietokannasta saa kestää korkeintaan kaksi sekuntia") tai
 käytettävyysvaatimukset ("Käyttäjän on saatava välitön palaute jokaisesta tekemästään toimenpiteestä").
 
+Määrittelydokumentin laatua voi arvioida seuraavin kysymyksin:
+- Saako vision perusteella yleiskuvan pelistä ja sen ideasta?
+- Onko pelin toiminnallisuus kuvattu kattavasti, yksiselitteisesti, konkreettisesti ja toteuttamiskelpoisesti? Saako dokumentista tarkan käsityksen siitä, miten peli toimii?
+- Sisältääkö peli uudenlaisia ideoita?
+- Onko tarpeelliset laadulliset vaatimukset kuvattu konkreettisesti?
+- Huomioiko vaatimusmäärittely pelille asetetut reunaehdot?
+- Onko määrittelydokumentti kielensä ja ulkoasunsa puolesta laadukas tekninen asiakirja?
+
+
 ## Pelin reunaehdot
 
 Määrittelyn pohjaksi asetetaan joukko reunaehtoja. Reunaehtojen tarkoitus on varmistaa, että saavutatte peliprojektin aikana ne oppimistavoitteet, joita opintojaksoille on määritetty.
@@ -69,12 +78,16 @@ Voitte siis määritellä ja toteuttaa minkälaisen pelin tahansa, kunhan se tot
 4. Peli huomioi kestävän kehityksen näkökulman.
 5. Peli on hyvien tapojen mukainen ja soveltuu myös nuorille käyttäjille (K12).
 
-## Määrittelydokumentin arviointi
+## Arvosanan määräytyminen
 
-Määrittelydokumentin arviointi perustuu dokumentin kattavuuteen ja laatuun. Erityisesti arvioidaan seuraavia seikkoja:
-- Saako vision perusteella yleiskuvan pelistä ja sen ideasta?
-- Onko pelin toiminnallisuus kuvattu kattavasti, yksiselitteisesti, konkreettisesti ja toteuttamiskelpoisesti? Saako dokumentista tarkan käsityksen siitä, miten peli toimii?
-- Sisältääkö peli uudenlaisia ideoita?
-- Onko tarpeelliset laadulliset vaatimukset kuvattu konkreettisesti?
-- Huomioiko vaatimusmäärittely pelille asetetut reunaehdot?
-- Onko määrittelydokumentti kielensä ja ulkoasunsa puolesta laadukas tekninen asiakirja?
+Projektityön arviointi noudattaa seuraavia suuntaviivoja:
+
+- **Arvosana 1**: Työstä näkyy pyrkimys täyttää pakolliset reunaehdot 1-5. Teknisessä toteutuksessa
+on puutteita ja heikkouksia, tai työ on laajuudeltaan ja kunnianhimon tasoltaan vaatimaton.
+- **Arvosana 3**: Peli toteuttaa pakolliset reunaehdot 1-5. Teknisessä toteutuksessa ei ole merkittäviä
+puutteita. Työ on laajuutensa ja haastavuutensa näkökulmasta hyvätasoinen.
+- **Arvosana 5**: Peli toteuttaa pakolliset reunaehdot 1-5. Työ on tekniseltä toteutukseltaan ja
+ohjelmakoodin rakenteellisen laadun näkökulmasta korkeatasoinen. Työssä korostuu opittujen
+teknologioiden taitava ja monipuolinen käyttö. 
+
+Projektin arvosanasta johdettavaan yksilöarvosanaan vaikuttaa myös jatkuva näyttö sekä itse- ja vertaisarviointi.

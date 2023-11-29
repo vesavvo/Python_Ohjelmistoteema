@@ -35,6 +35,13 @@ Luku 5 (Laadulliset vaatimukset) tarkentaa, millaisia muita kuin toiminnallisia 
 
 Luku 6 (Muut seikat) esittelee muut mahdolliset määrittelyvaiheessa esiin tulevat seikat.
 
+Määrittelydokumentin laatua voi arvioida seuraavin kysymyksin:
+- Saako vision perusteella yleiskuvan pelistä ja sen ideasta?
+- Onko pelin toiminnallisuus kuvattu kattavasti, yksiselitteisesti, konkreettisesti ja toteuttamiskelpoisesti? Saako dokumentista tarkan käsityksen siitä, miten peli toimii?
+- Sisältääkö peli uudenlaisia ideoita?
+- Onko tarpeelliset laadulliset vaatimukset kuvattu konkreettisesti?
+- Huomioiko vaatimusmäärittely pelille asetetut reunaehdot?
+- Onko määrittelydokumentti kielensä ja ulkoasunsa puolesta laadukas tekninen asiakirja?
 
 
 ## Pelin reunaehdot
@@ -57,12 +64,19 @@ Seuraavat seikat eivät ole välttämättömiä, mutta ne katsotaan eduksi:
 2. Ohjelmoinnissa hyödynnetään Pythonin oliopiirteitä.
 3. Pelin taustapalvelu kommunikoi ulkoisten tietolähteiden kanssa.
 
-## Määrittelydokumentin arviointi
+## Arvosanan määräytyminen
 
-Projekityön määrittelydokumentilla on vastaavat kriteerit kuin esiprojektissa tehdyllä määrittelydokumentilla.Määrittelydokumentin arviointi perustuu dokumentin kattavuuteen ja laatuun. Erityisesti arvioidaan seuraavia seikkoja:
-- Saako vision perusteella yleiskuvan pelistä ja sen ideasta?
-- Onko pelin toiminnallisuus kuvattu kattavasti, yksiselitteisesti, konkreettisesti ja toteuttamiskelpoisesti? Saako dokumentista tarkan käsityksen siitä, miten peli toimii?
-- Sisältääkö peli uudenlaisia ideoita?
-- Onko tarpeelliset laadulliset vaatimukset kuvattu konkreettisesti?
-- Huomioiko vaatimusmäärittely pelille asetetut reunaehdot?
-- Onko määrittelydokumentti kielensä ja ulkoasunsa puolesta laadukas tekninen asiakirja?
+Projektityön arviointi noudattaa seuraavia suuntaviivoja:
+
+- **Arvosana 1**: Työstä näkyy pyrkimys täyttää pakolliset reunaehdot 1-8. Teknisessä toteutuksessa
+on puutteita ja heikkouksia, tai työ on laajuudeltaan ja kunnianhimon tasoltaan vaatimaton.
+- **Arvosana 3**: Peli toteuttaa pakolliset reunaehdot 1-8. Teknisessä toteutuksessa ei ole merkittäviä
+puutteita. Työ on laajuutensa ja haastavuutensa näkökulmasta hyvätasoinen. Työn puutteita voi kompensoida
+jonkin valinnaisen reunaehdon 1-3 toteutuminen.
+- **Arvosana 5**: Peli toteuttaa pakolliset reunaehdot 1-8. Työ on tekniseltä toteutukseltaan ja
+ohjelmakoodin rakenteellisen laadun näkökulmasta korkeatasoinen. Työssä korostuu opittujen
+teknologioiden taitava ja monipuolinen käyttö. Jos työssä on vähäisiä puutteita, niitä on
+kompensoitu toteuttamalla valinnaisia reunaehtoja 1-3.
+
+Projektin arvosanasta johdettavaan yksilöarvosanaan vaikuttaa myös jatkuva näyttö sekä itse- ja vertaisarviointi.
+
