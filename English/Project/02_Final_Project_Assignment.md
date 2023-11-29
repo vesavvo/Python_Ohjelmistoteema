@@ -1,7 +1,7 @@
 # Final project assignment
 
 The goal of the final project work is to modify and complete the functional prototype you created during the preliminary 
-project so that the outcome is **a web-based flight simulator game that uses a map service and an external data source**.
+project so that the outcome is **a web-based flight simulator game**.
 
 ![Hot-air Balloon](img/640px-Hot_Air_Balloon_Launch_(Unsplash).jpg)
 
