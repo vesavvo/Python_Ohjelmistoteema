@@ -1,7 +1,7 @@
 # Projektityön toimeksianto
 
 Projektityön tavoitteena on muokata ja täydentää esiprojektin aikana rakentamaanne toiminnallista prototyyppiä siten,
-että tuloksena on **karttapalvelua ja ulkoista tietolähdettä käyttävä selaimen kautta pelattava lentopeli**.
+että tuloksena on **selaimen kautta pelattava lentopeli**.
 
 ![Kuumailmapallo](img/640px-Hot_Air_Balloon_Launch_(Unsplash).jpg)
 
