@@ -35,9 +35,20 @@ as in the requirement specification of the preliminary project.
 Chapter 5 (Quality requirements) specifies what requirements the game has other than the functional requirements. These could for example be
 requirements relating to response time or usability.kattavuus
 
-## Boundary conditions for the game
+A requirements specification document can be evaluated with the following questions:
 
-The finished flight simulator game must follow the boundary conditions listed below. You are again free to design and implement any type 
+- Does the vision provide a general view of the game and the idea behind the game?
+- Has the functionality of the game been presented in a comprehensive, unambiguous, concrete and feasible way? Does the document give an accurate 
+impression of how the game works?
+- Does the game contain novel ideas?
+- Have the necessary quality requirements been presented in a concrete way?
+- Does the game fulfill the set mandatory conditions for the game?
+- Can the document be considered a high-quality, technical document in terms of language and appearance?
+
+
+## Mandatory conditions for the game
+
+The finished flight simulator game must follow the mandatory conditions listed below. You are again free to design and implement any type 
 of a game you want as long as it fulfills these conditions:
 
 1. The user playes the game in an interactive way on a browser.
@@ -56,15 +67,14 @@ The following criteria are not mandatory but they will be regarded as merits:
 2. The program utilizes the object-oriented features of Python.
 3. The game's backend service communicates with external data sources.
 
+## Determining the Grade
 
-## Evaluation of the requirements specification document
+- **Grade 1**: The effort to meet the mandatory conditions 1-8 is evident. There are deficiencies and weaknesses in the technical implementation, or the work is modest in scope and ambition.
+- **Grade 3**: The game fulfills the mandatory conditions 1-8. There are no significant shortcomings in the technical implementation. From the perspective of its scope and complexity, the work is of a good standard. Any shortcomings in the work can be compensated by the fulfillment of optional conditions 1-3.
+- **Grade 5**: The game fulfills the mandatory conditions 1-8. The work is of high quality in terms of technical implementation and the structural quality of the source code. The skilled and versatile use of learned technologies is emphasized in the work. If there are minor deficiencies in the work, they have been compensated by implementing optional conditions 1-3.
 
-The requirement specification document for the final project applies the same criteria as the document written in the preliminary project. 
-The evaluation of the requirement specification document is again based on coverage and quality. Especially the following factors are considered:
-- Does the vision provide a general view of the game and the idea behind the game?
-- Has the functionality of the game been presented in a comprehensive, unambiguous, concrete and feasible way? Does the document give an accurate 
-impression of how the game works?
-- Does the game contain novel ideas?
-- Have the necessary quality requirements been presented in a concrete way?
-- Does the game fulfill the set boundary conditions for the game?
-- Can the document be considered a high-quality, technical document in terms of language and appearance?
+The individual grade derived from the project grade is also influenced by continuous evidence, self-assessment, and peer assessment.
+
+
+
+
