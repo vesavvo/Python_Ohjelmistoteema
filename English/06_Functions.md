@@ -28,7 +28,7 @@ def greet():
     return
 ```
 
-A function is defined using the reversed word `def` followed by the name of the function. In Python, functions
+A function is defined using the reserved word `def` followed by the name of the function. In Python, functions
 are named with descriptive names written in lowercase letters. If the name of the function has multiple words, the
 words are separated with underscores. Following these rules, the same greeting function here could also be
 called `greet_user` for example.
