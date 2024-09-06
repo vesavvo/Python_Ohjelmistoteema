@@ -154,7 +154,7 @@ The most common list operations are listed in the table below:
 | append    | adds an item to the end of the list                                                         | names.append("Matti")                                             |
 | remove    | removes the first occurance of an item in the list                                          | names.remove("Pekka")                                             |
 | insert    | inserts an item into a defined position in the list, index specified in the first argument  | names.insert(4, "Teppo")                                          |
-| extend    | adds the items in the second list to the first list                                         | otherNames = ["Allu","Ninni"]<br/>names.insert(otherNames)        |
+| extend    | adds the items in the second list to the first list                                         | otherNames = ["Allu","Ninni"]<br/>names.extend(otherNames)        |
 | index     | returns the index of the first occurence of the specified item                              | what_index = names.index("Olga")                                  |
 | in        | checks if an item exists in the list                                                        | if "Matti" in names:<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Matti found"    |
 | sort      | sorts the list items in alphabetical or numerical order                                     | numbers.sort()                                                      |
@@ -247,6 +247,6 @@ Using the `range` function is a handy way of replacing a loop that uses a loop v
 program prints string "Hello!" six times:
 
 ```python
-for luku in range(6):
+for number in range(6):
     print("Hello!")
 ```
