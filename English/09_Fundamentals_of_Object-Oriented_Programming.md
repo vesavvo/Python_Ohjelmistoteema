@@ -128,7 +128,7 @@ if the parameter is not given when a dog object is created. In this example, Ras
 The `bark` method the was written inside the class can be called to any existing instance of the Dog class. The first parameter
 of a method is always `self`. This is followed by other parameters that are given values when the method is called.
 
-A method is called by writing the name of an object followed by a period and the name of the method followed by curly brackets
+A method is called by writing the name of an object followed by a period and the name of the method followed by parentheses
 and possible parameters. For example the statement `dog1.bark(2)` calls the bark method for the dog1 object. The times to bark
 is passed as a parameter in the method call (2). Inside a method the properties of and object can be referred to by writing `self`
 followed by a period and then the name of the property. For example, the expression `self.sound` refers to the value of the
