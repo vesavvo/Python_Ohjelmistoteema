@@ -140,7 +140,7 @@ Tämä metodi toteutettiin parametrittomana. Tervehtiminen kohdistuu kaikkiin ho
 hoitola itse tietää, mitä koiria siellä kulloinkin on hoidossa. Metodi käy läpi koirien listan ja käskee
 kutakin koiraa haukahtamaan yhden kerran.
 
-Lopuksi esimerkkiohjelmassa kirjataam ulos yksi koira, Muro. Tätä varten kutsutaan `Hoitola`-luokkaan kirjoitettua vastaavaa
+Lopuksi esimerkkiohjelmassa kirjataan ulos yksi koira, Muro. Tätä varten kutsutaan `Hoitola`-luokkaan kirjoitettua vastaavaa
 metodia, joka poistaa annetun alkion listasta. Tämän jälkeen koiria tervehditään jälleen, mutta tervehdykseen on
 vastaamassa enää Rekku.
 
