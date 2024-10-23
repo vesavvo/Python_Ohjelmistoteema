@@ -78,7 +78,7 @@ Based on the documentation of the TVmaze API this type of an API request should 
 The operation of the request should first be tested by writing the request statement to the address bar of a web browser
 (such as Chrome). Typically, it is only possible to send GET requests via a browser.
 
-From a Python program a similar request is sent using the `get` method from the `requests` library.
+From a Python program a similar request is sent using the `get` method from the `requests` library. Notice: You need to install the `requests` library in PyCharm.
 Applying the `json` method to the received response converts the data to a Python dictionary structure:
 
 ```python
@@ -90,7 +90,6 @@ keyword = input("Enter keyword: ")
 request = "https://api.tvmaze.com/search/shows?q=" + keyword
 response = requests.get(request).json()
 print(response)
-
 ```
 
 Let's see how the program works:
@@ -107,6 +106,14 @@ is very similar to a Python dictionary.)
 
 The resulting dictionary structure must still be examined and processed so
 that we can print out the information we want.
+
+### Did you get an error instead of the JSON?
+
+Make sure to install the `requests` library in PyCharm. Easiest way to install is to move your mouse cursor on top of the `import requests` statement, and click on the `Install package requests` button in the tooltip, as shown in the screenshot below.
+
+<img width="826" alt="Screenshot 2024-10-23 at 11 23 28" src="https://github.com/user-attachments/assets/061654ce-4b1c-49a5-af1a-4c724297c0fd">
+
+
 
 ## Processing the response
 
