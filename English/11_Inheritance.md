@@ -114,7 +114,7 @@ The program provides the following output:
 1: Viivi Virta
  Hourly pay: 12.35
 2: Ahmed Habib
- Montly pay: 2750
+ Monthly pay: 2750
 3: Pekka Puro
 4: Olga Glebova
  Hourly pay: 14.92
