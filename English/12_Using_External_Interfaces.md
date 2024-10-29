@@ -186,7 +186,7 @@ when the request is successfully fulfilled. A failed request is responded with a
 the error that occured. The official list of HTTP response status codes can be found on the World Wide Web Consortium (W3C) 
 web page at: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html. The status code can be read in the program from the
 `status_code` property returned by the `request.get` method. Here we will limit the error testing by only checking whether the
-status code is 200 or something else.
+status code is 200 or [something else](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 Sometimes there can be a situation where the external service cannot be reached at all and as a result cannot even
 return a status code that would show an error. This manifests as the Python program crashing during runtime, running to a so called
