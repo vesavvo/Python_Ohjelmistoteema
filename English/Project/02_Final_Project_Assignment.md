@@ -33,7 +33,7 @@ Chapter 4 (Functional Requirements) describes what the user can do with the exte
 as in the requirement specification of the preliminary project.
 
 Chapter 5 (Quality requirements) specifies what requirements the game has other than the functional requirements. These could for example be
-requirements relating to response time or usability.kattavuus
+requirements relating to response time or usability.
 
 A requirements specification document can be evaluated with the following questions:
 
