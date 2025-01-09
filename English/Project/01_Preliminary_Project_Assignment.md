@@ -1,12 +1,12 @@
 # Preliminary project assignment
 
-Your goal is to build a **functional prototype of a flight simulator game**.
+Your goal is to build a **functional prototype of a flight game**.
 
 ![Electric Airplane](img/Pipistrel_WATTsUP_airplane.jpg)
 
 <sub><sup>An image of the Pipistrel WATTsUP electric airplane: Ymmo, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</sup></sub>
 
-The prototype flight simulator is a game where the player can travel either globally or in a predefined area. The game 
+The prototype flight is a game where the player can travel either globally or in a predefined area. The game 
 uses the locations of real airports.
 
 The project consists of four phases:
@@ -17,7 +17,7 @@ The project consists of four phases:
 4. Implementation and testing of the final project work. (During Software 2)
 
 The first two phases are completed during the Software 1 study module. The goal of the preliminary project is to build 
-a functional prototype of the flight simulator that utilizes Python and a relational database. 
+a functional prototype of the game that utilizes Python and a relational database. 
 
 The last two phases are completed over the Software 2 study module. The functional prototype built during the previous 
 study module is used as a basis of the final project. The prototype is extended and modified by adding a web-based user interface (UI)
@@ -47,7 +47,7 @@ The requirement specification document must contain at least the following chapt
 Chapter 1 (Introduction) discusses what the purpose of the document is and who it is targeted to. Also the structure of the document 
 can be presented in the Introduction.
 
-Chapter 2 (Vision) describes the general idea of the the flight simulator game. What is the purpose of the game and how does it work? 
+Chapter 2 (Vision) describes the general idea of the the flight game. What is the purpose of the game and how does it work? 
 The vision can be presented also as a figure that is supported by a written description. Here you must explain the main idea of the game 
 in your own words: how does the game proceed and what stages must the player go through?
 
@@ -55,11 +55,11 @@ Chapter 3 (Functional requirements) discusses everything the user can do with th
 as user stories with a role (who), action (what), and benefit (why). An example of a user story would be "As a player I can choose the next 
 airport from the cities showing on the map, so that my electric airplane will move there.". The example user story contains a role (player),
 an action (selecting the next city) and a benefit the user can gain by completing the action (moving to the new location). There are enough 
-user stories when they together describe all functionality of the game. For the flight simulator this probably means dozens of user stories.
+user stories when they together describe all functionality of the game. For the flight game this probably means dozens of user stories.
 Each user story must be unambiguous and concrete. It must be possible to look back at the user stories later to determine whether each 
 planned functionality has been implemented in the software.
 
-Chapter 4 (Quality requirements) defines other requirements besides the functional requirements the flight simulator has. Examples of these 
+Chapter 4 (Quality requirements) defines other requirements besides the functional requirements the flight game has. Examples of these 
 could be performance requirements ("Fetching airport information from the database must take a maximum of two seconds.") or usability 
 requirements ("The user must get instant feedback from all actions they perform").
 
