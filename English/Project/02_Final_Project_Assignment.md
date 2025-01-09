@@ -1,7 +1,7 @@
 # Final project assignment
 
 The goal of the final project work is to modify and complete the functional prototype you created during the preliminary 
-project so that the outcome is **a web-based flight simulator game**.
+project so that the outcome is **a web-based flight game**.
 
 ![Hot-air Balloon](img/640px-Hot_Air_Balloon_Launch_(Unsplash).jpg)
 
@@ -10,7 +10,7 @@ project so that the outcome is **a web-based flight simulator game**.
 
 ## Requirements specification
 
-The requirement specification document describes what the final, extended flight simulator game can be used for. 
+The requirement specification document describes what the final, extended flight game can be used for. 
 You may use the contents and parts of the requirement specification of the preliminary project in your new requirement 
 specification document.
 
@@ -24,9 +24,9 @@ The requirements document must include at least the following chapters:
 Chapter 1 (Introduction) discusses the purpose and target audience of the document. Also the structure of the document can be 
 described in the Introduction.
 
-Chapter 2 (Current State) explains the current state of the project work: What can your prototype of the flight simulator be used for?
+Chapter 2 (Current State) explains the current state of the project work: What can your prototype of the flight be used for?
 
-Chapter 3 (Vision) describes the general idea of the new, extended flight simulator game. How does the user play the game and what 
+Chapter 3 (Vision) describes the general idea of the new, extended flight game. How does the user play the game and what 
 happens in the game? The vision can again be presented as an image with a supporting text description.
 
 Chapter 4 (Functional Requirements) describes what the user can do with the extended game. Write more user stories the same way 
@@ -48,7 +48,7 @@ impression of how the game works?
 
 ## Mandatory conditions for the game
 
-The finished flight simulator game must follow the mandatory conditions listed below. You are again free to design and implement any type 
+The finished game must follow the mandatory conditions listed below. You are again free to design and implement any type 
 of a game you want as long as it fulfills these conditions:
 
 1. The user playes the game in an interactive way on a browser.
