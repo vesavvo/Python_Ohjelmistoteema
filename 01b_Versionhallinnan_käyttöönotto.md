@@ -57,7 +57,7 @@ GitHub-kirjautumistietosi.
 Version Control**, ja hae GitHubissa luomasi Git-repositorio napsauttamalla **Clone**. PyCharm luo uuden 
 projektin, joka käyttää GitHub-reposiota.
 
-Tässäkin tapauksessa PyCharm-kehittimen valikkoriville imesttyy uusi Git-valikko.
+Tässäkin tapauksessa PyCharm-kehittimen valikkoriville ilmestyy uusi Git-valikko.
 
 ## Repositorion käyttö
 
