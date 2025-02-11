@@ -9,7 +9,7 @@ Tavoitteenanne on rakentaa **toiminnallinen prototyyppi pelistä**.
 
 Pelin prototyyppi on peli, jonka
 avulla käyttäjä voi matkustaa joko koko maailmassa tai sallimallanne alueella. Peli hyödyntää
-todellisten lentokenttien sijanteja.
+todellisten lentokenttien sijainteja.
 
 
 
@@ -53,7 +53,7 @@ etenee, ja millaisia vaiheita pelaaja käy läpi?
 Luku 3 (Toiminnalliset vaatimukset) kuvaa periaatteessa kaiken, mitä käyttäjä voi pelillä tehdä. Toiminnalliset vaatimukset esitetään tyypillisesti käyttäjätarinoina, joissa on tekijä, toimenpide ja tavoite. Esimerkki käyttäjätarinasta on "Pelaajana
 voin valita karttapohjalla näkyvistä kohteista seuraavan lentokentän, jotta sähkölentokoneeni siirtyy sinne". Käyttäjätarinassa kuvataan siis tekijä (pelaaja), toimenpide (kentän valinta) sekä käyttäjää hyödyttävä tavoite,
 joka toimenpiteestä seuraa (kohteeseen siirtyminen). Käyttäjätarinoita laaditaan niin monta, että ne yhdessä kuvaavat pelin toiminnallisuuden. Lentopelille käyttäjätarinoita tarvittaneen useita kymmeniä. Jokaisen käyttäjätarinan on oltava yksiselitteinen ja konkreettinen. Käyttäjätarinan pohjalta on voitava aikanaan todentaa, onko vastaava toiminnallisuus toteutettu ohjelmistossa.
- 
+
 Luku 4 (Laadulliset vaatimukset) tarkentaa, millaisia muita kuin toiminnallisia vaatimuksia lentopelillä on. Näitä voivat olla esimerkiksi suorituskykyvaatimukset ("Lentokentän tietojen haku tietokannasta saa kestää korkeintaan kaksi sekuntia") tai
 käytettävyysvaatimukset ("Käyttäjän on saatava välitön palaute jokaisesta tekemästään toimenpiteestä").
 
@@ -88,6 +88,6 @@ on puutteita ja heikkouksia, tai työ on laajuudeltaan ja kunnianhimon tasoltaan
 puutteita. Työ on laajuutensa ja haastavuutensa näkökulmasta hyvätasoinen.
 - **Arvosana 5**: Peli toteuttaa pakolliset reunaehdot 1-5. Työ on tekniseltä toteutukseltaan ja
 ohjelmakoodin rakenteellisen laadun näkökulmasta korkeatasoinen. Työssä korostuu opittujen
-teknologioiden taitava ja monipuolinen käyttö. 
+teknologioiden taitava ja monipuolinen käyttö.
 
 Projektin arvosanasta johdettavaan yksilöarvosanaan vaikuttaa myös jatkuva näyttö sekä itse- ja vertaisarviointi.
