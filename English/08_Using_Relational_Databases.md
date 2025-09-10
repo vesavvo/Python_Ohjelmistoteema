@@ -139,7 +139,7 @@ Hello! I'm Ash Fernsby. My salary is 2158 euros per month.
 
 The database query has been programmed inside the `getEmployeesByLastName` function.
 
-The SQL statement for the query is first written into a string variable that has been names `sql` in the program
+The SQL statement for the query is first written into a string variable that has been named `sql` in the program
 code. When writing a program, it is recommended to check the operation of an SQL query in a database editor
 (such as HeidiSQL). Only when the query works, it should be embedded into Python code. In this case the query
 is given the value of the last name from the parameter variable.
@@ -225,3 +225,4 @@ Salary updated
 ```
 
 A successful update can be confirmed directly from the database by using a database editor.
+
