@@ -74,9 +74,9 @@ Hyvää huomenta
 ```
 
 Tässä esimerkissä on kaksi muuttujaa:
-1. `tehdyt`-nimisen muuttujan arvona on toistojen kokonaismäärä. Kun se on luettu käyttäjältä, arvo pysyy muuttumattomana koko
+1. `kerrat`-nimisen muuttujan arvona on toistojen kokonaismäärä. Kun se on luettu käyttäjältä, arvo pysyy muuttumattomana koko
 ohjelman suorituksen ajan.
-2. `kerrat`-niminen muuttuja on kierrosmuuttuja. Se alustetaan nollaksi. Jokaisen kierroksen päättyessä kierrosmuuttujan arvoa
+2. `tehdyt`-niminen muuttuja on kierrosmuuttuja. Se alustetaan nollaksi. Jokaisen kierroksen päättyessä kierrosmuuttujan arvoa
 kasvatetaan yhdellä.
 
 Oletetaan, että käyttäjä pyytää viisi tervehdystä. Arvo 5 tallentuu `kerrat`-muuttujan arvoksi.
