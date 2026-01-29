@@ -197,7 +197,7 @@ while rounds < 100000:
     while (dice1!=6 or dice2!=6):
         dice1 = random.randint(1,6)
         dice2 = random.randint(1,6)
-	rolls = rolls + 1
+		rolls = rolls + 1
     #print(f"Rolled {rolls:d} times.")
     rounds = rounds + 1
     total_rolls = total_rolls + rolls
@@ -331,3 +331,4 @@ the stop button on the side of the console window:
 
 If the stop button does not stop the execution, check that the terminal emulation operations are enabled in
 the console window: select **Run/Edit Configurations** and check the **Emulate Terminal in Output Console** checkbox.
+
