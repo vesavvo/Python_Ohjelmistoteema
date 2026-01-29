@@ -88,7 +88,6 @@ You can use the following comparison operators to express conditions in Python:
 | \>       | greater than               |
 | \<       | less than                  |
 | >=       | greater than or equal to   | 
-| >=       | greater than or equal to   | 
 | <=       | less than or equal to      | 
 | ==       | equal to                   | 
 | !=       | not equal to               | 
@@ -274,3 +273,4 @@ and execution stops.
 If we look at the program, we can see that it was written so that the strict condition of the first branch is gradually
 loosened by each branch, so we do not need upper limits for the age in the conditions. They can be written but it would
 be unnecessary and create a new possibility for a programming error.
+
