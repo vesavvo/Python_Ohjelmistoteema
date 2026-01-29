@@ -131,7 +131,7 @@ The number of required rolls varies between runs:
 ```python
 import random
 dice1 = dice2 = rolls = 0
-while (dice1!=6 or dice2!=6):
+while (dice1!=6 and dice2!=6):
     dice1 = random.randint(1,6)
     dice2 = random.randint(1,6)
     rolls = rolls + 1
@@ -331,3 +331,4 @@ the stop button on the side of the console window:
 
 If the stop button does not stop the execution, check that the terminal emulation operations are enabled in
 the console window: select **Run/Edit Configurations** and check the **Emulate Terminal in Output Console** checkbox.
+
