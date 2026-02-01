@@ -119,7 +119,7 @@ number that are only divisible by one or the number itself.
    - For example, 13 is a prime number as it can only be divided by 1 or 13 so that the result is an integer.
    - On the other hand, 21 is not a prime number as it is divisible by 3 and 7.
 
-4. Write a program that asks the user to enter the names of five cities one by on (use a `for` loop for reading the names)
+4. Write a program that asks the user to enter the names of five cities one by one (use a `for` loop for reading the names)
 and stores them into a list structure. Finally, the program prints out the names of the cities one by one, one city per line,
 in the same order they were read as input. Use a `for` loop for asking the names and a `for/in` loop to iterate through the
 list.
@@ -281,3 +281,4 @@ be in the format of `{"Number":31, "isPrime":true}`.
 2. Implement a backend service that gets the ICAO code of an airport and then returns the name and location of the airport in JSON format.
 The information is fetched from the airport database used on this course. For example, the GET request for EFHK would be: 
 `http://127.0.0.1:5000/airport/EFHK`. The response must be in the format of: `{"ICAO":"EFHK", "Name":"Helsinki-Vantaa Airport", "Location":"Helsinki"}`.
+
