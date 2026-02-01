@@ -181,6 +181,9 @@ def greet(greeting, times):
     for i in range(times):
         print(greeting + " round: " + str(i+1))
     return
+
+greet("Hello", 3)
+greet("Good day", 2)
 ```
 
 The program provides the following output with different arguments:
@@ -316,3 +319,4 @@ function definition.
 
 Furthermore, Python also support anonymous, or so-called lambda functions. In lambda functions only the formula
 or rule to produce a return value is provided without writing an actual function. Lambda functions are introduced later.
+
