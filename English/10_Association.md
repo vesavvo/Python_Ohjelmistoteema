@@ -173,7 +173,7 @@ different directions must be in sync.
 As was mentioned above, the `Hotel` and `Dog` classes in the example shared a static association: the dogs in the hotel
 were stored as a list into the property of the hotel.
 
-The `Hotel` and `Dog` classes also share another type of a dependency: The `Hotel` class provides to methods that
+The `Hotel` and `Dog` classes also share another type of a dependency: The `Hotel` class provides two methods that
 have a reference to a `Dog` object as a parameter. An associative relationship can also be valid only during a method call
 when an instance of the other class is listed as a parameter of a method. When the method call finishes, the associative
 relationship used during the method call would vanish if the information of the relationship wasn't stored as a property like
